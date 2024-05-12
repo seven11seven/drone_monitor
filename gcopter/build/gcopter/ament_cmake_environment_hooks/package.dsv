@@ -1,0 +1,4 @@
+source;share/gcopter/local_setup.bash
+source;share/gcopter/local_setup.dsv
+source;share/gcopter/local_setup.sh
+source;share/gcopter/local_setup.zsh

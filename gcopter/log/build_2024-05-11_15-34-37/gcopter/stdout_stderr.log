@@ -1,0 +1,54 @@
+[35m[1mConsolidate compiler generated dependencies of target global_planning[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/global_planning.dir/src/global_planning.cpp.o[0m
+In file included from [01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/geo_utils.hpp:5[m[K,
+                 from [01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/misc/visualizer.hpp:6[m[K,
+                 from [01m[K/home/kiki/Workspace/drone_monitor/gcopter/src/global_planning.cpp:1[m[K:
+[01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/sdlp.hpp:[m[K In function ‘[01m[Kint sdlp::linfracprog(const double*, int, int, const double*, const double*, double*, double*, int*, int*) [with int d = 1][m[K’:
+[01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/sdlp.hpp:666:41:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmax_size[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  666 |                               [01;35m[Kconst int max_size[m[K,
+      |                               [01;35m[K~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/sdlp.hpp:671:39:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kwork[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  671 |                               [01;35m[Kdouble *work[m[K,
+      |                               [01;35m[K~~~~~~~~^~~~[m[K
+In file included from [01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/gcopter.hpp:4[m[K,
+                 from [01m[K/home/kiki/Workspace/drone_monitor/gcopter/src/global_planning.cpp:3[m[K:
+[01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/minco.hpp:[m[K In member function ‘[01m[Kvoid minco::MINCO_S2NU::setParameters(const Matrix3Xd&, const VectorXd&)[m[K’:
+[01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/minco.hpp:218:26:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+  218 |             A(1, 1) = 1,0[01;35m[K;[m[K
+      |                          [01;35m[K^[m[K
+[01m[K/home/kiki/Workspace/drone_monitor/gcopter/src/global_planning.cpp:[m[K At global scope:
+[01m[K/home/kiki/Workspace/drone_monitor/gcopter/src/global_planning.cpp:123:79:[m[K [01;35m[Kwarning: [m[K‘[01m[Ksensor_msgs::msg::PointCloud2_<std::allocator<void> >::ConstPtr[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  123 |     inline void mapCallBack(const sensor_msgs::msg::PointCloud2::ConstPtr &msg[01;35m[K)[m[K
+      |                                                                               [01;35m[K^[m[K
+In file included from [01m[K/home/kiki/ros2_humble/build/sensor_msgs/rosidl_generator_cpp/sensor_msgs/msg/point_cloud2.hpp:7[m[K,
+                 from [01m[K/home/kiki/Workspace/drone_monitor/gcopter/src/global_planning.cpp:23[m[K:
+[01m[K/home/kiki/ros2_humble/build/sensor_msgs/rosidl_generator_cpp/sensor_msgs/msg/detail/point_cloud2__struct.hpp:194:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  194 |     [01;36m[KConstPtr[m[K;
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/kiki/Workspace/drone_monitor/gcopter/src/global_planning.cpp:236:84:[m[K [01;35m[Kwarning: [m[K‘[01m[Kgeometry_msgs::msg::PoseStamped_<std::allocator<void> >::ConstPtr[m[K’ is deprecated [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+  236 |     inline void targetCallBack(const geometry_msgs::msg::PoseStamped::ConstPtr &msg[01;35m[K)[m[K
+      |                                                                                    [01;35m[K^[m[K
+In file included from [01m[K/home/kiki/ros2_humble/build/geometry_msgs/rosidl_generator_cpp/geometry_msgs/msg/pose_stamped.hpp:7[m[K,
+                 from [01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/misc/visualizer.hpp:20[m[K,
+                 from [01m[K/home/kiki/Workspace/drone_monitor/gcopter/src/global_planning.cpp:1[m[K:
+[01m[K/home/kiki/ros2_humble/build/geometry_msgs/rosidl_generator_cpp/geometry_msgs/msg/detail/pose_stamped__struct.hpp:115:5:[m[K [01;36m[Knote: [m[Kdeclared here
+  115 |     [01;36m[KConstPtr[m[K;
+      |     [01;36m[K^~~~~~~~[m[K
+[100%] [32m[1mLinking CXX executable global_planning[0m
+[100%] Built target global_planning
+-- Install configuration: ""
+-- Installing: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/lib/gcopter/global_planning
+-- Set runtime path of "/home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/lib/gcopter/global_planning" to ""
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/ament_index/resource_index/package_run_dependencies/gcopter
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/ament_index/resource_index/parent_prefix_path/gcopter
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/gcopter/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/gcopter/environment/path.dsv
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/gcopter/local_setup.bash
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/gcopter/local_setup.sh
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/gcopter/local_setup.zsh
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/gcopter/local_setup.dsv
+-- Installing: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/gcopter/package.dsv
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/ament_index/resource_index/packages/gcopter
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/gcopter/cmake/gcopterConfig.cmake
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/gcopter/cmake/gcopterConfig-version.cmake
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/gcopter/package.xml

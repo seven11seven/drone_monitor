@@ -1,0 +1,8 @@
+source;share/gcopter/hook/cmake_prefix_path.ps1
+source;share/gcopter/hook/cmake_prefix_path.dsv
+source;share/gcopter/hook/cmake_prefix_path.sh
+source;share/gcopter/local_setup.bash
+source;share/gcopter/local_setup.dsv
+source;share/gcopter/local_setup.ps1
+source;share/gcopter/local_setup.sh
+source;share/gcopter/local_setup.zsh

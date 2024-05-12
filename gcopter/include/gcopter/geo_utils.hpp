@@ -5,7 +5,6 @@
 #include "sdlp.hpp"
 
 #include <Eigen/Eigen>
-
 #include <cfloat>
 #include <cstdint>
 #include <set>
@@ -62,7 +61,7 @@ namespace geo_utils
     {
         inline bool operator()(const Eigen::Vector3d &l,
                                const Eigen::Vector3d &r)
-        {
+        const {
             return l(0) < r(0) ||
                    (l(0) == r(0) &&
                     (l(1) < r(1) ||

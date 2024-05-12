@@ -1,0 +1,34 @@
+-- Found ament_cmake: 1.3.8 (/home/kiki/ros2_humble/install/ament_cmake/share/ament_cmake/cmake)
+-- Found rclcpp: 16.0.8 (/home/kiki/ros2_humble/install/rclcpp/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.5 (/home/kiki/ros2_humble/install/rosidl_generator_c/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.5 (/home/kiki/ros2_humble/install/rosidl_adapter/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.5 (/home/kiki/ros2_humble/install/rosidl_generator_cpp/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_introspection_c;rosidl_typesupport_fastrtps_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_introspection_cpp;rosidl_typesupport_fastrtps_cpp
+-- Found rmw_implementation_cmake: 6.1.1 (/home/kiki/ros2_humble/install/rmw_implementation_cmake/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.6 (/home/kiki/ros2_humble/install/rmw_fastrtps_cpp/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found geometry_msgs: 4.2.3 (/home/kiki/ros2_humble/install/geometry_msgs/share/geometry_msgs/cmake)
+-- Found sensor_msgs: 4.2.3 (/home/kiki/ros2_humble/install/sensor_msgs/share/sensor_msgs/cmake)
+-- Found visualization_msgs: 4.2.3 (/home/kiki/ros2_humble/install/visualization_msgs/share/visualization_msgs/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/kiki/Workspace/drone_monitor/gcopter/build/gcopter
+[ 50%] [32mBuilding CXX object CMakeFiles/bls.dir/debug/bls.cpp.o[0m
+In file included from [01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/geo_utils.hpp:5[m[K,
+                 from [01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/sfc_gen.hpp:4[m[K,
+                 from [01m[K/home/kiki/Workspace/drone_monitor/gcopter/debug/bls.cpp:1[m[K:
+[01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/sdlp.hpp:[m[K In function ‘[01m[Kint sdlp::linfracprog(const double*, int, int, const double*, const double*, double*, double*, int*, int*) [with int d = 1][m[K’:
+[01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/sdlp.hpp:666:41:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmax_size[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  666 |                               [01;35m[Kconst int max_size[m[K,
+      |                               [01;35m[K~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/sdlp.hpp:671:39:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kwork[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  671 |                               [01;35m[Kdouble *work[m[K,
+      |                               [01;35m[K~~~~~~~~^~~~[m[K
+[100%] [32m[1mLinking CXX executable bls[0m
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+(.text+0x1b): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/bls.dir/build.make:97: bls] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/bls.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

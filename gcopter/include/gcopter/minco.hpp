@@ -4,7 +4,6 @@
 #include "trajectory.hpp"
 
 #include <Eigen/Eigen>
-
 #include <cmath>
 #include <vector>
 
@@ -216,7 +215,7 @@ namespace minco
             b.setZero();
 
             A(0, 0) = 1.0;
-            A(1, 1) = 1,0;
+            A(1, 1) = 1.0;
             b.row(0) = headPV.col(0).transpose();
             b.row(1) = headPV.col(1).transpose();
 

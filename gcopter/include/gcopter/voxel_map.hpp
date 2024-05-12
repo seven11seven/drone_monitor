@@ -4,7 +4,7 @@
 #include "voxel_dilater.hpp"
 #include <memory>
 #include <vector>
-#include <Eigen/Eigen>
+#include "Eigen/Eigen"
 
 namespace voxel_map
 {

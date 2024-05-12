@@ -1,0 +1,7 @@
+[0.015s] Invoking command in '/home/kiki/Workspace/drone_monitor/gcopter/build/gcopter': /usr/bin/cmake /home/kiki/Workspace/drone_monitor/gcopter -DCMAKE_INSTALL_PREFIX=/home/kiki/Workspace/drone_monitor/gcopter/install/gcopter
+[0.026s] [31mCMake Error at CMakeLists.txt:4:
+[0.026s]   Parse error.  Expected "(", got identifier with text "to".
+[0.026s] 
+[0.026s] [0m
+[0.026s] -- Configuring incomplete, errors occurred!
+[0.027s] Invoked command in '/home/kiki/Workspace/drone_monitor/gcopter/build/gcopter' returned '1': /usr/bin/cmake /home/kiki/Workspace/drone_monitor/gcopter -DCMAKE_INSTALL_PREFIX=/home/kiki/Workspace/drone_monitor/gcopter/install/gcopter

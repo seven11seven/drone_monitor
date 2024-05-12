@@ -1,0 +1,17 @@
+In file included from [01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/geo_utils.hpp:5[m[K,
+                 from [01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/sfc_gen.hpp:4[m[K,
+                 from [01m[K/home/kiki/Workspace/drone_monitor/gcopter/debug/bls.cpp:1[m[K:
+[01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/sdlp.hpp:[m[K In function ‘[01m[Kint sdlp::linfracprog(const double*, int, int, const double*, const double*, double*, double*, int*, int*) [with int d = 1][m[K’:
+[01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/sdlp.hpp:666:41:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmax_size[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  666 |                               [01;35m[Kconst int max_size[m[K,
+      |                               [01;35m[K~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/sdlp.hpp:671:39:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kwork[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  671 |                               [01;35m[Kdouble *work[m[K,
+      |                               [01;35m[K~~~~~~~~^~~~[m[K
+[01m[K/home/kiki/Workspace/drone_monitor/gcopter/debug/bls.cpp:[m[K In function ‘[01m[Kint main(int, const char**)[m[K’:
+[01m[K/home/kiki/Workspace/drone_monitor/gcopter/debug/bls.cpp:68:14:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargc[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   68 | int main([01;35m[Kint argc[m[K, char const *argv[])
+      |          [01;35m[K~~~~^~~~[m[K
+[01m[K/home/kiki/Workspace/drone_monitor/gcopter/debug/bls.cpp:68:32:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargv[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   68 | int main(int argc, [01;35m[Kchar const *argv[][m[K)
+      |                    [01;35m[K~~~~~~~~~~~~^~~~~~[m[K

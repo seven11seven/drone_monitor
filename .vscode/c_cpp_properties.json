@@ -4,8 +4,10 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/gcopter/include/gcopter",
-                "/usr/local/include/ompl-1.6/"
+                "${workspaceFolder}/gcopter/include",
+                "${workspaceFolder}/gcopter/include/gcopter/**",
+                "/usr/local/include/ompl-1.6/**",
+                "/opt/ros/humble/include/**"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

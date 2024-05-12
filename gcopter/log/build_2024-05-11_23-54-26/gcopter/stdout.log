@@ -1,0 +1,20 @@
+[35m[1mConsolidate compiler generated dependencies of target global_planning[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/global_planning.dir/src/global_planning.cpp.o[0m
+[100%] [32m[1mLinking CXX executable global_planning[0m
+[100%] Built target global_planning
+-- Install configuration: ""
+-- Installing: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/lib/gcopter/global_planning
+-- Set runtime path of "/home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/lib/gcopter/global_planning" to ""
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/ament_index/resource_index/package_run_dependencies/gcopter
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/ament_index/resource_index/parent_prefix_path/gcopter
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/gcopter/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/gcopter/environment/path.dsv
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/gcopter/local_setup.bash
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/gcopter/local_setup.sh
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/gcopter/local_setup.zsh
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/gcopter/local_setup.dsv
+-- Installing: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/gcopter/package.dsv
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/ament_index/resource_index/packages/gcopter
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/gcopter/cmake/gcopterConfig.cmake
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/gcopter/cmake/gcopterConfig-version.cmake
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/gcopter/package.xml

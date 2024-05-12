@@ -7,7 +7,6 @@
 #include "geo_utils.hpp"
 
 #include <Eigen/Eigen>
-
 #include <cmath>
 #include <cfloat>
 #include <iostream>
