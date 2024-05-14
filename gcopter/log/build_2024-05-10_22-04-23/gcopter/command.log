@@ -1,2 +1,0 @@
-Invoking command in '/home/kiki/Workspace/drone_monitor/gcopter/build/gcopter': /usr/bin/cmake /home/kiki/Workspace/drone_monitor/gcopter -DCMAKE_INSTALL_PREFIX=/home/kiki/Workspace/drone_monitor/gcopter/install/gcopter
-Invoked command in '/home/kiki/Workspace/drone_monitor/gcopter/build/gcopter' returned '1': /usr/bin/cmake /home/kiki/Workspace/drone_monitor/gcopter -DCMAKE_INSTALL_PREFIX=/home/kiki/Workspace/drone_monitor/gcopter/install/gcopter

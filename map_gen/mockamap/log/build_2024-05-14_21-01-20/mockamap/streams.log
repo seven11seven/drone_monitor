@@ -1,0 +1,32 @@
+[0.007s] Invoking command in '/home/kiki/Workspace/drone_monitor/map_gen/mockamap/build/mockamap': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/kiki/Workspace/drone_monitor/map_gen/mockamap/build/mockamap -- -j32 -l32
+[0.029s] [35m[1mConsolidate compiler generated dependencies of target mockamap_node[0m
+[0.043s] [ 33%] [32mBuilding CXX object CMakeFiles/mockamap_node.dir/src/mockamap.cpp.o[0m
+[2.243s] [01m[K/home/kiki/Workspace/drone_monitor/map_gen/mockamap/src/mockamap.cpp:[m[K In member function ‘[01m[Kvoid mocka::Maps::recursiveDivision(int, int, int, int, Eigen::MatrixXi&)[m[K’:
+[2.243s] [01m[K/home/kiki/Workspace/drone_monitor/map_gen/mockamap/src/mockamap.cpp:648:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kvalid[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[2.243s]   648 |       bool [01;35m[Kvalid[m[K     = false; // used to judge whether the wall selection is valid
+[2.243s]       |            [01;35m[K^~~~~[m[K
+[3.467s] [ 66%] [32m[1mLinking CXX executable mockamap_node[0m
+[3.622s] [100%] Built target mockamap_node
+[3.627s] Invoked command in '/home/kiki/Workspace/drone_monitor/map_gen/mockamap/build/mockamap' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/kiki/Workspace/drone_monitor/map_gen/mockamap/build/mockamap -- -j32 -l32
+[3.645s] Invoking command in '/home/kiki/Workspace/drone_monitor/map_gen/mockamap/build/mockamap': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/kiki/Workspace/drone_monitor/map_gen/mockamap/build/mockamap
+[3.648s] -- Install configuration: ""
+[3.648s] -- Installing: /home/kiki/Workspace/drone_monitor/map_gen/mockamap/install/mockamap/lib/mockamap/mockamap_node
+[3.649s] -- Set runtime path of "/home/kiki/Workspace/drone_monitor/map_gen/mockamap/install/mockamap/lib/mockamap/mockamap_node" to ""
+[3.649s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/map_gen/mockamap/install/mockamap/share/mockamap/launch
+[3.649s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/map_gen/mockamap/install/mockamap/share/mockamap/launch/mockamap.launch
+[3.649s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/map_gen/mockamap/install/mockamap/share/ament_index/resource_index/package_run_dependencies/mockamap
+[3.649s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/map_gen/mockamap/install/mockamap/share/ament_index/resource_index/parent_prefix_path/mockamap
+[3.649s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/map_gen/mockamap/install/mockamap/share/mockamap/environment/ament_prefix_path.sh
+[3.649s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/map_gen/mockamap/install/mockamap/share/mockamap/environment/ament_prefix_path.dsv
+[3.649s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/map_gen/mockamap/install/mockamap/share/mockamap/environment/path.sh
+[3.649s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/map_gen/mockamap/install/mockamap/share/mockamap/environment/path.dsv
+[3.649s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/map_gen/mockamap/install/mockamap/share/mockamap/local_setup.bash
+[3.649s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/map_gen/mockamap/install/mockamap/share/mockamap/local_setup.sh
+[3.650s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/map_gen/mockamap/install/mockamap/share/mockamap/local_setup.zsh
+[3.650s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/map_gen/mockamap/install/mockamap/share/mockamap/local_setup.dsv
+[3.650s] -- Installing: /home/kiki/Workspace/drone_monitor/map_gen/mockamap/install/mockamap/share/mockamap/package.dsv
+[3.650s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/map_gen/mockamap/install/mockamap/share/ament_index/resource_index/packages/mockamap
+[3.650s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/map_gen/mockamap/install/mockamap/share/mockamap/cmake/mockamapConfig.cmake
+[3.650s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/map_gen/mockamap/install/mockamap/share/mockamap/cmake/mockamapConfig-version.cmake
+[3.650s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/map_gen/mockamap/install/mockamap/share/mockamap/package.xml
+[3.651s] Invoked command in '/home/kiki/Workspace/drone_monitor/map_gen/mockamap/build/mockamap' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/kiki/Workspace/drone_monitor/map_gen/mockamap/build/mockamap

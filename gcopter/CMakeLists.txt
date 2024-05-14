@@ -21,8 +21,8 @@ find_package(ompl REQUIRED)
 
 include_directories(
     include
-    /usr/local/include/ompl-1.6
-    /opt/ros/humble/include
+    # /usr/local/include/ompl-1.6
+    # /opt/ros/humble/include
 )
 
 add_executable(global_planning src/global_planning.cpp)
@@ -38,6 +38,11 @@ ament_target_dependencies(global_planning
 install(TARGETS
   global_planning
   DESTINATION lib/${PROJECT_NAME})
+
+install(DIRECTORY
+    launch
+    DESTINATION share/${PROJECT_NAME}/
+)
 
 # add_executable(bls debug/bls.cpp)
 # ament_target_dependencies(bls 

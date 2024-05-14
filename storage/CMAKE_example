@@ -1,0 +1,64 @@
+cmake_minimum_required(VERSION 3.8)
+project(gcopter)
+
+#####################################
+## Set g++ and complier parameters ##
+#####################################
+# Default to C++14
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 14)
+endif()
+
+if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+  add_compile_options(-Wall -Wextra -Wpedantic)
+endif()
+
+####################################
+## Examples to make a package     ##
+####################################
+## cmake tools, e.g. ament_cmake
+find_package(ament_cmake REQUIRED)
+## External library
+## CMAKE will search for the header file and related cmake file
+find_package(rclcpp REQUIRED)
+find_package(std_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(visualization_msgs REQUIRED)
+find_package(Eigen3 REQUIRED)
+find_package(ompl REQUIRED)
+## Add local library locations in current package
+include_directories(
+    include
+)
+## Compile cpp files
+## Remember tell CMAKE the link to external library
+add_executable(global_planning src/global_planning.cpp)
+ament_target_dependencies(global_planning 
+    rclcpp 
+    std_msgs
+    geometry_msgs
+    sensor_msgs
+    visualization_msgs
+    OMPL
+    ament_cmake
+)
+## Install your project
+## Add the executable files to target directory in compiled project
+install(TARGETS
+  global_planning
+  DESTINATION lib/${PROJECT_NAME})
+
+#############################################
+## Add launch file to the compiled project ##
+#############################################
+install(DIRECTORY
+    launch
+    DESTINATION share/${PROJECT_NAME}/
+)
+
+######################################
+## TODO: Examples to make a library ##
+######################################
+
+ament_package()

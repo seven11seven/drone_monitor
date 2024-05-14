@@ -1,10 +1,8 @@
-1. Eigen is a C++ template library for linear algebra: matrices, vectors, numerical solvers, and related algorithms.
+g++ -std=c++14 gcopter.hpp -I ./ -I /usr/local/include/ompl-1.6/ -o flatness
 
-2. inline is used to make fast usage of small and frequently called functions during compling
+TODO
 
-3. the usage of template function
+ - 1. refine the map_gen package using ROS2; 
 
-4. try to reuse the codes from established projects to save time
-
-g++ -std=c++14 -I ./ gcopter.hpp -I /usr/local/include/ompl-1.6/ -o flatness
-
+2. link the two nodes and visualization;
+3. implement the project in docker (two dockers, one for each);

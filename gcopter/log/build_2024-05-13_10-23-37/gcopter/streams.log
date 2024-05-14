@@ -1,0 +1,22 @@
+[0.007s] Invoking command in '/home/kiki/Workspace/drone_monitor/gcopter/build/gcopter': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/kiki/Workspace/drone_monitor/gcopter/build/gcopter -- -j32 -l32
+[0.033s] [100%] Built target global_planning
+[0.038s] Invoked command in '/home/kiki/Workspace/drone_monitor/gcopter/build/gcopter' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/kiki/Workspace/drone_monitor/gcopter/build/gcopter -- -j32 -l32
+[0.052s] Invoking command in '/home/kiki/Workspace/drone_monitor/gcopter/build/gcopter': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/kiki/Workspace/drone_monitor/gcopter/build/gcopter
+[0.055s] -- Install configuration: ""
+[0.055s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/lib/gcopter/global_planning
+[0.055s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/gcopter//launch
+[0.055s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/gcopter//launch/global_planning.launch
+[0.055s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/ament_index/resource_index/package_run_dependencies/gcopter
+[0.055s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/ament_index/resource_index/parent_prefix_path/gcopter
+[0.055s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/gcopter/environment/ament_prefix_path.dsv
+[0.055s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/gcopter/environment/path.dsv
+[0.055s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/gcopter/local_setup.bash
+[0.055s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/gcopter/local_setup.sh
+[0.055s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/gcopter/local_setup.zsh
+[0.055s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/gcopter/local_setup.dsv
+[0.055s] -- Installing: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/gcopter/package.dsv
+[0.055s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/ament_index/resource_index/packages/gcopter
+[0.055s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/gcopter/cmake/gcopterConfig.cmake
+[0.055s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/gcopter/cmake/gcopterConfig-version.cmake
+[0.055s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/gcopter/install/gcopter/share/gcopter/package.xml
+[0.057s] Invoked command in '/home/kiki/Workspace/drone_monitor/gcopter/build/gcopter' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/kiki/Workspace/drone_monitor/gcopter/build/gcopter
