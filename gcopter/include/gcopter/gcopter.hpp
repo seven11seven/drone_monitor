@@ -449,6 +449,9 @@ namespace gcopter
                                             const Eigen::VectorXd &x,
                                             Eigen::VectorXd &g)
         {
+            // The key function in this project
+            // not only return cost,
+            // but the gradient,
             GCOPTER_PolytopeSFC &obj = *(GCOPTER_PolytopeSFC *)ptr;
             const int dimTau = obj.temporalDim;
             const int dimXi = obj.spatialDim;
@@ -800,11 +803,15 @@ namespace gcopter
             lbfgs_params.g_epsilon = 0.0;
             lbfgs_params.delta = relCostTol;
 
+            // Eigen::VectorXd, double
+            // funcHandler, proc_stepbound funcHandler, proc_progress funcHandler
+            // the GCOPTER_PolytopeSFC class instance
+            // lbfgs_params
             int ret = lbfgs::lbfgs_optimize(x,
                                             minCostFunctional,
                                             &GCOPTER_PolytopeSFC::costFunctional,
                                             nullptr,
-                                            nullptr,
+                                            nullptr, 
                                             this,
                                             lbfgs_params);
 

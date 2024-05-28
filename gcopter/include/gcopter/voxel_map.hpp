@@ -31,14 +31,18 @@ namespace voxel_map
               voxels(voxNum, Unoccupied) {}
 
     private:
+        // mapSize the width, length, and height
         Eigen::Vector3i mapSize;
         Eigen::Vector3d o;
         double scale;
         int voxNum;
+        // 1, width, width*length
         Eigen::Vector3i step;
         Eigen::Vector3d oc;
         Eigen::Vector3i bounds;
         Eigen::Vector3d stepScale;
+        // voxels : size equals to number of voxels
+        // surf   : 
         std::vector<uint8_t> voxels;
         std::vector<Eigen::Vector3i> surf;
     
@@ -100,14 +104,18 @@ namespace voxel_map
                 cvec.reserve(voxNum);
                 int i, j, k, idx;
                 bool check;
+                // apply some kind of dilation operation to the specified voxel 
+                // based on its coordinates and other parameters.
                 for (int x = 0; x <= bounds(0); x++)
                 {
                     for (int y = 0; y <= bounds(1); y += step(1))
                     {
                         for (int z = 0; z <= bounds(2); z += step(2))
-                        {
+                        {   
+                            // retrieve all the voxels
                             if (voxels[x + y + z] == Occupied)
-                            {
+                            {   
+                                // expanding the occupied voxels based on certain criteria.
                                 VOXEL_DILATER(i, j, k,
                                               x, y, z,
                                               step(1), step(2),
@@ -119,7 +127,9 @@ namespace voxel_map
                 }
 
                 for (int loop = 1; loop < r; loop++)
-                {
+                {   
+                    // swap the value of cvec and lvec
+                    // std::vector<Eigen::Vector3i> : cvec, lvec 
                     std::swap(cvec, lvec);
                     for (const Eigen::Vector3i &id : lvec)
                     {
@@ -132,6 +142,8 @@ namespace voxel_map
                     lvec.clear();
                 }
 
+                // updates the `surf` variable with the contents of the `cvec` vector, 
+                // which presumably represents the final dilated surface.
                 surf = cvec;
             }
         }
@@ -154,7 +166,12 @@ namespace voxel_map
         }
 
         inline void getSurf(std::vector<Eigen::Vector3d> &points) const
-        {
+        {   
+            // Seems this function convert the inner "surf" to another represention 
+            // reserve: allocate memory for at least `n` elements upfront, which can be useful 
+            // when you know in advance the approximate number of elements the vector will hold.
+            // surf is of type std::vector<Eigen::Vector3i>
+            // stepScale if of type std::vector<Eigen::Vector3d>
             points.reserve(surf.size());
             for (const Eigen::Vector3i &id : surf)
             {

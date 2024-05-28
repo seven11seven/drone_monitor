@@ -1,0 +1,24 @@
+[35m[1mConsolidate compiler generated dependencies of target global_planning[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/global_planning.dir/src/global_planning.cpp.o[0m
+[100%] [32m[1mLinking CXX executable global_planning[0m
+[100%] Built target global_planning
+-- Install configuration: ""
+-- Installing: /home/kiki/Workspace/drone_monitor/install/gcopter/lib/gcopter/global_planning
+-- Set runtime path of "/home/kiki/Workspace/drone_monitor/install/gcopter/lib/gcopter/global_planning" to ""
+-- Installing: /home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter//launch
+-- Installing: /home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter//launch/global_planning.launch
+-- Installing: /home/kiki/Workspace/drone_monitor/install/gcopter/share/ament_index/resource_index/package_run_dependencies/gcopter
+-- Installing: /home/kiki/Workspace/drone_monitor/install/gcopter/share/ament_index/resource_index/parent_prefix_path/gcopter
+-- Installing: /home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/environment/ament_prefix_path.sh
+-- Installing: /home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/environment/ament_prefix_path.dsv
+-- Installing: /home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/environment/path.sh
+-- Installing: /home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/environment/path.dsv
+-- Installing: /home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/local_setup.bash
+-- Installing: /home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/local_setup.sh
+-- Installing: /home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/local_setup.zsh
+-- Installing: /home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/local_setup.dsv
+-- Installing: /home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/package.dsv
+-- Installing: /home/kiki/Workspace/drone_monitor/install/gcopter/share/ament_index/resource_index/packages/gcopter
+-- Installing: /home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/cmake/gcopterConfig.cmake
+-- Installing: /home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/cmake/gcopterConfig-version.cmake
+-- Installing: /home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/package.xml

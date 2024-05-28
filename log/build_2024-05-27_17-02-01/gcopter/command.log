@@ -1,0 +1,4 @@
+Invoking command in '/home/kiki/Workspace/drone_monitor/build/gcopter': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/kiki/Workspace/drone_monitor/gcopter -DCMAKE_INSTALL_PREFIX=/home/kiki/Workspace/drone_monitor/install/gcopter
+Invoked command in '/home/kiki/Workspace/drone_monitor/build/gcopter' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/kiki/Workspace/drone_monitor/gcopter -DCMAKE_INSTALL_PREFIX=/home/kiki/Workspace/drone_monitor/install/gcopter
+Invoking command in '/home/kiki/Workspace/drone_monitor/build/gcopter': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/kiki/Workspace/drone_monitor/build/gcopter -- -j32 -l32
+Invoked command in '/home/kiki/Workspace/drone_monitor/build/gcopter' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/kiki/Workspace/drone_monitor/build/gcopter -- -j32 -l32

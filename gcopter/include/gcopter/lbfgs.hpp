@@ -107,6 +107,7 @@ namespace lbfgs
     struct callback_data_t
     {
         void *instance = nullptr;
+        // proc_evaluate return the cost and the gradient
         lbfgs_evaluate_t proc_evaluate = nullptr;
         lbfgs_stepbound_t proc_stepbound = nullptr;
         lbfgs_progress_t proc_progress = nullptr;
@@ -314,6 +315,10 @@ namespace lbfgs
         cd.proc_progress = proc_progress;
 
         /* Evaluate the function value and its gradient. */
+        // x: current state
+        // g: gradient at current state
+        // instance: the GCOPTER_PolytopeSFC
+        // proc_evaluate is the cost function in instance
         fx = cd.proc_evaluate(cd.instance, x, g);
 
         /* Store the initial value of the cost function. */

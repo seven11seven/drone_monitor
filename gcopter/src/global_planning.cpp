@@ -103,18 +103,29 @@ public:
         targetSub = this->create_subscription<geometry_msgs::msg::PoseStamped>(targetTopic,
                                                                                rclcpp::QoS(1).best_effort(),
                                                                                std::bind(&GlobalPlanner::targetCallBack, this, std::placeholders::_1));
+        
+        // test: visualize the module 
+        
+        // visualizer.visualizeMoudle(goal, 0.5, startGoal.size(), this->spherePub);
 
     }
 
     inline void mapCallBack(const sensor_msgs::msg::PointCloud2::SharedPtr msg)
-    {
+    {   
+        // Convert the PC2 msg to the voxelMap
+        // initialize the voxel map if not
         if (!mapInitialized)
         {
             size_t cur = 0;
+            // The `point_step` field in `sensor_msgs::msg::PointCloud2` 
+            // represents the size, in bytes, of an individual point in the point cloud data.
+            // size_t is the number of points in the PCL msg
             const size_t total = msg->data.size() / msg->point_step;
+            // fdata is the sequence of float number whose address pointing to the data's address
             float *fdata = (float *)(&msg->data[0]);
             for (size_t i = 0; i < total; i++)
-            {
+            {   
+                // set the points to voxelMap
                 cur = msg->point_step / sizeof(float) * i;
 
                 if (std::isnan(fdata[cur + 0]) || std::isinf(fdata[cur + 0]) ||
@@ -127,11 +138,18 @@ public:
                                                      fdata[cur + 1],
                                                      fdata[cur + 2]));
             }
-
+            // dilateRadius is a predifined paramter
+            // voxel Scale is const and defined through vocelWidth 
+            // dilate the voxel in the point cloud
+            // surf is generated at this step
             voxelMap.dilate(std::ceil(dilateRadius / voxelMap.getScale()));
 
             mapInitialized = true;
         }
+
+        //! @todo visualize the module
+
+
     }
 
     inline void plan()
@@ -139,18 +157,28 @@ public:
         if (startGoal.size() == 2)
         {
             std::vector<Eigen::Vector3d> route;
-            
+
+            // return the planned path points in vector 3D format
+            // planner: RRTstar
             sfc_gen::planPath<voxel_map::VoxelMap>(startGoal[0],
                                                    startGoal[1],
                                                    voxelMap.getOrigin(),
                                                    voxelMap.getCorner(),
                                                    &voxelMap, 0.01,
                                                    route);
-
+            // X: the dynamic size of the matrix (rows/columns)
+            // d: double type
+            // X,4: dynamic-size matrix with 4 rows and a number of columns that can vary at runtime
+            // pc is the surface of the convex hull in the voxel map and converted 
+            // to the real vector space before called
             std::vector<Eigen::MatrixX4d> hPolys;
             std::vector<Eigen::Vector3d> pc;
             voxelMap.getSurf(pc);
+            // route is the original feasible path now
 
+            // serach for / generate the convered convex hulls in the path
+            // Each row of hPoly is defined by h0, h1, h2, h3 as
+            // h0*x + h1*y + h2*z + h3 <= 0
             sfc_gen::convexCover(route,
                                  pc,
                                  voxelMap.getOrigin(),
@@ -158,12 +186,15 @@ public:
                                  7.0,
                                  3.0,
                                  hPolys);
+            // short cut uneccessary convex hulls
+            // the final convex hulls are generated. in the type of std::vector<Eigen::MatrixX4d>
             sfc_gen::shortCut(hPolys);
 
             if (route.size() > 1)
             {
                 visualizer.visualizePolytope(hPolys, this->meshPub, this->edgePub);
 
+                // state here includes pos, vel, and acc
                 Eigen::Matrix3d iniState;
                 Eigen::Matrix3d finState;
                 iniState << route.front(), Eigen::Vector3d::Zero(), Eigen::Vector3d::Zero();
@@ -194,7 +225,7 @@ public:
                 const int quadratureRes = integralIntervs;
 
                 traj.clear();
-
+                // setup() and optimize()
                 if (!gcopter.setup(weightT,
                                    iniState, finState,
                                    hPolys, INFINITY,
@@ -214,6 +245,7 @@ public:
 
                 if (traj.getPieceNum() > 0)
                 {
+                    // get the trajectory generation time
                     trajStamp = rclcpp::Clock().now().seconds();
                     visualizer.visualize(traj, route, this->routePub, this->wayPointsPub, this->trajectoryPub);
                 }

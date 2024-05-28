@@ -1,0 +1,36 @@
+[0.005s] Invoking command in '/home/kiki/Workspace/drone_monitor/build/simulation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/kiki/Workspace/drone_monitor/build/simulation -- -j32 -l32
+[0.025s] [35m[1mConsolidate compiler generated dependencies of target simulation_node[0m
+[0.035s] [ 50%] [32mBuilding CXX object CMakeFiles/simulation_node.dir/src/fake_module.cpp.o[0m
+[0.794s] In file included from [01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/geo_utils.hpp:5[m[K,
+[0.794s]                  from [01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/misc/visualizer.hpp:6[m[K,
+[0.794s]                  from [01m[K/home/kiki/Workspace/drone_monitor/simulation/src/fake_module.cpp:1[m[K:
+[0.794s] [01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/sdlp.hpp:[m[K In function ‘[01m[Kint sdlp::linfracprog(const double*, int, int, const double*, const double*, double*, double*, int*, int*) [with int d = 1][m[K’:
+[0.794s] [01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/sdlp.hpp:666:41:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmax_size[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[0.794s]   666 |                               [01;35m[Kconst int max_size[m[K,
+[0.794s]       |                               [01;35m[K~~~~~~~~~~^~~~~~~~[m[K
+[0.794s] [01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/sdlp.hpp:671:39:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kwork[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[0.795s]   671 |                               [01;35m[Kdouble *work[m[K,
+[0.795s]       |                               [01;35m[K~~~~~~~~^~~~[m[K
+[11.180s] [100%] [32m[1mLinking CXX executable simulation_node[0m
+[11.317s] [100%] Built target simulation_node
+[11.323s] Invoked command in '/home/kiki/Workspace/drone_monitor/build/simulation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/kiki/Workspace/drone_monitor/build/simulation -- -j32 -l32
+[11.337s] Invoking command in '/home/kiki/Workspace/drone_monitor/build/simulation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/kiki/Workspace/drone_monitor/build/simulation
+[11.340s] -- Install configuration: ""
+[11.340s] -- Installing: /home/kiki/Workspace/drone_monitor/install/simulation/lib/simulation/simulation_node
+[11.341s] -- Set runtime path of "/home/kiki/Workspace/drone_monitor/install/simulation/lib/simulation/simulation_node" to ""
+[11.341s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/ament_index/resource_index/package_run_dependencies/simulation
+[11.341s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/ament_index/resource_index/parent_prefix_path/simulation
+[11.341s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/environment/ament_prefix_path.sh
+[11.341s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/environment/ament_prefix_path.dsv
+[11.341s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/environment/path.sh
+[11.341s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/environment/path.dsv
+[11.341s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/local_setup.bash
+[11.341s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/local_setup.sh
+[11.341s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/local_setup.zsh
+[11.341s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/local_setup.dsv
+[11.341s] -- Installing: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/package.dsv
+[11.341s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/ament_index/resource_index/packages/simulation
+[11.341s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/cmake/simulationConfig.cmake
+[11.341s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/cmake/simulationConfig-version.cmake
+[11.341s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/package.xml
+[11.343s] Invoked command in '/home/kiki/Workspace/drone_monitor/build/simulation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/kiki/Workspace/drone_monitor/build/simulation

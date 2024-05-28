@@ -1,0 +1,17 @@
+/home/kiki/Workspace/drone_monitor/install/mockamap/lib/mockamap/mockamap_node
+/home/kiki/Workspace/drone_monitor/install/mockamap/share/mockamap/launch/mockamap.launch
+/home/kiki/Workspace/drone_monitor/install/mockamap/share/ament_index/resource_index/package_run_dependencies/mockamap
+/home/kiki/Workspace/drone_monitor/install/mockamap/share/ament_index/resource_index/parent_prefix_path/mockamap
+/home/kiki/Workspace/drone_monitor/install/mockamap/share/mockamap/environment/ament_prefix_path.sh
+/home/kiki/Workspace/drone_monitor/install/mockamap/share/mockamap/environment/ament_prefix_path.dsv
+/home/kiki/Workspace/drone_monitor/install/mockamap/share/mockamap/environment/path.sh
+/home/kiki/Workspace/drone_monitor/install/mockamap/share/mockamap/environment/path.dsv
+/home/kiki/Workspace/drone_monitor/install/mockamap/share/mockamap/local_setup.bash
+/home/kiki/Workspace/drone_monitor/install/mockamap/share/mockamap/local_setup.sh
+/home/kiki/Workspace/drone_monitor/install/mockamap/share/mockamap/local_setup.zsh
+/home/kiki/Workspace/drone_monitor/install/mockamap/share/mockamap/local_setup.dsv
+/home/kiki/Workspace/drone_monitor/install/mockamap/share/mockamap/package.dsv
+/home/kiki/Workspace/drone_monitor/install/mockamap/share/ament_index/resource_index/packages/mockamap
+/home/kiki/Workspace/drone_monitor/install/mockamap/share/mockamap/cmake/mockamapConfig.cmake
+/home/kiki/Workspace/drone_monitor/install/mockamap/share/mockamap/cmake/mockamapConfig-version.cmake
+/home/kiki/Workspace/drone_monitor/install/mockamap/share/mockamap/package.xml

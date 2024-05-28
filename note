@@ -1,8 +1,57 @@
-g++ -std=c++14 gcopter.hpp -I ./ -I /usr/local/include/ompl-1.6/ -o flatness
+>>> Knowledge >>>
+1. dynamic pointer, assertation, memory distribution
+2. dynmaic variable, the size of the variable can not be decided before it is running
+<<< Knowledge <<<
 
-TODO
+>>> Start Memo >>> 
+0. General CMD
+    ros2 pkg create --build-type ament_cmake --license Apache-2.0 --node-name forest_sensing map_sensing
+    g++ -std=c++14 gcopter.hpp -I ./ -I /usr/local/include/ompl-1.6/ -o flatness
 
- - 1. refine the map_gen package using ROS2; 
+1. Start the program:
+    colcon build --packages-select xxx
+    source ./gcopter/install/setup.bash
+    source ./map_gen/mockamap/install/setup.bash
+    ros2 launch /path/to/your/launch_file.launch
 
-2. link the two nodes and visualization;
-3. implement the project in docker (two dockers, one for each);
+2. Set the Rviz paramters:
+    frame: odom
+    2D Nav Goal: /move_base_simple/goal
+
+3. Set the rqt_gui parameters
+    plugins visualize topic
+
+4. Some project information
+    the range of mockamap (-25, 25) * (-25, 25) * (0, 10)
+<<< Start Memo <<< 
+
+>>> TODO >>>
+0. Let the module fly;
+
+1. know the voxelMap definition ====
+2. know the convex hull generation ====
+3. know the objective function and related optimization ====
+4. visualize the point cloud surface / visulize the convex hulls ====
+5. visualize the module surfaces  ====
+6. generate cylinder obstacles and visualize in RViz2 ==== (try the Rviz plugins)
+7. remap the cost function class of the crane-module trajectory planning
+9. MILESTONE: automatic trajectory planning in the simplest assumption
+
+10. evaluate the proposed differential flatness of the crane-module system
+11. reconsidering the optimization methods based on MIO
+12. the trajectory planning algorithm considering the dynamics
+13. MILESTONE:realize the optimization process based on MINCO
+
+gcopter in the costFunctional 
+<<< TODO <<<
+
+>>> Principle >>>
+1. do not modify the methods, variables, create new methods or reuse them instead
+2. add detail notations when decoding the project. The logic, parameters, inputs and outputs, mathmactics, etc.
+3. 
+<<< Principle <<<
+
+>>> Other Issues TODAY >>>
+1. design the smart hook
+2. test the NUC power supply
+<<< Other Issues TODAY <<<

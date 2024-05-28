@@ -9,7 +9,9 @@
                 "/usr/local/include/ompl-1.6/**",
                 "/opt/ros/humble/include/**",
                 "/usr/include/pcl-1.12",
-                "/opt/ros/humble/include/sensor_msgs"
+                "/opt/ros/humble/include/sensor_msgs",
+                "/opt/ros/humble/include/rclcpp",
+                "/opt/ros/humble/include/nav_msgs"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

@@ -1,0 +1,10 @@
+/home/kiki/Workspace/drone_monitor/build/gcopter/CMakeFiles/uninstall.dir
+/home/kiki/Workspace/drone_monitor/build/gcopter/CMakeFiles/gcopter_uninstall.dir
+/home/kiki/Workspace/drone_monitor/build/gcopter/CMakeFiles/global_planning.dir
+/home/kiki/Workspace/drone_monitor/build/gcopter/CMakeFiles/test.dir
+/home/kiki/Workspace/drone_monitor/build/gcopter/CMakeFiles/edit_cache.dir
+/home/kiki/Workspace/drone_monitor/build/gcopter/CMakeFiles/rebuild_cache.dir
+/home/kiki/Workspace/drone_monitor/build/gcopter/CMakeFiles/list_install_components.dir
+/home/kiki/Workspace/drone_monitor/build/gcopter/CMakeFiles/install.dir
+/home/kiki/Workspace/drone_monitor/build/gcopter/CMakeFiles/install/local.dir
+/home/kiki/Workspace/drone_monitor/build/gcopter/CMakeFiles/install/strip.dir

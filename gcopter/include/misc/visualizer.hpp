@@ -132,6 +132,57 @@ public:
         }
     }
 
+    // std::vector<Eigen::Vector3d> pc;
+    // visualize polytopes in V-representation
+    inline void visualizeMoudle(const std::vector<Eigen::Vector3d> &vPoly,
+                                const rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr & edgePub)
+    {
+        
+        // module is a kind of polytope
+        // RVIZ support tris for visualization
+        visualization_msgs::msg::Marker edgeMarker;
+
+        // initialize the msg type and other parameters
+        edgeMarker.id = 0;
+        edgeMarker.header.stamp = rclcpp::Clock().now();
+        edgeMarker.header.frame_id = "odom";
+        edgeMarker.pose.orientation.w = 1.00;
+        edgeMarker.action = visualization_msgs::msg::Marker::ADD;
+        edgeMarker.type = visualization_msgs::msg::Marker::LINE_LIST;
+        edgeMarker.ns = "edge";
+        edgeMarker.color.r = 0.00;
+        edgeMarker.color.g = 1.00;
+        edgeMarker.color.b = 1.00;
+        edgeMarker.color.a = 1.00;
+        edgeMarker.scale.x = 0.02; // line width
+
+        geometry_msgs::msg::Point point;
+
+        std::vector<std::pair<int, int>> box_edges = 
+        {
+            {0, 1}, {1, 2}, {2, 3}, {3, 0},
+            {4, 5}, {5, 6}, {6, 7}, {7, 4},
+            {0, 4}, {1, 5}, {2, 6}, {3, 7}
+        };
+
+        for (std::pair<int, int> edge : box_edges)
+        {
+            point.x = vPoly[edge.first](0);
+            point.y = vPoly[edge.first](1);
+            point.z = vPoly[edge.first](2);
+            edgeMarker.points.push_back(point);
+            point.x = vPoly[edge.second](0);
+            point.y = vPoly[edge.second](1);
+            point.z = vPoly[edge.second](2);
+            edgeMarker.points.push_back(point);
+        }
+
+        edgePub->publish(edgeMarker);
+        
+        return;
+    }
+
+    
     // Visualize some polytopes in H-representation
     inline void visualizePolytope(const std::vector<Eigen::MatrixX4d> &hPolys,
                                   const rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr & meshPub,
@@ -140,10 +191,17 @@ public:
         // Due to the fact that H-representation cannot be directly visualized
         // We first conduct vertex enumeration of them, then apply quickhull
         // to obtain triangle meshs of polyhedra
+
+        // initializing these matrices with 3 rows and 0 columns. 
+        // This means that initially, these matrices are empty as they do not contain any columns (i.e., no data). 
+        // The number of columns in these matrices can be increased later during 
+        // runtime as needed based on the data you want to store in them.
         Eigen::Matrix3Xd mesh(3, 0), curTris(3, 0), oldTris(3, 0);
         for (size_t id=0; id<hPolys.size(); id++)
         {
             oldTris = mesh;
+            // an Eigen matrix with a fixed number of rows (3) and a dynamic number of columns
+            // colMajor: the matrix should be stored in column-major order in memory
             Eigen::Matrix<double, 3, -1, Eigen::ColMajor> vPoly;
             geo_utils::enumerateVs(hPolys[id], vPoly);
 
@@ -157,6 +215,7 @@ public:
             {
                 curTris.col(i) = vPoly.col(idxBuffer[i]);
             }
+
             mesh.resize(3, oldTris.cols() + curTris.cols());
             mesh.leftCols(oldTris.cols()) = oldTris;
             mesh.rightCols(curTris.cols()) = curTris;
@@ -190,7 +249,8 @@ public:
         edgeMarker.scale.x = 0.02;
 
         geometry_msgs::msg::Point point;
-
+        
+        // access the number of columns in the `mesh` matrix. 
         int ptnum = mesh.cols();
 
         for (int i=0; i<ptnum; i++)

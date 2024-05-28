@@ -1,0 +1,126 @@
+[0.004s] Invoking command in '/home/kiki/Workspace/drone_monitor/build/simulation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/kiki/Workspace/drone_monitor/simulation -DCMAKE_INSTALL_PREFIX=/home/kiki/Workspace/drone_monitor/install/simulation
+[0.028s] -- The C compiler identification is GNU 11.4.0
+[0.053s] -- The CXX compiler identification is GNU 11.4.0
+[0.056s] -- Detecting C compiler ABI info
+[0.087s] -- Detecting C compiler ABI info - done
+[0.091s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.091s] -- Detecting C compile features
+[0.091s] -- Detecting C compile features - done
+[0.092s] -- Detecting CXX compiler ABI info
+[0.126s] -- Detecting CXX compiler ABI info - done
+[0.130s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.130s] -- Detecting CXX compile features
+[0.130s] -- Detecting CXX compile features - done
+[0.131s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.196s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.231s] -- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)
+[0.249s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.251s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.254s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.260s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.268s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.297s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.298s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.340s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.352s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.374s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.378s] -- Looking for pthread.h
+[0.410s] -- Looking for pthread.h - found
+[0.410s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.441s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.442s] -- Found Threads: TRUE  
+[0.511s] -- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.531s] -- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.573s] -- Checking for module 'eigen3'
+[0.579s] --   Found eigen3, version 3.4.0
+[0.592s] -- Found Eigen: /usr/include/eigen3 (Required is at least version "3.1") 
+[0.592s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[0.600s] -- Found Boost: /usr/local/lib/cmake/Boost-1.82.0/BoostConfig.cmake (found suitable version "1.82.0", minimum required is "1.65.0") found components: system filesystem date_time iostreams serialization 
+[0.624s] -- Checking for module 'libusb-1.0'
+[0.629s] --   Found libusb-1.0, version 1.0.25
+[0.642s] -- Found libusb: /usr/lib/x86_64-linux-gnu/libusb-1.0.so  
+[0.643s] -- Found OpenNI: /usr/lib/libOpenNI.so;libusb::libusb (found version "1.5.4.0") 
+[0.643s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[0.663s] -- Found OpenNI2: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb (found version "2.2.0.33") 
+[0.663s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[0.663s] [0m** WARNING ** io features related to pcap will be disabled[0m
+[0.663s] [0m** WARNING ** io features related to png will be disabled[0m
+[0.680s] -- Found GLEW: /usr/lib/x86_64-linux-gnu/libGLEW.so  
+[0.683s] -- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so  found components: OpenGL GLX 
+[0.749s] -- Found MPI_C: /usr/lib/x86_64-linux-gnu/libmpi.so (found version "3.1") 
+[0.749s] -- Found MPI: TRUE (found version "3.1") found components: C 
+[0.750s] -- Found JsonCpp: /usr/lib/x86_64-linux-gnu/libjsoncpp.so (found suitable version "1.9.5", minimum required is "0.7.0") 
+[0.754s] -- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.2.11") 
+[0.762s] -- Found PNG: /usr/lib/x86_64-linux-gnu/libpng.so (found version "1.6.37") 
+[0.767s] -- Found Eigen3: /usr/include/eigen3 (found version "3.4.0") 
+[0.801s] -- Found X11: /usr/include   
+[0.801s] -- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so
+[0.834s] -- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so - found
+[0.834s] -- Looking for gethostbyname
+[0.865s] -- Looking for gethostbyname - found
+[0.865s] -- Looking for connect
+[0.896s] -- Looking for connect - found
+[0.896s] -- Looking for remove
+[0.927s] -- Looking for remove - found
+[0.927s] -- Looking for shmat
+[0.958s] -- Looking for shmat - found
+[0.958s] -- Looking for IceConnectionNumber in ICE
+[0.992s] -- Looking for IceConnectionNumber in ICE - found
+[1.025s] -- Found EXPAT: /usr/lib/x86_64-linux-gnu/libexpat.so (found version "2.4.7") 
+[1.026s] -- Found double-conversion: /usr/lib/x86_64-linux-gnu/libdouble-conversion.so  
+[1.027s] -- Found LZ4: /usr/lib/x86_64-linux-gnu/liblz4.so (found version "1.9.3") 
+[1.028s] -- Found LZMA: /usr/lib/x86_64-linux-gnu/liblzma.so (found version "5.2.5") 
+[1.034s] -- Found JPEG: /usr/lib/x86_64-linux-gnu/libjpeg.so (found version "80") 
+[1.036s] -- Found TIFF: /usr/lib/x86_64-linux-gnu/libtiff.so (found version "4.3.0")  
+[1.038s] -- Found Freetype: /usr/lib/x86_64-linux-gnu/libfreetype.so (found version "2.11.1") 
+[1.040s] -- Found utf8cpp: /usr/include/utf8cpp  
+[1.055s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[1.055s] -- looking for PCL_COMMON
+[1.055s] -- Found PCL_COMMON: /usr/lib/x86_64-linux-gnu/libpcl_common.so  
+[1.055s] -- looking for PCL_OCTREE
+[1.056s] -- Found PCL_OCTREE: /usr/lib/x86_64-linux-gnu/libpcl_octree.so  
+[1.056s] -- looking for PCL_IO
+[1.056s] -- Found PCL_IO: /usr/lib/x86_64-linux-gnu/libpcl_io.so  
+[1.056s] -- Found PCL: pcl_common;pcl_octree;pcl_io;Boost::system;Boost::filesystem;Boost::date_time;Boost::iostreams;Boost::serialization;/usr/lib/libOpenNI.so;libusb::libusb;/usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb;VTK::ChartsCore;VTK::CommonColor;VTK::CommonComputationalGeometry;VTK::CommonCore;VTK::CommonDataModel;VTK::CommonExecutionModel;VTK::CommonMath;VTK::CommonMisc;VTK::CommonTransforms;VTK::FiltersCore;VTK::FiltersExtraction;VTK::FiltersGeneral;VTK::FiltersGeometry;VTK::FiltersModeling;VTK::FiltersSources;VTK::ImagingCore;VTK::ImagingSources;VTK::InteractionImage;VTK::InteractionStyle;VTK::InteractionWidgets;VTK::IOCore;VTK::IOGeometry;VTK::IOImage;VTK::IOLegacy;VTK::IOPLY;VTK::RenderingAnnotation;VTK::RenderingCore;VTK::RenderingContext2D;VTK::RenderingLOD;VTK::RenderingFreeType;VTK::ViewsCore;VTK::ViewsContext2D;VTK::RenderingOpenGL2;VTK::GUISupportQt  
+[1.057s] -- Found pcl_conversions: 2.4.0 (/opt/ros/humble/share/pcl_conversions/cmake)
+[1.118s] -- Found visualization_msgs: 4.2.3 (/opt/ros/humble/share/visualization_msgs/cmake)
+[1.172s] -- Found ompl: /usr/local/include/ompl-1.6;/usr/local/include;/usr/local/include/eigen3;/usr/include  
+[1.202s] -- Configuring done
+[1.210s] -- Generating done
+[1.211s] -- Build files have been written to: /home/kiki/Workspace/drone_monitor/build/simulation
+[1.218s] Invoked command in '/home/kiki/Workspace/drone_monitor/build/simulation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/kiki/Workspace/drone_monitor/simulation -DCMAKE_INSTALL_PREFIX=/home/kiki/Workspace/drone_monitor/install/simulation
+[1.219s] Invoking command in '/home/kiki/Workspace/drone_monitor/build/simulation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/kiki/Workspace/drone_monitor/build/simulation -- -j32 -l32
+[1.241s] [ 50%] [32mBuilding CXX object CMakeFiles/simulation_node.dir/src/fake_module.cpp.o[0m
+[1.965s] In file included from [01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/geo_utils.hpp:5[m[K,
+[1.965s]                  from [01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/misc/visualizer.hpp:6[m[K,
+[1.965s]                  from [01m[K/home/kiki/Workspace/drone_monitor/simulation/src/fake_module.cpp:1[m[K:
+[1.965s] [01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/sdlp.hpp:[m[K In function ‘[01m[Kint sdlp::linfracprog(const double*, int, int, const double*, const double*, double*, double*, int*, int*) [with int d = 1][m[K’:
+[1.965s] [01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/sdlp.hpp:666:41:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmax_size[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[1.965s]   666 |                               [01;35m[Kconst int max_size[m[K,
+[1.965s]       |                               [01;35m[K~~~~~~~~~~^~~~~~~~[m[K
+[1.965s] [01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/sdlp.hpp:671:39:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kwork[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[1.965s]   671 |                               [01;35m[Kdouble *work[m[K,
+[1.965s]       |                               [01;35m[K~~~~~~~~^~~~[m[K
+[11.697s] [100%] [32m[1mLinking CXX executable simulation_node[0m
+[11.835s] [100%] Built target simulation_node
+[11.842s] Invoked command in '/home/kiki/Workspace/drone_monitor/build/simulation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/kiki/Workspace/drone_monitor/build/simulation -- -j32 -l32
+[11.855s] Invoking command in '/home/kiki/Workspace/drone_monitor/build/simulation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/kiki/Workspace/drone_monitor/build/simulation
+[11.858s] -- Install configuration: ""
+[11.858s] -- Installing: /home/kiki/Workspace/drone_monitor/install/simulation/lib/simulation/simulation_node
+[11.859s] -- Set runtime path of "/home/kiki/Workspace/drone_monitor/install/simulation/lib/simulation/simulation_node" to ""
+[11.859s] -- Installing: /home/kiki/Workspace/drone_monitor/install/simulation/share/ament_index/resource_index/package_run_dependencies/simulation
+[11.859s] -- Installing: /home/kiki/Workspace/drone_monitor/install/simulation/share/ament_index/resource_index/parent_prefix_path/simulation
+[11.859s] -- Installing: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/environment/ament_prefix_path.sh
+[11.859s] -- Installing: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/environment/ament_prefix_path.dsv
+[11.859s] -- Installing: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/environment/path.sh
+[11.859s] -- Installing: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/environment/path.dsv
+[11.860s] -- Installing: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/local_setup.bash
+[11.860s] -- Installing: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/local_setup.sh
+[11.860s] -- Installing: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/local_setup.zsh
+[11.860s] -- Installing: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/local_setup.dsv
+[11.860s] -- Installing: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/package.dsv
+[11.860s] -- Installing: /home/kiki/Workspace/drone_monitor/install/simulation/share/ament_index/resource_index/packages/simulation
+[11.860s] -- Installing: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/cmake/simulationConfig.cmake
+[11.860s] -- Installing: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/cmake/simulationConfig-version.cmake
+[11.860s] -- Installing: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/package.xml
+[11.860s] Invoked command in '/home/kiki/Workspace/drone_monitor/build/simulation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/kiki/Workspace/drone_monitor/build/simulation

@@ -137,6 +137,9 @@ public:
         std::srand(info.seed);
         Maze3DGen();
         break;
+      case 5:
+        RandomMapGenerateCylinder();
+        break;
     }
   }
 
@@ -151,6 +154,7 @@ public:
 
   void perlin3D()
   {
+    // The mapping from parameters to generated points cloud
     double complexity;
     double fill;
     int    fractal;
@@ -160,14 +164,21 @@ public:
     this->get_parameter_or("fill", fill, 0.38);
     this->get_parameter_or("fractal", fractal, 1);
     this->get_parameter_or("attenuation", attenuation, 0.5);
-
+    
+    // width and height are two important parameters to define the shape of a point cloud in PCL
+    // be set based on how the point cloud data is organized (data structure not data)
     info.cloud->width  = info.sizeX * info.sizeY * info.sizeZ;
     info.cloud->height = 1;
+    // pre-allocate memory for a certain number of points
     info.cloud->points.resize(info.cloud->width * info.cloud->height);
 
     PerlinNoise noise(info.seed);
 
+    // allocates a new `std::vector` of `double` on the heap and stores a pointer to it in `v`.
     std::vector<double>* v = new std::vector<double>;
+    // pre-allocates memory in the `std::vector` pointed to by `v` 
+    // to accommodate `info.cloud->width` number of elements without triggering reallocation.
+    // By pre-allocating memory, you can avoid unnecessary reallocations and improve performance.
     v->reserve(info.cloud->width);
     for (int i = 0; i < info.sizeX; ++i)
     {
@@ -181,15 +192,18 @@ public:
             int    dfv = pow(2, it);
             double ta  = attenuation / it;
             tnoise += ta * noise.noise(dfv * i * complexity,
-                                      dfv * j * complexity,
-                                      dfv * k * complexity);
+                                       dfv * j * complexity,
+                                       dfv * k * complexity);
           }
           v->push_back(tnoise);
         }
       }
     }
+    // sorting the elements in the `std::vector` pointed to by the pointer `v`.
+    // in ascending order.
     std::sort(v->begin(), v->end());
     int    tpos = info.cloud->width * (1 - fill);
+    // The `at` function is a safe way to access elements in a vector with bounds checking. 
     double tmp  = v->at(tpos);
     RCLCPP_INFO(this->get_logger(), "threshold: %lf", tmp);
 
@@ -497,6 +511,37 @@ public:
     info.cloud->height = 1;
     RCLCPP_INFO(this->get_logger(), "the number of points before optimization is %d", info.cloud->width);
     info.cloud->points.resize(info.cloud->width * info.cloud->height);
+    pcl2ros();
+  }
+
+  void RandomMapGenerateCylinder()
+  {
+    //! @todo Generate 2D map with constant height
+    double _resolution = 1 / info.scale;
+    int    _ObsNum;
+    this->get_parameter_or("obstacle_number", _ObsNum, 10);
+
+    // Test the basic logic 10*10*10
+    pcl::PointXYZ pt_random;
+    info.cloud->points.reserve(1000);
+    for (int i = 0; i < 10; i++)
+    {
+      for (int j = 0; j < 10; j++)
+      {
+        for (int k = 0; k < 10; k++)
+        {
+          pt_random.x = i * 0.1;
+          pt_random.y = j * 0.1;
+          pt_random.z = k * 0.1;
+          info.cloud->points.push_back(pt_random);
+        }
+      }
+    }
+    
+    info.cloud->width = info.cloud->points.size();
+    info.cloud->height = 1;
+    info.cloud->is_dense = true;
+    RCLCPP_INFO(this->get_logger(), "the number of points before optimization is %d", info.cloud->width);
     pcl2ros();
   }
 
@@ -997,17 +1042,6 @@ private:
   rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pcl_pub;
   size_t count_;
 };
-
-
-  // BasicInfo getInfo() const
-  // {
-  //   return info;
-  // }
-
-  // void setInfo(const BasicInfo& value)
-  // {
-  //   info = value;
-  // }
 
 }
 
