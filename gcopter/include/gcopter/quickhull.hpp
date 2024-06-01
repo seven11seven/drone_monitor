@@ -1,7 +1,7 @@
 // Public domain code from Antti Kuukka
 // https://github.com/akuukka/quickhull
 // Many thanks to him.
-
+// buildMesh is the key function of this class
 #ifndef QUICKHULL_HPP
 #define QUICKHULL_HPP
 

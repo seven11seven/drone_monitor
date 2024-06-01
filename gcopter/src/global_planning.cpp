@@ -87,6 +87,7 @@ public:
         thrPub = this->create_publisher<std_msgs::msg::Float64>("/visualizer/total_thrust", 1000);
         tiltPub = this->create_publisher<std_msgs::msg::Float64>("/visualizer/tilt_angle", 1000);
         bdrPub = this->create_publisher<std_msgs::msg::Float64>("/visualizer/body_rate", 1000);
+        modulePub = this->create_publisher<visualization_msgs::msg::Marker>("/visualizer/modules", 1000);
  
         const Eigen::Vector3i xyz((mapBound[1] - mapBound[0]) / voxelWidth,
                                   (mapBound[3] - mapBound[2]) / voxelWidth,
@@ -248,6 +249,7 @@ public:
                     // get the trajectory generation time
                     trajStamp = rclcpp::Clock().now().seconds();
                     visualizer.visualize(traj, route, this->routePub, this->wayPointsPub, this->trajectoryPub);
+                    visualizer.visualizeModule(traj, this->modulePub);
                 }
             }    
         }
@@ -368,6 +370,7 @@ public:
     rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr meshPub;
     rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr edgePub;
     rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr spherePub;
+    rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr modulePub;
 
     rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr speedPub;
     rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr thrPub;

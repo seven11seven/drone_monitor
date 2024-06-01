@@ -7,6 +7,7 @@
 namespace flatness
 {
     class FlatnessMap
+    // this part encode the information of the drone dynamics
     {
     public:
         inline void reset(const double &vehicle_mass,

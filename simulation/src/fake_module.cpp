@@ -44,7 +44,8 @@ public:
 
   void timer_callback()
   {
-    visualizer.visualizeMoudle(moduleGeom, edgePub);
+    // This function have been alternated
+    // visualizer.visualizeModule(moduleGeom, edgePub);
   }
 
   inline void moduleGen(const Eigen::Vector3d coGeom,

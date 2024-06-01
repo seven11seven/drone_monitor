@@ -1,0 +1,391 @@
+[0.045s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.045s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=32, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7f6682832e90>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f66829af100>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f66829af100>>, mixin_verb=('build',))
+[0.112s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.112s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.112s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.112s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.112s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.112s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.112s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/kiki/Workspace/drone_monitor'
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.117s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.117s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.117s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.117s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.117s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.117s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.117s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.117s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(gcopter) by extensions ['ignore', 'ignore_ament_install']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(gcopter) by extension 'ignore'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(gcopter) by extension 'ignore_ament_install'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(gcopter) by extensions ['colcon_pkg']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(gcopter) by extension 'colcon_pkg'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(gcopter) by extensions ['colcon_meta']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(gcopter) by extension 'colcon_meta'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(gcopter) by extensions ['ros']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(gcopter) by extension 'ros'
+[0.119s] DEBUG:colcon.colcon_core.package_identification:Package 'gcopter' with type 'ros.ament_cmake' and name 'gcopter'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(map_gen) by extensions ['ignore', 'ignore_ament_install']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(map_gen) by extension 'ignore'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(map_gen) by extension 'ignore_ament_install'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(map_gen) by extensions ['colcon_pkg']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(map_gen) by extension 'colcon_pkg'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(map_gen) by extensions ['colcon_meta']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(map_gen) by extension 'colcon_meta'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(map_gen) by extensions ['ros']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(map_gen) by extension 'ros'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(map_gen) by extensions ['cmake', 'python']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(map_gen) by extension 'cmake'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(map_gen) by extension 'python'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(map_gen) by extensions ['python_setup_py']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(map_gen) by extension 'python_setup_py'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(map_gen/map_sensing) by extensions ['ignore', 'ignore_ament_install']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(map_gen/map_sensing) by extension 'ignore'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(map_gen/map_sensing) by extension 'ignore_ament_install'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(map_gen/map_sensing) by extensions ['colcon_pkg']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(map_gen/map_sensing) by extension 'colcon_pkg'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(map_gen/map_sensing) by extensions ['colcon_meta']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(map_gen/map_sensing) by extension 'colcon_meta'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(map_gen/map_sensing) by extensions ['ros']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(map_gen/map_sensing) by extension 'ros'
+[0.120s] DEBUG:colcon.colcon_core.package_identification:Package 'map_gen/map_sensing' with type 'ros.ament_cmake' and name 'map_sensing'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(map_gen/mockamap) by extensions ['ignore', 'ignore_ament_install']
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(map_gen/mockamap) by extension 'ignore'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(map_gen/mockamap) by extension 'ignore_ament_install'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(map_gen/mockamap) by extensions ['colcon_pkg']
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(map_gen/mockamap) by extension 'colcon_pkg'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(map_gen/mockamap) by extensions ['colcon_meta']
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(map_gen/mockamap) by extension 'colcon_meta'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(map_gen/mockamap) by extensions ['ros']
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(map_gen/mockamap) by extension 'ros'
+[0.121s] DEBUG:colcon.colcon_core.package_identification:Package 'map_gen/mockamap' with type 'ros.ament_cmake' and name 'mockamap'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch) by extensions ['ignore', 'ignore_ament_install']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch) by extension 'ignore'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch) by extension 'ignore_ament_install'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch) by extensions ['colcon_pkg']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch) by extension 'colcon_pkg'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch) by extensions ['colcon_meta']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch) by extension 'colcon_meta'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch) by extensions ['ros']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch) by extension 'ros'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch) by extensions ['cmake', 'python']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch) by extension 'cmake'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch) by extension 'python'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch) by extensions ['python_setup_py']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch) by extension 'python_setup_py'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch/launch) by extensions ['ignore', 'ignore_ament_install']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch/launch) by extension 'ignore'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch/launch) by extension 'ignore_ament_install'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch/launch) by extensions ['colcon_pkg']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch/launch) by extension 'colcon_pkg'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch/launch) by extensions ['colcon_meta']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch/launch) by extension 'colcon_meta'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch/launch) by extensions ['ros']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch/launch) by extension 'ros'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch/launch) by extensions ['cmake', 'python']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch/launch) by extension 'cmake'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch/launch) by extension 'python'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch/launch) by extensions ['python_setup_py']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch/launch) by extension 'python_setup_py'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch/launch/__pycache__) by extensions ['ignore', 'ignore_ament_install']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch/launch/__pycache__) by extension 'ignore'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch/launch/__pycache__) by extension 'ignore_ament_install'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch/launch/__pycache__) by extensions ['colcon_pkg']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch/launch/__pycache__) by extension 'colcon_pkg'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch/launch/__pycache__) by extensions ['colcon_meta']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch/launch/__pycache__) by extension 'colcon_meta'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch/launch/__pycache__) by extensions ['ros']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch/launch/__pycache__) by extension 'ros'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch/launch/__pycache__) by extensions ['cmake', 'python']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch/launch/__pycache__) by extension 'cmake'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch/launch/__pycache__) by extension 'python'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch/launch/__pycache__) by extensions ['python_setup_py']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(my_launch/launch/__pycache__) by extension 'python_setup_py'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(simulation) by extensions ['ignore', 'ignore_ament_install']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(simulation) by extension 'ignore'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(simulation) by extension 'ignore_ament_install'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(simulation) by extensions ['colcon_pkg']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(simulation) by extension 'colcon_pkg'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(simulation) by extensions ['colcon_meta']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(simulation) by extension 'colcon_meta'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(simulation) by extensions ['ros']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(simulation) by extension 'ros'
+[0.122s] DEBUG:colcon.colcon_core.package_identification:Package 'simulation' with type 'ros.ament_cmake' and name 'simulation'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(template) by extensions ['ignore', 'ignore_ament_install']
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(template) by extension 'ignore'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(template) by extension 'ignore_ament_install'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(template) by extensions ['colcon_pkg']
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(template) by extension 'colcon_pkg'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(template) by extensions ['colcon_meta']
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(template) by extension 'colcon_meta'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(template) by extensions ['ros']
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(template) by extension 'ros'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(template) by extensions ['cmake', 'python']
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(template) by extension 'cmake'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(template) by extension 'python'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(template) by extensions ['python_setup_py']
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(template) by extension 'python_setup_py'
+[0.122s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.122s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.122s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.122s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.122s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.136s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.136s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.136s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/kiki/Workspace/drone_monitor/install
+[0.137s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 290 installed packages in /opt/ros/humble
+[0.137s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.154s] Level 5:colcon.colcon_core.verb:set package 'gcopter' build argument 'cmake_args' from command line to 'None'
+[0.154s] Level 5:colcon.colcon_core.verb:set package 'gcopter' build argument 'cmake_target' from command line to 'None'
+[0.154s] Level 5:colcon.colcon_core.verb:set package 'gcopter' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.154s] Level 5:colcon.colcon_core.verb:set package 'gcopter' build argument 'cmake_clean_cache' from command line to 'False'
+[0.154s] Level 5:colcon.colcon_core.verb:set package 'gcopter' build argument 'cmake_clean_first' from command line to 'False'
+[0.154s] Level 5:colcon.colcon_core.verb:set package 'gcopter' build argument 'cmake_force_configure' from command line to 'False'
+[0.154s] Level 5:colcon.colcon_core.verb:set package 'gcopter' build argument 'ament_cmake_args' from command line to 'None'
+[0.154s] Level 5:colcon.colcon_core.verb:set package 'gcopter' build argument 'catkin_cmake_args' from command line to 'None'
+[0.154s] Level 5:colcon.colcon_core.verb:set package 'gcopter' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.154s] DEBUG:colcon.colcon_core.verb:Building package 'gcopter' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/kiki/Workspace/drone_monitor/build/gcopter', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/kiki/Workspace/drone_monitor/install/gcopter', 'merge_install': False, 'path': '/home/kiki/Workspace/drone_monitor/gcopter', 'symlink_install': False, 'test_result_base': None}
+[0.154s] Level 5:colcon.colcon_core.verb:set package 'map_sensing' build argument 'cmake_args' from command line to 'None'
+[0.154s] Level 5:colcon.colcon_core.verb:set package 'map_sensing' build argument 'cmake_target' from command line to 'None'
+[0.154s] Level 5:colcon.colcon_core.verb:set package 'map_sensing' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.154s] Level 5:colcon.colcon_core.verb:set package 'map_sensing' build argument 'cmake_clean_cache' from command line to 'False'
+[0.154s] Level 5:colcon.colcon_core.verb:set package 'map_sensing' build argument 'cmake_clean_first' from command line to 'False'
+[0.154s] Level 5:colcon.colcon_core.verb:set package 'map_sensing' build argument 'cmake_force_configure' from command line to 'False'
+[0.154s] Level 5:colcon.colcon_core.verb:set package 'map_sensing' build argument 'ament_cmake_args' from command line to 'None'
+[0.154s] Level 5:colcon.colcon_core.verb:set package 'map_sensing' build argument 'catkin_cmake_args' from command line to 'None'
+[0.154s] Level 5:colcon.colcon_core.verb:set package 'map_sensing' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.154s] DEBUG:colcon.colcon_core.verb:Building package 'map_sensing' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/kiki/Workspace/drone_monitor/build/map_sensing', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/kiki/Workspace/drone_monitor/install/map_sensing', 'merge_install': False, 'path': '/home/kiki/Workspace/drone_monitor/map_gen/map_sensing', 'symlink_install': False, 'test_result_base': None}
+[0.154s] Level 5:colcon.colcon_core.verb:set package 'mockamap' build argument 'cmake_args' from command line to 'None'
+[0.154s] Level 5:colcon.colcon_core.verb:set package 'mockamap' build argument 'cmake_target' from command line to 'None'
+[0.154s] Level 5:colcon.colcon_core.verb:set package 'mockamap' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.154s] Level 5:colcon.colcon_core.verb:set package 'mockamap' build argument 'cmake_clean_cache' from command line to 'False'
+[0.154s] Level 5:colcon.colcon_core.verb:set package 'mockamap' build argument 'cmake_clean_first' from command line to 'False'
+[0.154s] Level 5:colcon.colcon_core.verb:set package 'mockamap' build argument 'cmake_force_configure' from command line to 'False'
+[0.154s] Level 5:colcon.colcon_core.verb:set package 'mockamap' build argument 'ament_cmake_args' from command line to 'None'
+[0.154s] Level 5:colcon.colcon_core.verb:set package 'mockamap' build argument 'catkin_cmake_args' from command line to 'None'
+[0.154s] Level 5:colcon.colcon_core.verb:set package 'mockamap' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.154s] DEBUG:colcon.colcon_core.verb:Building package 'mockamap' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/kiki/Workspace/drone_monitor/build/mockamap', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/kiki/Workspace/drone_monitor/install/mockamap', 'merge_install': False, 'path': '/home/kiki/Workspace/drone_monitor/map_gen/mockamap', 'symlink_install': False, 'test_result_base': None}
+[0.154s] Level 5:colcon.colcon_core.verb:set package 'simulation' build argument 'cmake_args' from command line to 'None'
+[0.154s] Level 5:colcon.colcon_core.verb:set package 'simulation' build argument 'cmake_target' from command line to 'None'
+[0.154s] Level 5:colcon.colcon_core.verb:set package 'simulation' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.154s] Level 5:colcon.colcon_core.verb:set package 'simulation' build argument 'cmake_clean_cache' from command line to 'False'
+[0.154s] Level 5:colcon.colcon_core.verb:set package 'simulation' build argument 'cmake_clean_first' from command line to 'False'
+[0.154s] Level 5:colcon.colcon_core.verb:set package 'simulation' build argument 'cmake_force_configure' from command line to 'False'
+[0.154s] Level 5:colcon.colcon_core.verb:set package 'simulation' build argument 'ament_cmake_args' from command line to 'None'
+[0.154s] Level 5:colcon.colcon_core.verb:set package 'simulation' build argument 'catkin_cmake_args' from command line to 'None'
+[0.154s] Level 5:colcon.colcon_core.verb:set package 'simulation' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.154s] DEBUG:colcon.colcon_core.verb:Building package 'simulation' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/kiki/Workspace/drone_monitor/build/simulation', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/kiki/Workspace/drone_monitor/install/simulation', 'merge_install': False, 'path': '/home/kiki/Workspace/drone_monitor/simulation', 'symlink_install': False, 'test_result_base': None}
+[0.155s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.155s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.155s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/kiki/Workspace/drone_monitor/gcopter' with build type 'ament_cmake'
+[0.155s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/kiki/Workspace/drone_monitor/gcopter'
+[0.156s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.156s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.156s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.264s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/kiki/Workspace/drone_monitor/map_gen/map_sensing' with build type 'ament_cmake'
+[0.264s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/kiki/Workspace/drone_monitor/map_gen/map_sensing'
+[0.264s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.264s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.265s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/kiki/Workspace/drone_monitor/map_gen/mockamap' with build type 'ament_cmake'
+[0.265s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/kiki/Workspace/drone_monitor/map_gen/mockamap'
+[0.265s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.265s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.383s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/kiki/Workspace/drone_monitor/simulation' with build type 'ament_cmake'
+[0.383s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/kiki/Workspace/drone_monitor/simulation'
+[0.383s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.383s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.878s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kiki/Workspace/drone_monitor/build/gcopter': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/kiki/Workspace/drone_monitor/build/gcopter -- -j32 -l32
+[0.878s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kiki/Workspace/drone_monitor/build/map_sensing': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/kiki/Workspace/drone_monitor/map_gen/map_sensing -DCMAKE_INSTALL_PREFIX=/home/kiki/Workspace/drone_monitor/install/map_sensing
+[1.081s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kiki/Workspace/drone_monitor/build/mockamap': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/kiki/Workspace/drone_monitor/build/mockamap -- -j32 -l32
+[1.213s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kiki/Workspace/drone_monitor/build/simulation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/kiki/Workspace/drone_monitor/build/simulation -- -j32 -l32
+[1.224s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kiki/Workspace/drone_monitor/build/mockamap' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/kiki/Workspace/drone_monitor/build/mockamap -- -j32 -l32
+[1.240s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kiki/Workspace/drone_monitor/build/mockamap': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/kiki/Workspace/drone_monitor/build/mockamap
+[1.310s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mockamap)
+[1.310s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kiki/Workspace/drone_monitor/build/mockamap' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/kiki/Workspace/drone_monitor/build/mockamap
+[1.311s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/mockamap' for CMake module files
+[1.312s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/mockamap' for CMake config files
+[1.312s] Level 1:colcon.colcon_core.shell:create_environment_hook('mockamap', 'cmake_prefix_path')
+[1.312s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kiki/Workspace/drone_monitor/install/mockamap/share/mockamap/hook/cmake_prefix_path.ps1'
+[1.405s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kiki/Workspace/drone_monitor/install/mockamap/share/mockamap/hook/cmake_prefix_path.dsv'
+[1.525s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kiki/Workspace/drone_monitor/install/mockamap/share/mockamap/hook/cmake_prefix_path.sh'
+[1.629s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/mockamap/lib'
+[1.629s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/mockamap/bin'
+[1.629s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/mockamap/lib/pkgconfig/mockamap.pc'
+[1.629s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/mockamap/lib/python3.10/site-packages'
+[1.629s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/mockamap/bin'
+[1.629s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiki/Workspace/drone_monitor/install/mockamap/share/mockamap/package.ps1'
+[1.736s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kiki/Workspace/drone_monitor/install/mockamap/share/mockamap/package.dsv'
+[1.832s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiki/Workspace/drone_monitor/install/mockamap/share/mockamap/package.sh'
+[1.939s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiki/Workspace/drone_monitor/install/mockamap/share/mockamap/package.bash'
+[2.069s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiki/Workspace/drone_monitor/install/mockamap/share/mockamap/package.zsh'
+[2.200s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kiki/Workspace/drone_monitor/install/mockamap/share/colcon-core/packages/mockamap)
+[2.213s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mockamap)
+[2.213s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/mockamap' for CMake module files
+[2.213s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/mockamap' for CMake config files
+[2.213s] Level 1:colcon.colcon_core.shell:create_environment_hook('mockamap', 'cmake_prefix_path')
+[2.213s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kiki/Workspace/drone_monitor/install/mockamap/share/mockamap/hook/cmake_prefix_path.ps1'
+[2.307s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kiki/Workspace/drone_monitor/install/mockamap/share/mockamap/hook/cmake_prefix_path.dsv'
+[2.414s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kiki/Workspace/drone_monitor/install/mockamap/share/mockamap/hook/cmake_prefix_path.sh'
+[2.546s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/mockamap/lib'
+[2.546s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/mockamap/bin'
+[2.546s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/mockamap/lib/pkgconfig/mockamap.pc'
+[2.546s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/mockamap/lib/python3.10/site-packages'
+[2.546s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/mockamap/bin'
+[2.546s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiki/Workspace/drone_monitor/install/mockamap/share/mockamap/package.ps1'
+[2.664s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kiki/Workspace/drone_monitor/install/mockamap/share/mockamap/package.dsv'
+[2.782s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiki/Workspace/drone_monitor/install/mockamap/share/mockamap/package.sh'
+[2.889s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiki/Workspace/drone_monitor/install/mockamap/share/mockamap/package.bash'
+[3.008s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiki/Workspace/drone_monitor/install/mockamap/share/mockamap/package.zsh'
+[3.116s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kiki/Workspace/drone_monitor/install/mockamap/share/colcon-core/packages/mockamap)
+[4.859s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kiki/Workspace/drone_monitor/build/map_sensing' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/kiki/Workspace/drone_monitor/map_gen/map_sensing -DCMAKE_INSTALL_PREFIX=/home/kiki/Workspace/drone_monitor/install/map_sensing
+[4.860s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kiki/Workspace/drone_monitor/build/map_sensing': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/kiki/Workspace/drone_monitor/build/map_sensing -- -j32 -l32
+[11.056s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kiki/Workspace/drone_monitor/build/map_sensing' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/kiki/Workspace/drone_monitor/build/map_sensing -- -j32 -l32
+[11.067s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kiki/Workspace/drone_monitor/build/map_sensing': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/kiki/Workspace/drone_monitor/build/map_sensing
+[11.074s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(map_sensing)
+[11.074s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kiki/Workspace/drone_monitor/build/map_sensing' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/kiki/Workspace/drone_monitor/build/map_sensing
+[11.074s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/map_sensing' for CMake module files
+[11.075s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/map_sensing' for CMake config files
+[11.075s] Level 1:colcon.colcon_core.shell:create_environment_hook('map_sensing', 'cmake_prefix_path')
+[11.075s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kiki/Workspace/drone_monitor/install/map_sensing/share/map_sensing/hook/cmake_prefix_path.ps1'
+[11.076s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kiki/Workspace/drone_monitor/install/map_sensing/share/map_sensing/hook/cmake_prefix_path.dsv'
+[11.076s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kiki/Workspace/drone_monitor/install/map_sensing/share/map_sensing/hook/cmake_prefix_path.sh'
+[11.076s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/map_sensing/lib'
+[11.076s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/map_sensing/bin'
+[11.076s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/map_sensing/lib/pkgconfig/map_sensing.pc'
+[11.076s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/map_sensing/lib/python3.10/site-packages'
+[11.077s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/map_sensing/bin'
+[11.077s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiki/Workspace/drone_monitor/install/map_sensing/share/map_sensing/package.ps1'
+[11.077s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kiki/Workspace/drone_monitor/install/map_sensing/share/map_sensing/package.dsv'
+[11.079s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiki/Workspace/drone_monitor/install/map_sensing/share/map_sensing/package.sh'
+[11.079s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiki/Workspace/drone_monitor/install/map_sensing/share/map_sensing/package.bash'
+[11.079s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiki/Workspace/drone_monitor/install/map_sensing/share/map_sensing/package.zsh'
+[11.079s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kiki/Workspace/drone_monitor/install/map_sensing/share/colcon-core/packages/map_sensing)
+[11.090s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(map_sensing)
+[11.091s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/map_sensing' for CMake module files
+[11.091s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/map_sensing' for CMake config files
+[11.091s] Level 1:colcon.colcon_core.shell:create_environment_hook('map_sensing', 'cmake_prefix_path')
+[11.091s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kiki/Workspace/drone_monitor/install/map_sensing/share/map_sensing/hook/cmake_prefix_path.ps1'
+[11.093s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kiki/Workspace/drone_monitor/install/map_sensing/share/map_sensing/hook/cmake_prefix_path.dsv'
+[11.094s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kiki/Workspace/drone_monitor/install/map_sensing/share/map_sensing/hook/cmake_prefix_path.sh'
+[11.095s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/map_sensing/lib'
+[11.095s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/map_sensing/bin'
+[11.095s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/map_sensing/lib/pkgconfig/map_sensing.pc'
+[11.095s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/map_sensing/lib/python3.10/site-packages'
+[11.095s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/map_sensing/bin'
+[11.095s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiki/Workspace/drone_monitor/install/map_sensing/share/map_sensing/package.ps1'
+[11.096s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kiki/Workspace/drone_monitor/install/map_sensing/share/map_sensing/package.dsv'
+[11.097s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiki/Workspace/drone_monitor/install/map_sensing/share/map_sensing/package.sh'
+[11.098s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiki/Workspace/drone_monitor/install/map_sensing/share/map_sensing/package.bash'
+[11.099s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiki/Workspace/drone_monitor/install/map_sensing/share/map_sensing/package.zsh'
+[11.100s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kiki/Workspace/drone_monitor/install/map_sensing/share/colcon-core/packages/map_sensing)
+[14.151s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kiki/Workspace/drone_monitor/build/simulation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/kiki/Workspace/drone_monitor/build/simulation -- -j32 -l32
+[14.162s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kiki/Workspace/drone_monitor/build/simulation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/kiki/Workspace/drone_monitor/build/simulation
+[14.167s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(simulation)
+[14.168s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/simulation' for CMake module files
+[14.168s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kiki/Workspace/drone_monitor/build/simulation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/kiki/Workspace/drone_monitor/build/simulation
+[14.168s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/simulation' for CMake config files
+[14.168s] Level 1:colcon.colcon_core.shell:create_environment_hook('simulation', 'cmake_prefix_path')
+[14.168s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/hook/cmake_prefix_path.ps1'
+[14.169s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/hook/cmake_prefix_path.dsv'
+[14.170s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/hook/cmake_prefix_path.sh'
+[14.171s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/simulation/lib'
+[14.171s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/simulation/bin'
+[14.171s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/simulation/lib/pkgconfig/simulation.pc'
+[14.171s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/simulation/lib/python3.10/site-packages'
+[14.171s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/simulation/bin'
+[14.171s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/package.ps1'
+[14.172s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/package.dsv'
+[14.173s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/package.sh'
+[14.174s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/package.bash'
+[14.175s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/package.zsh'
+[14.176s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kiki/Workspace/drone_monitor/install/simulation/share/colcon-core/packages/simulation)
+[14.185s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(simulation)
+[14.186s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/simulation' for CMake module files
+[14.186s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/simulation' for CMake config files
+[14.186s] Level 1:colcon.colcon_core.shell:create_environment_hook('simulation', 'cmake_prefix_path')
+[14.186s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/hook/cmake_prefix_path.ps1'
+[14.187s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/hook/cmake_prefix_path.dsv'
+[14.188s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/hook/cmake_prefix_path.sh'
+[14.189s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/simulation/lib'
+[14.189s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/simulation/bin'
+[14.189s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/simulation/lib/pkgconfig/simulation.pc'
+[14.189s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/simulation/lib/python3.10/site-packages'
+[14.189s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/simulation/bin'
+[14.189s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/package.ps1'
+[14.190s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/package.dsv'
+[14.191s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/package.sh'
+[14.192s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/package.bash'
+[14.193s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/package.zsh'
+[14.194s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kiki/Workspace/drone_monitor/install/simulation/share/colcon-core/packages/simulation)
+[22.169s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kiki/Workspace/drone_monitor/build/gcopter' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/kiki/Workspace/drone_monitor/build/gcopter -- -j32 -l32
+[22.179s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/kiki/Workspace/drone_monitor/build/gcopter': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/kiki/Workspace/drone_monitor/build/gcopter
+[22.191s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gcopter)
+[22.191s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/gcopter' for CMake module files
+[22.191s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/kiki/Workspace/drone_monitor/build/gcopter' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/kiki/Workspace/drone_monitor/build/gcopter
+[22.191s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/gcopter' for CMake config files
+[22.191s] Level 1:colcon.colcon_core.shell:create_environment_hook('gcopter', 'cmake_prefix_path')
+[22.191s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/hook/cmake_prefix_path.ps1'
+[22.192s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/hook/cmake_prefix_path.dsv'
+[22.193s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/hook/cmake_prefix_path.sh'
+[22.194s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/gcopter/lib'
+[22.194s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/gcopter/bin'
+[22.194s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/gcopter/lib/pkgconfig/gcopter.pc'
+[22.194s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/gcopter/lib/python3.10/site-packages'
+[22.194s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/gcopter/bin'
+[22.195s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/package.ps1'
+[22.196s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/package.dsv'
+[22.196s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/package.sh'
+[22.197s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/package.bash'
+[22.198s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/package.zsh'
+[22.199s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kiki/Workspace/drone_monitor/install/gcopter/share/colcon-core/packages/gcopter)
+[22.209s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gcopter)
+[22.209s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/gcopter' for CMake module files
+[22.209s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/gcopter' for CMake config files
+[22.209s] Level 1:colcon.colcon_core.shell:create_environment_hook('gcopter', 'cmake_prefix_path')
+[22.209s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/hook/cmake_prefix_path.ps1'
+[22.210s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/hook/cmake_prefix_path.dsv'
+[22.211s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/hook/cmake_prefix_path.sh'
+[22.212s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/gcopter/lib'
+[22.212s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/gcopter/bin'
+[22.212s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/gcopter/lib/pkgconfig/gcopter.pc'
+[22.212s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/gcopter/lib/python3.10/site-packages'
+[22.212s] Level 1:colcon.colcon_core.environment:checking '/home/kiki/Workspace/drone_monitor/install/gcopter/bin'
+[22.212s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/package.ps1'
+[22.213s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/package.dsv'
+[22.214s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/package.sh'
+[22.215s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/package.bash'
+[22.216s] INFO:colcon.colcon_core.shell:Creating package script '/home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/package.zsh'
+[22.217s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/kiki/Workspace/drone_monitor/install/gcopter/share/colcon-core/packages/gcopter)
+[22.218s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[22.218s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[22.218s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[22.218s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[22.221s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[22.221s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[22.221s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[22.229s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[22.229s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/kiki/Workspace/drone_monitor/install/local_setup.ps1'
+[22.229s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/kiki/Workspace/drone_monitor/install/_local_setup_util_ps1.py'
+[22.230s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/kiki/Workspace/drone_monitor/install/setup.ps1'
+[22.231s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/kiki/Workspace/drone_monitor/install/local_setup.sh'
+[22.231s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/kiki/Workspace/drone_monitor/install/_local_setup_util_sh.py'
+[22.232s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/kiki/Workspace/drone_monitor/install/setup.sh'
+[22.232s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/kiki/Workspace/drone_monitor/install/local_setup.bash'
+[22.232s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/kiki/Workspace/drone_monitor/install/setup.bash'
+[22.233s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/kiki/Workspace/drone_monitor/install/local_setup.zsh'
+[22.233s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/kiki/Workspace/drone_monitor/install/setup.zsh'

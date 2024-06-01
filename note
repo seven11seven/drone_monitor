@@ -23,6 +23,8 @@
 
 4. Some project information
     the range of mockamap (-25, 25) * (-25, 25) * (0, 10)
+    develop the simulation package for module trajectory optimization
+    use the gcopter as a static library
 <<< Start Memo <<< 
 
 >>> TODO >>>
@@ -33,8 +35,10 @@
 3. know the objective function and related optimization ====
 4. visualize the point cloud surface / visulize the convex hulls ====
 5. visualize the module surfaces  ====
-6. generate cylinder obstacles and visualize in RViz2 ==== (try the Rviz plugins)
+6. generate cylinder obstacles and visualize in RViz2 ====
 7. remap the cost function class of the crane-module trajectory planning
+    7.1 Visualize the module and the trajectory ===
+    7.2 Reset the cost function
 9. MILESTONE: automatic trajectory planning in the simplest assumption
 
 10. evaluate the proposed differential flatness of the crane-module system
@@ -42,6 +46,7 @@
 12. the trajectory planning algorithm considering the dynamics
 13. MILESTONE:realize the optimization process based on MINCO
 
+14. Visualize using OctoMap
 gcopter in the costFunctional 
 <<< TODO <<<
 
@@ -52,6 +57,34 @@ gcopter in the costFunctional
 <<< Principle <<<
 
 >>> Other Issues TODAY >>>
-1. design the smart hook
+1. Decode the optimization function, finished ====
+2. Develop the step motor driver
+3. Test the Odrive
+
+1. Decode the optimization function, part of ... ====
+2. Teleoperation system development plan ====
+3. Revise MINCO for module without the consideration of system dynamics
+
+1. Decode the optimization function, part of ... ====
+2. Control device purchasing and development ====
+
+1. Visualize the module and the trajectory ====
+2. Decode the optimization function, part of ... ====
+3. Adjust the stepper motor ====
+
+1. design the smart hook ====
 2. test the NUC power supply
 <<< Other Issues TODAY <<<
+
+>>> Temp Note >>>
+1. a function related to c and T
+2. integration of the function
+3. the gradient of the integration function w.r.t. c and T
+4. dc/dq and dc/dt
+5. dq/dxi, dt/dtau
+6. the forward function to calculate current state
+
+1. a sequence of polys 
+2. the mapping from xi to q is determained by the poly
+
+1. T can be directly mapped to tau for all pieces

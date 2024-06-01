@@ -14,26 +14,42 @@ namespace geo_utils
 {
     inline bool findInterior(const Eigen::MatrixX4d &hPoly,
                              Eigen::Vector3d &interior)
-    {
+    {   
+        // the logic of this function
+        // m is the number of surfaces
         const int m=hPoly.rows();
-
+        
         Eigen::MatrixX4d A(m, 4);
         Eigen::VectorXd b(m);
         Eigen::Vector4d c, x;
-
+        
+        // normalize h0, h1, and h2
         const Eigen::ArrayXd hNorm = hPoly.leftCols<3>().rowwise().norm();
+        // A(m, :3) is the normalized (_h0, _h1, _h2; ...)
         A.leftCols<3>() = hPoly.leftCols<3>().array().colwise() / hNorm;
+        // A(m, :) = (_h0, _h1, _h2, 1; ...)
         A.rightCols<1>().setConstant(1.0);
+        // b = (- _h3; ...)
         b = -hPoly.rightCols<1>().array() / hNorm;
+        // c = (0; 0; 0; -1)
         c.setZero();
         c(3) = -1.0;
-
+        
+        // min cTx, s.t. Ax<=b
+        // dim(x) << dim(b)
+        // max x4
+        // [_h0, _h1, _h2] [x1, x2, x3] + [_h3] <= -x4
+        // a inner point in the polytope should be negative
+        // a small -x4 means the point is far from the surface
+        // so this indeed to find the point in the "centre" of the polytope
         const double minmaxsd = sdlp::linprog<4>(c, A, b, x);
         interior = x.head<3>();
 
         return minmaxsd < 0.0 && !std::isinf(minmaxsd);
     }
 
+    //! @todo this may be important for some methods
+    // check whether the overlap between two polytope exceeds eps (the inner point to the nearest surface)
     inline bool overlap(const Eigen::MatrixX4d &hPoly0,
                         const Eigen::MatrixX4d &hPoly1,
                         const double eps = 1.0e-6)

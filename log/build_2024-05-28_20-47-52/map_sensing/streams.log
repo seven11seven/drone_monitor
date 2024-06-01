@@ -1,0 +1,116 @@
+[0.614s] Invoking command in '/home/kiki/Workspace/drone_monitor/build/map_sensing': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/kiki/Workspace/drone_monitor/map_gen/map_sensing -DCMAKE_INSTALL_PREFIX=/home/kiki/Workspace/drone_monitor/install/map_sensing
+[0.825s] -- The C compiler identification is GNU 11.4.0
+[1.061s] -- The CXX compiler identification is GNU 11.4.0
+[1.065s] -- Detecting C compiler ABI info
+[1.378s] -- Detecting C compiler ABI info - done
+[1.381s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.381s] -- Detecting C compile features
+[1.382s] -- Detecting C compile features - done
+[1.383s] -- Detecting CXX compiler ABI info
+[1.591s] -- Detecting CXX compiler ABI info - done
+[1.595s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.596s] -- Detecting CXX compile features
+[1.596s] -- Detecting CXX compile features - done
+[1.597s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.666s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.706s] -- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)
+[1.724s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.725s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.729s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.735s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.743s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.773s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.774s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.814s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.827s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.849s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.853s] -- Looking for pthread.h
+[2.074s] -- Looking for pthread.h - found
+[2.074s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.301s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[2.302s] -- Found Threads: TRUE  
+[2.372s] -- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)
+[2.428s] -- Found nav_msgs: 4.2.3 (/opt/ros/humble/share/nav_msgs/cmake)
+[2.472s] -- Checking for module 'eigen3'
+[2.477s] --   Found eigen3, version 3.4.0
+[2.489s] -- Found Eigen: /usr/include/eigen3 (Required is at least version "3.1") 
+[2.489s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[2.497s] -- Found Boost: /usr/local/lib/cmake/Boost-1.82.0/BoostConfig.cmake (found suitable version "1.82.0", minimum required is "1.65.0") found components: system filesystem date_time iostreams serialization 
+[2.519s] -- Checking for module 'libusb-1.0'
+[2.524s] --   Found libusb-1.0, version 1.0.25
+[2.537s] -- Found libusb: /usr/lib/x86_64-linux-gnu/libusb-1.0.so  
+[2.537s] -- Found OpenNI: /usr/lib/libOpenNI.so;libusb::libusb (found version "1.5.4.0") 
+[2.538s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[2.558s] -- Found OpenNI2: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb (found version "2.2.0.33") 
+[2.558s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[2.558s] [0m** WARNING ** io features related to pcap will be disabled[0m
+[2.558s] [0m** WARNING ** io features related to png will be disabled[0m
+[2.575s] -- Found GLEW: /usr/lib/x86_64-linux-gnu/libGLEW.so  
+[2.578s] -- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so  found components: OpenGL GLX 
+[3.054s] -- Found MPI_C: /usr/lib/x86_64-linux-gnu/libmpi.so (found version "3.1") 
+[3.054s] -- Found MPI: TRUE (found version "3.1") found components: C 
+[3.054s] -- Found JsonCpp: /usr/lib/x86_64-linux-gnu/libjsoncpp.so (found suitable version "1.9.5", minimum required is "0.7.0") 
+[3.054s] -- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.2.11") 
+[3.054s] -- Found PNG: /usr/lib/x86_64-linux-gnu/libpng.so (found version "1.6.37") 
+[3.054s] -- Found Eigen3: /usr/include/eigen3 (found version "3.4.0") 
+[3.054s] -- Found X11: /usr/include   
+[3.054s] -- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so
+[3.204s] -- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so - found
+[3.205s] -- Looking for gethostbyname
+[3.452s] -- Looking for gethostbyname - found
+[3.452s] -- Looking for connect
+[3.679s] -- Looking for connect - found
+[3.679s] -- Looking for remove
+[3.928s] -- Looking for remove - found
+[3.928s] -- Looking for shmat
+[4.165s] -- Looking for shmat - found
+[4.165s] -- Looking for IceConnectionNumber in ICE
+[4.358s] -- Looking for IceConnectionNumber in ICE - found
+[4.394s] -- Found EXPAT: /usr/lib/x86_64-linux-gnu/libexpat.so (found version "2.4.7") 
+[4.394s] -- Found double-conversion: /usr/lib/x86_64-linux-gnu/libdouble-conversion.so  
+[4.395s] -- Found LZ4: /usr/lib/x86_64-linux-gnu/liblz4.so (found version "1.9.3") 
+[4.396s] -- Found LZMA: /usr/lib/x86_64-linux-gnu/liblzma.so (found version "5.2.5") 
+[4.402s] -- Found JPEG: /usr/lib/x86_64-linux-gnu/libjpeg.so (found version "80") 
+[4.404s] -- Found TIFF: /usr/lib/x86_64-linux-gnu/libtiff.so (found version "4.3.0")  
+[4.406s] -- Found Freetype: /usr/lib/x86_64-linux-gnu/libfreetype.so (found version "2.11.1") 
+[4.409s] -- Found utf8cpp: /usr/include/utf8cpp  
+[4.425s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[4.425s] -- looking for PCL_COMMON
+[4.425s] -- Found PCL_COMMON: /usr/lib/x86_64-linux-gnu/libpcl_common.so  
+[4.425s] -- looking for PCL_OCTREE
+[4.425s] -- Found PCL_OCTREE: /usr/lib/x86_64-linux-gnu/libpcl_octree.so  
+[4.425s] -- looking for PCL_IO
+[4.426s] -- Found PCL_IO: /usr/lib/x86_64-linux-gnu/libpcl_io.so  
+[4.426s] -- Found PCL: pcl_common;pcl_octree;pcl_io;Boost::system;Boost::filesystem;Boost::date_time;Boost::iostreams;Boost::serialization;/usr/lib/libOpenNI.so;libusb::libusb;/usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb;VTK::ChartsCore;VTK::CommonColor;VTK::CommonComputationalGeometry;VTK::CommonCore;VTK::CommonDataModel;VTK::CommonExecutionModel;VTK::CommonMath;VTK::CommonMisc;VTK::CommonTransforms;VTK::FiltersCore;VTK::FiltersExtraction;VTK::FiltersGeneral;VTK::FiltersGeometry;VTK::FiltersModeling;VTK::FiltersSources;VTK::ImagingCore;VTK::ImagingSources;VTK::InteractionImage;VTK::InteractionStyle;VTK::InteractionWidgets;VTK::IOCore;VTK::IOGeometry;VTK::IOImage;VTK::IOLegacy;VTK::IOPLY;VTK::RenderingAnnotation;VTK::RenderingCore;VTK::RenderingContext2D;VTK::RenderingLOD;VTK::RenderingFreeType;VTK::ViewsCore;VTK::ViewsContext2D;VTK::RenderingOpenGL2;VTK::GUISupportQt  
+[4.427s] -- Found pcl_conversions: 2.4.0 (/opt/ros/humble/share/pcl_conversions/cmake)
+[4.544s] -- Configuring done
+[4.554s] -- Generating done
+[4.587s] -- Build files have been written to: /home/kiki/Workspace/drone_monitor/build/map_sensing
+[4.595s] Invoked command in '/home/kiki/Workspace/drone_monitor/build/map_sensing' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/kiki/Workspace/drone_monitor/map_gen/map_sensing -DCMAKE_INSTALL_PREFIX=/home/kiki/Workspace/drone_monitor/install/map_sensing
+[4.596s] Invoking command in '/home/kiki/Workspace/drone_monitor/build/map_sensing': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/kiki/Workspace/drone_monitor/build/map_sensing -- -j32 -l32
+[4.619s] [ 50%] [32mBuilding CXX object CMakeFiles/map_sensing_node.dir/src/forest_sensing.cpp.o[0m
+[10.495s] [100%] [32m[1mLinking CXX executable map_sensing_node[0m
+[10.786s] [100%] Built target map_sensing_node
+[10.792s] Invoked command in '/home/kiki/Workspace/drone_monitor/build/map_sensing' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/kiki/Workspace/drone_monitor/build/map_sensing -- -j32 -l32
+[10.803s] Invoking command in '/home/kiki/Workspace/drone_monitor/build/map_sensing': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/kiki/Workspace/drone_monitor/build/map_sensing
+[10.807s] -- Install configuration: ""
+[10.807s] -- Installing: /home/kiki/Workspace/drone_monitor/install/map_sensing/lib/map_sensing/map_sensing_node
+[10.808s] -- Set runtime path of "/home/kiki/Workspace/drone_monitor/install/map_sensing/lib/map_sensing/map_sensing_node" to ""
+[10.809s] -- Installing: /home/kiki/Workspace/drone_monitor/install/map_sensing/share/map_sensing/launch
+[10.809s] -- Installing: /home/kiki/Workspace/drone_monitor/install/map_sensing/share/map_sensing/launch/sensing.launch
+[10.809s] -- Installing: /home/kiki/Workspace/drone_monitor/install/map_sensing/share/ament_index/resource_index/package_run_dependencies/map_sensing
+[10.809s] -- Installing: /home/kiki/Workspace/drone_monitor/install/map_sensing/share/ament_index/resource_index/parent_prefix_path/map_sensing
+[10.809s] -- Installing: /home/kiki/Workspace/drone_monitor/install/map_sensing/share/map_sensing/environment/ament_prefix_path.sh
+[10.809s] -- Installing: /home/kiki/Workspace/drone_monitor/install/map_sensing/share/map_sensing/environment/ament_prefix_path.dsv
+[10.809s] -- Installing: /home/kiki/Workspace/drone_monitor/install/map_sensing/share/map_sensing/environment/path.sh
+[10.809s] -- Installing: /home/kiki/Workspace/drone_monitor/install/map_sensing/share/map_sensing/environment/path.dsv
+[10.809s] -- Installing: /home/kiki/Workspace/drone_monitor/install/map_sensing/share/map_sensing/local_setup.bash
+[10.809s] -- Installing: /home/kiki/Workspace/drone_monitor/install/map_sensing/share/map_sensing/local_setup.sh
+[10.809s] -- Installing: /home/kiki/Workspace/drone_monitor/install/map_sensing/share/map_sensing/local_setup.zsh
+[10.809s] -- Installing: /home/kiki/Workspace/drone_monitor/install/map_sensing/share/map_sensing/local_setup.dsv
+[10.809s] -- Installing: /home/kiki/Workspace/drone_monitor/install/map_sensing/share/map_sensing/package.dsv
+[10.809s] -- Installing: /home/kiki/Workspace/drone_monitor/install/map_sensing/share/ament_index/resource_index/packages/map_sensing
+[10.809s] -- Installing: /home/kiki/Workspace/drone_monitor/install/map_sensing/share/map_sensing/cmake/map_sensingConfig.cmake
+[10.809s] -- Installing: /home/kiki/Workspace/drone_monitor/install/map_sensing/share/map_sensing/cmake/map_sensingConfig-version.cmake
+[10.809s] -- Installing: /home/kiki/Workspace/drone_monitor/install/map_sensing/share/map_sensing/package.xml
+[10.810s] Invoked command in '/home/kiki/Workspace/drone_monitor/build/map_sensing' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/kiki/Workspace/drone_monitor/build/map_sensing

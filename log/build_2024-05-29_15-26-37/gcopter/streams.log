@@ -1,0 +1,44 @@
+[0.007s] Invoking command in '/home/kiki/Workspace/drone_monitor/build/gcopter': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/kiki/Workspace/drone_monitor/build/gcopter -- -j32 -l32
+[0.026s] [35m[1mConsolidate compiler generated dependencies of target global_planning[0m
+[0.035s] [ 50%] [32mBuilding CXX object CMakeFiles/global_planning.dir/src/global_planning.cpp.o[0m
+[0.775s] In file included from [01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/geo_utils.hpp:5[m[K,
+[0.775s]                  from [01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/misc/visualizer.hpp:6[m[K,
+[0.775s]                  from [01m[K/home/kiki/Workspace/drone_monitor/gcopter/src/global_planning.cpp:1[m[K:
+[0.775s] [01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/sdlp.hpp:[m[K In function ‘[01m[Kint sdlp::linfracprog(const double*, int, int, const double*, const double*, double*, double*, int*, int*) [with int d = 1][m[K’:
+[0.775s] [01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/sdlp.hpp:666:41:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmax_size[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[0.775s]   666 |                               [01;35m[Kconst int max_size[m[K,
+[0.775s]       |                               [01;35m[K~~~~~~~~~~^~~~~~~~[m[K
+[0.775s] [01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/sdlp.hpp:671:39:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kwork[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[0.775s]   671 |                               [01;35m[Kdouble *work[m[K,
+[0.775s]       |                               [01;35m[K~~~~~~~~^~~~[m[K
+[4.253s] In file included from [01m[K/home/kiki/Workspace/drone_monitor/gcopter/src/global_planning.cpp:1[m[K:
+[4.253s] /home/kiki/Workspace/drone_monitor/gcopter/include/misc/visualizer.hpp: In instantiation of ‘[01m[Kvoid Visualizer::visualizeModule(const Trajectory<D>&, const std::vector<Eigen::Matrix<double, 3, 1> >&, const SharedPtr&) [with int D = 5; rclcpp::Publisher<visualization_msgs::msg::Marker_<std::allocator<void> > >::SharedPtr = std::shared_ptr<rclcpp::Publisher<visualization_msgs::msg::Marker_<std::allocator<void> > > >][m[K’:
+[4.253s] [01m[K/home/kiki/Workspace/drone_monitor/gcopter/src/global_planning.cpp:252:47:[m[K   required from here
+[4.253s] [01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/misc/visualizer.hpp:30:71:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kroute[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[4.253s]    30 |                                  [01;35m[Kconst std::vector<Eigen::Vector3d> & route[m[K,
+[4.253s]       |                                  [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[21.273s] [100%] [32m[1mLinking CXX executable global_planning[0m
+[22.192s] [100%] Built target global_planning
+[22.206s] Invoked command in '/home/kiki/Workspace/drone_monitor/build/gcopter' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/kiki/Workspace/drone_monitor/build/gcopter -- -j32 -l32
+[22.221s] Invoking command in '/home/kiki/Workspace/drone_monitor/build/gcopter': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/kiki/Workspace/drone_monitor/build/gcopter
+[22.224s] -- Install configuration: ""
+[22.224s] -- Installing: /home/kiki/Workspace/drone_monitor/install/gcopter/lib/gcopter/global_planning
+[22.231s] -- Set runtime path of "/home/kiki/Workspace/drone_monitor/install/gcopter/lib/gcopter/global_planning" to ""
+[22.231s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter//launch
+[22.231s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter//launch/global_planning.launch
+[22.232s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/gcopter/share/ament_index/resource_index/package_run_dependencies/gcopter
+[22.232s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/gcopter/share/ament_index/resource_index/parent_prefix_path/gcopter
+[22.232s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/environment/ament_prefix_path.sh
+[22.232s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/environment/ament_prefix_path.dsv
+[22.232s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/environment/path.sh
+[22.232s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/environment/path.dsv
+[22.232s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/local_setup.bash
+[22.232s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/local_setup.sh
+[22.232s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/local_setup.zsh
+[22.232s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/local_setup.dsv
+[22.232s] -- Installing: /home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/package.dsv
+[22.232s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/gcopter/share/ament_index/resource_index/packages/gcopter
+[22.232s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/cmake/gcopterConfig.cmake
+[22.232s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/cmake/gcopterConfig-version.cmake
+[22.232s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/gcopter/share/gcopter/package.xml
+[22.313s] Invoked command in '/home/kiki/Workspace/drone_monitor/build/gcopter' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/kiki/Workspace/drone_monitor/build/gcopter

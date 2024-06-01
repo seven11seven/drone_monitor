@@ -22,6 +22,145 @@
 class Visualizer
 {
 public:
+    // Visualize the key module frames in the trajectory
+    //! @todo modify the function when the module planning function is done
+    //! @author added by kiki
+    template <int D>
+    inline void visualizeModule(const Trajectory<D> & traj,
+                                const rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr & modulePub)
+    {
+        // Markers are visual elements that can be used to represent things like points, lines, meshes, text, etc.
+        visualization_msgs::msg::Marker moduleMarker;
+        // Each marker must have a unique identifier within a Marker message
+        // By using unique IDs for markers, you can update or remove 
+        // specific markers within a visualization without affecting other markers.
+        moduleMarker.id = 0;
+        moduleMarker.type = visualization_msgs::msg::Marker::LINE_LIST;
+        moduleMarker.header.stamp = rclcpp::Clock().now();
+        moduleMarker.header.frame_id = "odom";
+        // part of the Pose message used to define the orientation of a marker in 3D space.
+        // The `w` component represents the scalar (real) part of the quaternion.
+        moduleMarker.pose.orientation.w = 1.00;
+        // specify what action should be taken with the marker that is being published. 
+        // `ADD` (value = 0): This action adds a new marker to the visualization. 
+        // If a marker with the same `id` already exists, it will be replaced by the new marker.
+        moduleMarker.action = visualization_msgs::msg::Marker::ADD;
+        // specify the namespace for the marker. 
+        // organize and manage markers more effectively by grouping them into namespaces
+        moduleMarker.ns = "moduleframe";
+        // geometry and visual settings
+        moduleMarker.color.r = 0.00;
+        moduleMarker.color.g = 1.00;
+        moduleMarker.color.b = 0.00;
+        moduleMarker.color.a = 1.00;
+        moduleMarker.scale.x = 0.2; // line width
+
+        // visulization
+        // current logic: for each waypoint, show a module whose CoM is the waypoint
+        std::vector<std::pair<int, int>> box_edges = 
+        {
+            {0, 1}, {1, 2}, {2, 3}, {3, 0},
+            {4, 5}, {5, 6}, {6, 7}, {7, 4},
+            {0, 4}, {1, 5}, {2, 6}, {3, 7}
+        };
+
+        const double diameter = 1.0;
+        Eigen::Vector3d offset = Eigen::Vector3d(diameter, diameter, diameter);
+        std::vector<Eigen::Vector3d> moduleGeom(8);
+        Eigen::Vector3d coGeom(0.0, 0.0, 0.0);
+
+        if (traj.getPieceNum() > 0)
+        {   
+            // wps represents the segement points
+            // Eigen::Matrix wps = traj.getPositions();
+            Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic> wps = traj.getPositions();
+            for (int i=0; i<wps.cols(); i++)
+            {   
+                // the CoM of the Module
+                coGeom = wps.col(i).head<3>();
+                // update the moduleGeom
+                moduleGeom[0] = coGeom + Eigen::Vector3d(1, 1, 1).cwiseProduct(offset);
+                moduleGeom[1] = coGeom + Eigen::Vector3d(-1, 1, 1).cwiseProduct(offset);
+                moduleGeom[2] = coGeom + Eigen::Vector3d(-1, -1, 1).cwiseProduct(offset);
+                moduleGeom[3] = coGeom + Eigen::Vector3d(1, -1, 1).cwiseProduct(offset);
+                moduleGeom[4] = coGeom + Eigen::Vector3d(1, 1, -1).cwiseProduct(offset);
+                moduleGeom[5] = coGeom + Eigen::Vector3d(-1, 1, -1).cwiseProduct(offset);
+                moduleGeom[6] = coGeom + Eigen::Vector3d(-1, -1, -1).cwiseProduct(offset);
+                moduleGeom[7] = coGeom + Eigen::Vector3d(1, -1, -1).cwiseProduct(offset);
+                // add line to moduleMarker
+                for (std::pair<int, int> edge : box_edges)
+                {
+                    geometry_msgs::msg::Point point;
+                    point.x = moduleGeom[edge.first](0);
+                    point.y = moduleGeom[edge.first](1);
+                    point.z = moduleGeom[edge.first](2);
+                    moduleMarker.points.push_back(point);
+                    point.x = moduleGeom[edge.second](0);
+                    point.y = moduleGeom[edge.second](1);
+                    point.z = moduleGeom[edge.second](2);
+                    moduleMarker.points.push_back(point);
+                } 
+            }
+
+        }
+
+        modulePub->publish(moduleMarker);
+        
+        return;
+    }
+
+    // // std::vector<Eigen::Vector3d> pc;
+    // // visualize polytopes in V-representation
+    // //! @todo rename the paramters for clarification
+    // //! @author add by kiki
+    // inline void visualizeModule(const std::vector<Eigen::Vector3d> &vPoly,
+    //                             const rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr & edgePub)
+    // {
+    //     // vPoly
+    //     // edgePub
+    //     // module is a kind of polytope
+    //     // RVIZ support tris for visualization
+    //     visualization_msgs::msg::Marker edgeMarker;
+
+    //     // initialize the msg type and other parameters
+    //     edgeMarker.id = 0;
+    //     edgeMarker.header.stamp = rclcpp::Clock().now();
+    //     edgeMarker.header.frame_id = "odom";
+    //     edgeMarker.pose.orientation.w = 1.00;
+    //     edgeMarker.action = visualization_msgs::msg::Marker::ADD;
+    //     edgeMarker.type = visualization_msgs::msg::Marker::LINE_LIST;
+    //     edgeMarker.ns = "edge";
+    //     edgeMarker.color.r = 0.00;
+    //     edgeMarker.color.g = 1.00;
+    //     edgeMarker.color.b = 1.00;
+    //     edgeMarker.color.a = 1.00;
+    //     edgeMarker.scale.x = 0.02; // line width
+
+    //     geometry_msgs::msg::Point point;
+
+    //     std::vector<std::pair<int, int>> box_edges = 
+    //     {
+    //         {0, 1}, {1, 2}, {2, 3}, {3, 0},
+    //         {4, 5}, {5, 6}, {6, 7}, {7, 4},
+    //         {0, 4}, {1, 5}, {2, 6}, {3, 7}
+    //     };
+
+    //     for (std::pair<int, int> edge : box_edges)
+    //     {
+    //         point.x = vPoly[edge.first](0);
+    //         point.y = vPoly[edge.first](1);
+    //         point.z = vPoly[edge.first](2);
+    //         edgeMarker.points.push_back(point);
+    //         point.x = vPoly[edge.second](0);
+    //         point.y = vPoly[edge.second](1);
+    //         point.z = vPoly[edge.second](2);
+    //         edgeMarker.points.push_back(point);
+    //     }
+
+    //     edgePub->publish(edgeMarker);
+        
+    //     return;
+    // }
 
     // Visualize the trajectory and its front-end path
     template <int D>
@@ -46,7 +185,7 @@ public:
         routeMarker.color.a = 1.00;
         routeMarker.scale.x = 0.1;
         
-        wayPointsMarker = routeMarker;
+        // wayPointsMarker = routeMarker; // seems redundant
         wayPointsMarker = routeMarker;
         wayPointsMarker.id = -wayPointsMarker.id - 1;
         wayPointsMarker.type = visualization_msgs::msg::Marker::SPHERE_LIST;
@@ -96,7 +235,8 @@ public:
         }
 
         if (traj.getPieceNum() > 0)
-        {
+        {   
+            // wps represents the segement points
             Eigen::Matrix wps = traj.getPositions();
             for (int i=0; i<wps.cols(); i++)
             {
@@ -131,57 +271,6 @@ public:
             trajectoryPub->publish(trajMarker);
         }
     }
-
-    // std::vector<Eigen::Vector3d> pc;
-    // visualize polytopes in V-representation
-    inline void visualizeMoudle(const std::vector<Eigen::Vector3d> &vPoly,
-                                const rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr & edgePub)
-    {
-        
-        // module is a kind of polytope
-        // RVIZ support tris for visualization
-        visualization_msgs::msg::Marker edgeMarker;
-
-        // initialize the msg type and other parameters
-        edgeMarker.id = 0;
-        edgeMarker.header.stamp = rclcpp::Clock().now();
-        edgeMarker.header.frame_id = "odom";
-        edgeMarker.pose.orientation.w = 1.00;
-        edgeMarker.action = visualization_msgs::msg::Marker::ADD;
-        edgeMarker.type = visualization_msgs::msg::Marker::LINE_LIST;
-        edgeMarker.ns = "edge";
-        edgeMarker.color.r = 0.00;
-        edgeMarker.color.g = 1.00;
-        edgeMarker.color.b = 1.00;
-        edgeMarker.color.a = 1.00;
-        edgeMarker.scale.x = 0.02; // line width
-
-        geometry_msgs::msg::Point point;
-
-        std::vector<std::pair<int, int>> box_edges = 
-        {
-            {0, 1}, {1, 2}, {2, 3}, {3, 0},
-            {4, 5}, {5, 6}, {6, 7}, {7, 4},
-            {0, 4}, {1, 5}, {2, 6}, {3, 7}
-        };
-
-        for (std::pair<int, int> edge : box_edges)
-        {
-            point.x = vPoly[edge.first](0);
-            point.y = vPoly[edge.first](1);
-            point.z = vPoly[edge.first](2);
-            edgeMarker.points.push_back(point);
-            point.x = vPoly[edge.second](0);
-            point.y = vPoly[edge.second](1);
-            point.z = vPoly[edge.second](2);
-            edgeMarker.points.push_back(point);
-        }
-
-        edgePub->publish(edgeMarker);
-        
-        return;
-    }
-
     
     // Visualize some polytopes in H-representation
     inline void visualizePolytope(const std::vector<Eigen::MatrixX4d> &hPolys,
@@ -207,9 +296,12 @@ public:
 
             quickhull::QuickHull<double> tinyQH;
             const auto polyHull = tinyQH.getConvexHull(vPoly.data(), vPoly.cols(), false, true);
+            // idxBuffer is the set of multiple "triple vertices"
+            // each represents a mesh plane 
             const auto &idxBuffer = polyHull.getIndexBuffer();
             int hNum = idxBuffer.size() / 3;
 
+            // hNum is the number of mesh pieces
             curTris.resize(3, hNum * 3);
             for (int i = 0; i < hNum * 3; i++)
             {
@@ -252,7 +344,6 @@ public:
         
         // access the number of columns in the `mesh` matrix. 
         int ptnum = mesh.cols();
-
         for (int i=0; i<ptnum; i++)
         {
             point.x = mesh(0, i);

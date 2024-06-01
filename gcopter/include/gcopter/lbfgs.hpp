@@ -238,7 +238,10 @@ namespace lbfgs
                               lbfgs_progress_t proc_progress,
                               void *instance,
                               const lbfgs_parameter_t &param)
-    {
+    {   
+        // instance provide some neccessary information during optimization
+        // and some information will be saved into the instance
+        // it will be used as the input of proc_xxx function above 
         int ret, i, j, k, ls, end, bound;
         double step, step_min, step_max, fx, ys, yy;
         double gnorm_inf, xnorm_inf, beta, rate, cau;
@@ -310,14 +313,14 @@ namespace lbfgs
         /* Construct a callback data. */
         callback_data_t cd;
         cd.instance = instance;
-        cd.proc_evaluate = proc_evaluate;
+        cd.proc_evaluate = proc_evaluate;   // const function
         cd.proc_stepbound = proc_stepbound;
         cd.proc_progress = proc_progress;
 
         /* Evaluate the function value and its gradient. */
         // x: current state
         // g: gradient at current state
-        // instance: the GCOPTER_PolytopeSFC
+        // instance: the GCOPTER_PolytopeSFC or other defined type
         // proc_evaluate is the cost function in instance
         fx = cd.proc_evaluate(cd.instance, x, g);
 

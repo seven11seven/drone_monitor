@@ -184,9 +184,10 @@ namespace minco
         Eigen::Matrix<double, 3, 2> tailPV;
         BandedSystem A;
         Eigen::MatrixX3d b;
+        // what is T1 T2 and T3
         Eigen::VectorXd T1;
-        Eigen::VectorXd T2;
-        Eigen::VectorXd T3;
+        Eigen::VectorXd T2; // T1^2
+        Eigen::VectorXd T3; // T1^3
 
     public:
         inline void setConditions(const Eigen::Matrix<double, 3, 2> &headState,

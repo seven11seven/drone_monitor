@@ -1,0 +1,10 @@
+/home/kiki/Workspace/drone_monitor/build/map_sensing/CMakeFiles/uninstall.dir
+/home/kiki/Workspace/drone_monitor/build/map_sensing/CMakeFiles/map_sensing_uninstall.dir
+/home/kiki/Workspace/drone_monitor/build/map_sensing/CMakeFiles/map_sensing_node.dir
+/home/kiki/Workspace/drone_monitor/build/map_sensing/CMakeFiles/test.dir
+/home/kiki/Workspace/drone_monitor/build/map_sensing/CMakeFiles/edit_cache.dir
+/home/kiki/Workspace/drone_monitor/build/map_sensing/CMakeFiles/rebuild_cache.dir
+/home/kiki/Workspace/drone_monitor/build/map_sensing/CMakeFiles/list_install_components.dir
+/home/kiki/Workspace/drone_monitor/build/map_sensing/CMakeFiles/install.dir
+/home/kiki/Workspace/drone_monitor/build/map_sensing/CMakeFiles/install/local.dir
+/home/kiki/Workspace/drone_monitor/build/map_sensing/CMakeFiles/install/strip.dir

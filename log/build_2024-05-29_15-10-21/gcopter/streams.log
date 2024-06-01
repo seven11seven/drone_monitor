@@ -1,0 +1,22 @@
+[0.007s] Invoking command in '/home/kiki/Workspace/drone_monitor/build/gcopter': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/kiki/Workspace/drone_monitor/build/gcopter -- -j32 -l32
+[0.025s] [35m[1mConsolidate compiler generated dependencies of target global_planning[0m
+[0.039s] [ 50%] [32mBuilding CXX object CMakeFiles/global_planning.dir/src/global_planning.cpp.o[0m
+[0.805s] In file included from [01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/geo_utils.hpp:5[m[K,
+[0.805s]                  from [01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/misc/visualizer.hpp:6[m[K,
+[0.806s]                  from [01m[K/home/kiki/Workspace/drone_monitor/gcopter/src/global_planning.cpp:1[m[K:
+[0.806s] [01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/sdlp.hpp:[m[K In function ‘[01m[Kint sdlp::linfracprog(const double*, int, int, const double*, const double*, double*, double*, int*, int*) [with int d = 1][m[K’:
+[0.806s] [01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/sdlp.hpp:666:41:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmax_size[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[0.806s]   666 |                               [01;35m[Kconst int max_size[m[K,
+[0.806s]       |                               [01;35m[K~~~~~~~~~~^~~~~~~~[m[K
+[0.806s] [01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/sdlp.hpp:671:39:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kwork[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[0.806s]   671 |                               [01;35m[Kdouble *work[m[K,
+[0.806s]       |                               [01;35m[K~~~~~~~~^~~~[m[K
+[1.879s] In file included from [01m[K/home/kiki/Workspace/drone_monitor/gcopter/src/global_planning.cpp:1[m[K:
+[1.879s] [01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/misc/visualizer.hpp:[m[K In member function ‘[01m[Kvoid Visualizer::visualize_module(const Trajectory<D>&, const std::vector<Eigen::Matrix<double, 3, 1> >&, const SharedPtr&)[m[K’:
+[1.879s] [01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/misc/visualizer.hpp:80:45:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+[1.879s]    80 |                 coGeom = wps.col(i).head<3>([01;31m[K)[m[K;
+[1.879s]       |                                             [01;31m[K^[m[K
+[12.273s] gmake[2]: *** [CMakeFiles/global_planning.dir/build.make:76: CMakeFiles/global_planning.dir/src/global_planning.cpp.o] Error 1
+[12.273s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/global_planning.dir/all] Error 2
+[12.273s] gmake: *** [Makefile:146: all] Error 2
+[12.274s] Invoked command in '/home/kiki/Workspace/drone_monitor/build/gcopter' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/kiki/Workspace/drone_monitor/build/gcopter -- -j32 -l32

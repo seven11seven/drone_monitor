@@ -1,5 +1,6 @@
 <launch>
-    <node name="rviz" pkg="rviz2" exec="rviz2" output="screen">
+    <node name="rviz" pkg="rviz2" exec="rviz2" output="screen" 
+        args="-d /home/kiki/Workspace/drone_monitor/my_launch/launch/MINCO_planner.rviz">
     </node>
 
     <!-- <node name="pos_vel_plot" pkg="rqt_gui" exec="rqt_gui">
@@ -31,7 +32,7 @@
     <remap from="/mock_map" to="/voxel_map"/>
     </node>
 
-    <!-- <node pkg="gcopter" exec="global_planning" name="global_planning_node" output="screen">
+    <node pkg="gcopter" exec="global_planning" name="global_planning_node" output="screen">
     <param name="MapTopic" value="/voxel_map"/>
     <param name="TargetTopic" value="/move_base_simple/goal"/>
     <param name="DilateRadius" value="0.5"/>
@@ -54,9 +55,9 @@
     <param name="SmoothingEps" value="1.0e-2"/>
     <param name="IntegralIntervs" value="16"/>
     <param name="RelCostTol" value="1.0e-5"/>
-    </node> -->
-
-    <node pkg="simulation" exec="simulation_node" name="mic_module_node" output="screen">
     </node>
+
+    <!-- <node pkg="simulation" exec="simulation_node" name="mic_module_node" output="screen">
+    </node> -->
 
 </launch>
