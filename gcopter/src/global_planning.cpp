@@ -104,10 +104,6 @@ public:
         targetSub = this->create_subscription<geometry_msgs::msg::PoseStamped>(targetTopic,
                                                                                rclcpp::QoS(1).best_effort(),
                                                                                std::bind(&GlobalPlanner::targetCallBack, this, std::placeholders::_1));
-        
-        // test: visualize the module 
-        
-        // visualizer.visualizeMoudle(goal, 0.5, startGoal.size(), this->spherePub);
 
     }
 

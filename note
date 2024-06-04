@@ -57,8 +57,10 @@ gcopter in the costFunctional
 <<< Principle <<<
 
 >>> Other Issues TODAY >>>
+1. Add geometry constraints during optimization
+
 1. Decode the optimization function, finished ====
-2. Develop the step motor driver
+2. Develop the step motor driver ====
 3. Test the Odrive
 
 1. Decode the optimization function, part of ... ====
@@ -77,14 +79,6 @@ gcopter in the costFunctional
 <<< Other Issues TODAY <<<
 
 >>> Temp Note >>>
-1. a function related to c and T
-2. integration of the function
-3. the gradient of the integration function w.r.t. c and T
-4. dc/dq and dc/dt
-5. dq/dxi, dt/dtau
-6. the forward function to calculate current state
-
-1. a sequence of polys 
-2. the mapping from xi to q is determained by the poly
-
-1. T can be directly mapped to tau for all pieces
+1. modify the initial path generation function
+2. modify the obstacle avoidence optimization process
+3. modify the dynamic flatness part

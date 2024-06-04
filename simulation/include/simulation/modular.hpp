@@ -24,10 +24,10 @@ namespace modular
         typedef std::vector<PolyhedronH> PolyhedraH;
 
     private:
-        // minco for solving banded linear system Ax=b effeciently
-        //! @todo the mathmatics, input and output of minco remain to be explored
+        // minco provides basic mappings and gradient calculation methods 
+        // and can be used in modular trajectory planning without modification
         minco::MINCO_S3NU minco;
-        //! @todo clarify hoe the flatmap encode the system
+        // the flatmap should be refined for the crane-module system
         flatness::FlatnessMap flatmap;
 
         double rho;
@@ -67,6 +67,10 @@ namespace modular
         Eigen::VectorXd gradByTimes;
         Eigen::MatrixX3d partialGradByCoeffs;
         Eigen::VectorXd partialGradByTimes;
+
+        // QQ: vPoly representing the module
+        // coordinates are related to the CoM of the module
+        Eigen::Matrix<double, 3, 8> modulePoly;
 
     private:
         /* The following 3 functions give the mappings and gradient w.r.t T and tau */
@@ -132,11 +136,13 @@ namespace modular
         }
 
         /* The following 4 functions give the mappings and gradient w.r.t vPolys and P */
+        // the functions shall be reused in the geometry penalty
         static inline void forwardP(const Eigen::VectorXd &xi,
                                     const Eigen::VectorXi &vIdx,
                                     const PolyhedraV &vPolys,
                                     Eigen::Matrix3Xd &P)
         {
+            // from xi to P
             const int sizeP = vIdx.size();
             P.resize(3, sizeP);
             Eigen::VectorXd q;
@@ -156,6 +162,7 @@ namespace modular
                                          Eigen::VectorXd &gradXi)
         {
             const int n = xi.size();
+            // what is ovPoly
             const Eigen::Matrix3Xd &ovPoly = *(Eigen::Matrix3Xd *)ptr;
 
             const double sqrNormXi = xi.squaredNorm();
