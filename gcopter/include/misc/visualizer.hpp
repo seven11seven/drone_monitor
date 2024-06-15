@@ -64,7 +64,8 @@ public:
             {0, 4}, {1, 5}, {2, 6}, {3, 7}
         };
 
-        const double diameter = 1.0;
+        //! @todo add diameter to hyper parameters
+        const double diameter = 0.5;
         Eigen::Vector3d offset = Eigen::Vector3d(diameter, diameter, diameter);
         std::vector<Eigen::Vector3d> moduleGeom(8);
         Eigen::Vector3d coGeom(0.0, 0.0, 0.0);

@@ -36,11 +36,15 @@
 4. visualize the point cloud surface / visulize the convex hulls ====
 5. visualize the module surfaces  ====
 6. generate cylinder obstacles and visualize in RViz2 ====
-7. remap the cost function class of the crane-module trajectory planning
-    7.1 Visualize the module and the trajectory ===
-    7.2 Reset the cost function
-9. MILESTONE: automatic trajectory planning in the simplest assumption
-
+7. remap the cost function class of the crane-module trajectory planning ====
+    7.1 Visualize the module and the trajectory ====
+    7.2 Reset the cost function ====
+8. MILESTONE: automatic trajectory planning in the simplest dynamic assumption
+    9.1 Review the energy penalty of the MINCO class: analytical integration of acceleration ====
+    9.2 Revise the flatness part of the project ====
+    9.3 Revise the violate thrust and velocity of the project ====
+    9.4 Review the xi to q layer in modular: no project retriction, use ball penalty instead ====
+9. dynamics simulation: mujoco <==> ros2 
 10. evaluate the proposed differential flatness of the crane-module system
 11. reconsidering the optimization methods based on MIO
 12. the trajectory planning algorithm considering the dynamics
@@ -53,11 +57,18 @@ gcopter in the costFunctional
 >>> Principle >>>
 1. do not modify the methods, variables, create new methods or reuse them instead
 2. add detail notations when decoding the project. The logic, parameters, inputs and outputs, mathmactics, etc.
-3. 
 <<< Principle <<<
 
 >>> Other Issues TODAY >>>
-1. Add geometry constraints during optimization
+1. Polish the codes
+2. Adjust the hardware
+
+1. modify the dynamics flatness part  ===
+2. encode dynamics  ===
+3. decode dynamics  ===
+4. adjust the parameters  ===
+
+1. Add geometry constraints during optimization ====
 
 1. Decode the optimization function, finished ====
 2. Develop the step motor driver ====
@@ -79,6 +90,8 @@ gcopter in the costFunctional
 <<< Other Issues TODAY <<<
 
 >>> Temp Note >>>
-1. modify the initial path generation function
-2. modify the obstacle avoidence optimization process
-3. modify the dynamic flatness part
+some of the cost function as well as the initial path strategy is not perfect,
+there are still much work remaining to be done.
+The key Qustion:
+How to define the quality of module liftinig trajectory ?
+

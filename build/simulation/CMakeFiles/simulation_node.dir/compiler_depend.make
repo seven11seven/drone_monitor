@@ -1163,6 +1163,11 @@ CMakeFiles/simulation_node.dir/src/fake_module.cpp.o: /home/kiki/Workspace/drone
   /usr/include/c++/11/bits/stl_queue.h \
   /usr/local/include/ompl-1.6/ompl/base/objectives/PathLengthOptimizationObjective.h \
   /usr/local/include/ompl-1.6/ompl/base/DiscreteMotionValidator.h \
+  /home/kiki/Workspace/drone_monitor/simulation/include/simulation/path_gen.hpp \
+  /home/kiki/Workspace/drone_monitor/simulation/include/simulation/modular.hpp \
+  /home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/minco.hpp \
+  /home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/lbfgs.hpp \
+  /home/kiki/Workspace/drone_monitor/simulation/include/simulation/crane_flatness.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/string.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__struct.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__builder.hpp \
@@ -1188,6 +1193,12 @@ CMakeFiles/simulation_node.dir/src/fake_module.cpp.o: /home/kiki/Workspace/drone
 /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__builder.hpp:
 
 /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__struct.hpp:
+
+/home/kiki/Workspace/drone_monitor/simulation/include/simulation/crane_flatness.hpp:
+
+/home/kiki/Workspace/drone_monitor/simulation/include/simulation/modular.hpp:
+
+/home/kiki/Workspace/drone_monitor/simulation/include/simulation/path_gen.hpp:
 
 /usr/local/include/ompl-1.6/ompl/base/objectives/PathLengthOptimizationObjective.h:
 

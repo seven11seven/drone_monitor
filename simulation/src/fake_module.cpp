@@ -6,6 +6,9 @@
 #include "gcopter/voxel_map.hpp"
 #include "gcopter/sfc_gen.hpp"
 
+#include "simulation/path_gen.hpp"
+#include "simulation/modular.hpp"
+
 #include <cmath>
 #include <iostream>
 #include <string>
@@ -145,6 +148,112 @@ public:
         }
     }
 
+    inline void module_plan()
+    {
+        if (startGoal.size() == 2)
+        {
+            std::vector<Eigen::Vector3d> route;
+
+            // return the planned path points in vector 3D format
+            // planner: RRTstar
+            path_gen::planPath<voxel_map::VoxelMap>(startGoal[0],
+                                                    startGoal[1],
+                                                    voxelMap.getOrigin(),
+                                                    voxelMap.getCorner(),
+                                                    &voxelMap, 0.01,
+                                                    route);
+            std::vector<Eigen::MatrixX4d> hPolys;
+            std::vector<Eigen::Vector3d> pc;
+            voxelMap.getSurf(pc);
+
+            // RCLCPP_WARN(this->get_logger(), "debug point 1");
+
+            sfc_gen::convexCover(route,
+                                 pc,
+                                 voxelMap.getOrigin(),
+                                 voxelMap.getCorner(),
+                                 7.0,
+                                 3.0,
+                                 hPolys);
+            sfc_gen::shortCut(hPolys);
+
+            // RCLCPP_WARN(this->get_logger(), "debug point 2");
+            // RCLCPP_WARN(this->get_logger(), "the number of hPolys is %ld", hPolys.size());
+
+            if (route.size() > 1)
+            {
+                visualizer.visualizePolytope(hPolys, this->meshPub, this->edgePub);
+
+                // state here includes pos, vel, and acc
+                Eigen::Matrix3d iniState;
+                Eigen::Matrix3d finState;
+                iniState << route.front(), Eigen::Vector3d::Zero(), Eigen::Vector3d::Zero();
+                finState << route.back(), Eigen::Vector3d::Zero(), Eigen::Vector3d::Zero();
+
+                gcopter::GCOPTER_PolytopeSFC gcopter;
+                modular::MODULAR_PolytopeSFC modular;
+
+                //! @todo when modifying the module dynamics
+                // initialize some constraint parameters
+                Eigen::VectorXd magnitudeBounds(5);
+                Eigen::VectorXd penaltyWeights(5);
+                Eigen::VectorXd physicalParams(6);
+                magnitudeBounds(0) = maxVelMag;
+                magnitudeBounds(1) = maxBdrMag;
+                magnitudeBounds(2) = maxTiltAngle;
+                magnitudeBounds(3) = minThrust;
+                magnitudeBounds(4) = maxThrust;
+                penaltyWeights(0) = (chiVec)[0];
+                penaltyWeights(1) = (chiVec)[1];
+                penaltyWeights(2) = (chiVec)[2];
+                penaltyWeights(3) = (chiVec)[3];
+                penaltyWeights(4) = (chiVec)[4];
+                physicalParams(0) = vehicleMass;
+                physicalParams(1) = gravAcc;
+                physicalParams(2) = horizDrag;
+                physicalParams(3) = vertDrag;
+                physicalParams(4) = parasDrag;
+                physicalParams(5) = speedEps;
+                const int quadratureRes = integralIntervs;
+
+                // RCLCPP_WARN(this->get_logger(), "debug point 3");
+
+                traj.clear();
+                // setup() and optimize()
+                if (!modular.setup(weightT,
+                                   iniState, finState,
+                                   hPolys, INFINITY,
+                                   smoothingEps,
+                                   quadratureRes,
+                                   magnitudeBounds,
+                                   penaltyWeights,
+                                   physicalParams))
+                {
+                    return;
+                }
+
+                // RCLCPP_WARN(this->get_logger(), "debug point 4");
+
+                if (std::isinf(modular.optimize(traj, relCostTol)))
+                {
+                    return;
+                }
+
+                // RCLCPP_WARN(this->get_logger(), "debug point 5");
+
+                if (traj.getPieceNum() > 0)
+                {
+                    // get the trajectory generation time
+                    trajStamp = rclcpp::Clock().now().seconds();
+                    visualizer.visualize(traj, route, this->routePub, this->wayPointsPub, this->trajectoryPub);
+                    visualizer.visualizeModule(traj, this->modulePub);
+                }
+
+                // RCLCPP_WARN(this->get_logger(), "debug point 6");
+            }
+        }
+    }
+
     inline void plan()
     {
         if (startGoal.size() == 2)
@@ -168,8 +277,6 @@ public:
             std::vector<Eigen::Vector3d> pc;
             voxelMap.getSurf(pc);
             // route is the original feasible path now
-
-            //! @todo generate the path using RRTstar
 
             // serach for / generate the convered convex hulls in the path
             // Each row of hPoly is defined by h0, h1, h2, h3 as
@@ -257,6 +364,8 @@ public:
             {
                 startGoal.clear();
             }
+            // bottom level + safe distance + orientation * (height - 2*safe distance)
+            // range: [bottom+safe distance, top-safe distance]
             const double zGoal = mapBound[4] + dilateRadius +
                                  fabs(msg->pose.orientation.z) *
                                      (mapBound[5] - mapBound[4] - 2 * dilateRadius);
@@ -271,12 +380,13 @@ public:
                 RCLCPP_WARN(this->get_logger(), "Infeasible Position Selected !!!\n");
             }
 
-            plan();
-
+            // plan();
+            module_plan();
         }
         return;
     }
 
+    // not used in this project
     inline void process()
     {
         Eigen::VectorXd physicalParams(6);

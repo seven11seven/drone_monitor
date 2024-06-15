@@ -30,8 +30,8 @@ namespace flatness
         inline void forward(const Eigen::Vector3d &vel,
                             const Eigen::Vector3d &acc,
                             const Eigen::Vector3d &jer,
-                            const double &psi,
-                            const double &dpsi,
+                            const double &psi,  // set as 0.0 in use
+                            const double &dpsi, // set as 0.0 in use
                             double &thr,
                             Eigen::Vector4d &quat,
                             Eigen::Vector3d &omg)
