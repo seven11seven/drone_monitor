@@ -30,8 +30,6 @@ namespace modular
         // minco provides basic mappings and gradient calculation methods 
         // and can be used in modular trajectory planning without modification
         minco::MINCO_S3NU minco;
-        // the flatmap should be refined for the crane-module system
-        flatness::FlatnessMap flatmap;
         crane_flatness::SimpleFlatnessMap simpleFlatmap;
 
         double rho;
@@ -165,8 +163,9 @@ namespace modular
                                          const Eigen::VectorXd &xi,
                                          Eigen::VectorXd &gradXi)
         {
+            // pre-optimize this function before using MINCO
+            // remaining to be modified for the 
             const int n = xi.size();
-            // ovPoly is 
             const Eigen::Matrix3Xd &ovPoly = *(Eigen::Matrix3Xd *)ptr;
 
             // unit Xi: unitXi = xi / sqrt(|xi|^2)
@@ -175,7 +174,6 @@ namespace modular
             const Eigen::VectorXd unitXi = xi * invNormXi;
             const Eigen::VectorXd r = unitXi.head(n - 1);
             
-            // 
             const Eigen::Vector3d delta = ovPoly.rightCols(n - 1) * r.cwiseProduct(r) +
                                           ovPoly.col(1) - ovPoly.col(0);
             double cost = delta.squaredNorm();
@@ -348,65 +346,48 @@ namespace modular
         }
 
         /* This function calculate the gradient from user defined penalty w.r.t. C and T*/
-        //! @todo modify from here. add penalties of the modular existing the Polytope;
         // you may paint an gradient graph to illustrate the process
         // magnitudeBounds = [v_max, omg_max, theta_max, thrust_min, thrust_max]^T
         // penaltyWeights = [pos_weight, vel_weight, omg_weight, theta_weight, thrust_weight]^T
         // physicalParams = [vehicle_mass, gravitational_acceleration, horitonral_drag_coeff,
         //                   vertical_drag_coeff, parasitic_drag_coeff, speed_smooth_factor]^T
-
         static inline void attachPenaltyFunctional(const Eigen::VectorXd &T,        // obj.times
                                                    const Eigen::MatrixX3d &coeffs,  // obj.minco.getCoeffs()
                                                    const Eigen::VectorXi &hIdx,     // obj.hPolyIdx
                                                    const PolyhedraH &hPolys,        // obj.hPolytopes
                                                    const double &smoothFactor,      // obj.smoothEps
                                                    const int &integralResolution,   // obj.integralRes
-                                                   const Eigen::VectorXd &magnitudeBounds,  // obj.magnitudeBd
-                                                   const Eigen::VectorXd &penaltyWeights,   // obj.penaltyWt
-                                                   // flatness::FlatnessMap &flatMap,          // obj.flatmap
-                                                   crane_flatness::SimpleFlatnessMap &flatMap,
-                                                   double &cost,                            // cost
-                                                   Eigen::VectorXd &gradT,                  // obj.partialGradByTimes
-                                                   Eigen::MatrixX3d &gradC)                 // obj.partialGradByCoeffs
+                                                   const Eigen::VectorXd &magnitudeBounds,      // obj.magnitudeBd
+                                                   const Eigen::VectorXd &penaltyWeights,       // obj.penaltyWt
+                                                   crane_flatness::SimpleFlatnessMap &flatMap,  // obj.flatmap
+                                                   double &cost,                                // cost
+                                                   Eigen::VectorXd &gradT,                      // obj.partialGradByTimes
+                                                   Eigen::MatrixX3d &gradC)                     // obj.partialGradByCoeffs
         {
             // T: initial trajectory time list
-            // magnitudeBounds:
+            // magnitudeBounds: defined in launch file, Max
+            // MaxVelMag, MaxBdrMag, MaxTiltAngle, MinTrust, MaxTrust
             // smoothFactor is a hyper-parameter to set the penalty
             // this function seems to be the total penalty function
             // aims at minimizing cost through gradT and gradC
             const double velSqrMax = magnitudeBounds(0) * magnitudeBounds(0);
-            const double omgSqrMax = magnitudeBounds(1) * magnitudeBounds(1);
-            //! @todo add MacAccMax
-            const double accSqrMax = 1;
-            const double thetaMax = magnitudeBounds(2);
-            const double thrustMean = 0.5 * (magnitudeBounds(3) + magnitudeBounds(4));
-            const double thrustRadi = 0.5 * fabs(magnitudeBounds(4) - magnitudeBounds(3));
-            const double thrustSqrRadi = thrustRadi * thrustRadi;
+            const double jibOmgSqrMax = magnitudeBounds(1) * magnitudeBounds(1);
+            const double accSqrMax = magnitudeBounds(2) * magnitudeBounds(2);
 
             // position penalty; velocity penalty; thrust penalty;
             // theta penalty: theta, the forth flatoutputs
             // omg penalty:   angular velocity penalty
+            // corresponding to ChiVec
             const double weightPos = penaltyWeights(0);
             const double weightVel = penaltyWeights(1);
-            const double weightOmg = penaltyWeights(2);
-            const double weightTheta = penaltyWeights(3);
-            const double weightThrust = penaltyWeights(4);
-            //! @todo adjust the penaltyWeight
-            const double weightAcc = 1.0e+4;
-            const double weightJibOmg = 1.0e+4;
+            const double weightAcc = penaltyWeights(2);
+            const double weightJibOmg = penaltyWeights(3);
 
 
             Eigen::Vector3d pos, vel, acc, jer, sna;
             Eigen::Vector3d totalGradPos, totalGradVel, totalGradAcc, totalGradJer;
-            double totalGradPsi, totalGradPsiD;
-            double thr, cos_theta;
-            // quat: the orientation of the drone, represented in quaterion
-            Eigen::Vector4d quat;
-            // omg: angular velocity
-            Eigen::Vector3d omg;
-            double gradThr, gradJibOmg;
-            Eigen::Vector4d gradQuat;
-            Eigen::Vector3d gradPos, gradVel, gradOmg, gradAcc;
+            double gradJibOmg;
+            Eigen::Vector3d gradPos, gradVel, gradAcc;
             double jib_omg, trolley_vel, jib_force, trolley_force, module_force;
 
             double step, alpha;
@@ -414,9 +395,9 @@ namespace modular
             Eigen::Matrix<double, 6, 1> beta0, beta1, beta2, beta3, beta4;
             Eigen::Vector3d outerNormal;
             int K, L;
-            double violaPos, violaVel, violaOmg, violaTheta, violaThrust, violaAcc, violaJibOmg;
-            double violaPosPenaD, violaVelPenaD, violaOmgPenaD, violaThetaPenaD, violaThrustPenaD, violaAccPenaD, violaJibOmgPenaD;
-            double violaPosPena, violaVelPena, violaOmgPena, violaThetaPena, violaThrustPena, violaAccPena, violaJibOmgPena;
+            double violaPos, violaVel, violaAcc, violaJibOmg;
+            double violaPosPenaD, violaVelPenaD, violaAccPenaD, violaJibOmgPenaD;
+            double violaPosPena,  violaVelPena,  violaAccPena,  violaJibOmgPena;
             double node, pena;
 
             const int pieceNum = T.size();
@@ -455,37 +436,24 @@ namespace modular
                     acc = c.transpose() * beta2;
                     jer = c.transpose() * beta3;
                     sna = c.transpose() * beta4;
-                    // the flatness of the system enables to calculate the thr, quat, and omg.
-                    //! @todo
-                    // flatMap.forward(vel, acc, jer, 0.0, 0.0, thr, quat, omg);
+                    // the flatness of the system enables to calculate the states and joint forces of the system.
                     flatMap.forward(pos, vel, acc, jib_omg, trolley_vel, jib_force, trolley_force, module_force);
                     
                     // User defined penalty function
-                    //! @todo This part remains to be modified for modular scenario
-                    // velocity and angular velocity penalty
-                    violaVel = vel.squaredNorm() - velSqrMax;   // velocity 
-                    // violaOmg = omg.squaredNorm() - omgSqrMax;   // omega: angluar velocity
-                    violaJibOmg = jib_omg*jib_omg - omgSqrMax;
-                    violaAcc = acc.squaredNorm() - accSqrMax;
-                    // theta penalty (the orientation of the drone)
-                    cos_theta = 1.0 - 2.0 * (quat(1) * quat(1) + quat(2) * quat(2));
-                    violaTheta = acos(cos_theta) - thetaMax;
-                    // the thrust should in a ball
-                    violaThrust = (thr - thrustMean) * (thr - thrustMean) - thrustSqrRadi;
+                    violaVel = vel.squaredNorm() - velSqrMax;       // velocity 
+                    violaJibOmg = jib_omg*jib_omg - jibOmgSqrMax;   // jibOmg angular velocity
+                    violaAcc = acc.squaredNorm() - accSqrMax;       // acceleration of module
 
                     // init gradients, all set zero
-                    gradThr = 0.0;
                     gradJibOmg = 0.0;
-                    gradQuat.setZero();
-                    gradPos.setZero(), gradVel.setZero(), gradOmg.setZero(), gradAcc.setZero();
+                    gradPos.setZero(), gradVel.setZero(), gradAcc.setZero();
                     pena = 0.0;
 
-                    /* the following blocks calculate penalty and gradients 
-                       given the violation degree for each segment,
-                       calculate the penalty segment,
-                       and the gradient of the penalty segment w.r.t. the violation degree
-                       */
-                    
+                    // the following blocks calculate penalty and gradients 
+                    // given the violation degree for each segment,
+                    // calculate the penalty segment,
+                    // and the gradient of the penalty segment w.r.t. the violation degree
+
                     // the point should in the negative half space for every surface
                     L = hIdx(i);            // the index of the Poly for ith piece
                     K = hPolys[L].rows();   // the Poly's h representation
@@ -493,12 +461,6 @@ namespace modular
                     {   
                         // each row in hPolys[L] is a surface
                         outerNormal = hPolys[L].block<1, 3>(k, 0);
-                        // violaPos = outerNormal.dot(pos) + hPolys[L](k, 3);
-                        // if (smoothedL1(violaPos, smoothFactor, violaPosPena, violaPosPenaD))
-                        // {
-                        //     gradPos += weightPos * violaPosPenaD * outerNormal; //gradPos have been set to zero
-                        //     pena += weightPos * violaPosPena;
-                        // }
 
                         // modify the penalty function with bounding box constraints
                         //! @todo set the diameter as hyper parameters
@@ -514,7 +476,8 @@ namespace modular
                             violaPos = outerNormal.dot(vertice) + hPolys[L](k, 3);
                             if (smoothedL1(violaPos, smoothFactor, violaPosPena, violaPosPenaD))
                             {
-                                gradPos += weightPos * violaPosPenaD * outerNormal; //gradPos have been set to zero
+                                //gradPos have been set to zero
+                                gradPos += weightPos * violaPosPenaD * outerNormal; 
                                 pena += weightPos * violaPosPena;
                             }
                         }
@@ -522,12 +485,12 @@ namespace modular
                     // smoothedL1: violaPena: penality value, violaPenaD: gradient pena/viola 
 
                     // gradVel = 2 * weightVel * sum(violaVelPenaD*vel)
-                    //! @todo adjust violavel
                     if (smoothedL1(violaVel, smoothFactor, violaVelPena, violaVelPenaD))
                     {   
                         // there is a grammer trick to save memory
                         // try to think in c++ complier, using the perspective of memory allocationaz
-                        gradVel += weightVel * violaVelPenaD * 2.0 * vel;   // the += here is to make full usage of memory
+                        // the += here is to make full usage of memory
+                        gradVel += weightVel * violaVelPenaD * 2.0 * vel;
                         pena += weightVel * violaVelPena;
                     }
 
@@ -543,26 +506,6 @@ namespace modular
                         pena += weightJibOmg * violaJibOmgPena;
                     }
 
-                    // if (smoothedL1(violaOmg, smoothFactor, violaOmgPena, violaOmgPenaD))
-                    // {
-                    //     gradOmg += weightOmg * violaOmgPenaD * 2.0 * omg;
-                    //     pena += weightOmg * violaOmgPena;
-                    // }
-                    
-                    // if (smoothedL1(violaTheta, smoothFactor, violaThetaPena, violaThetaPenaD))
-                    // {
-                    //     gradQuat += weightTheta * violaThetaPenaD /
-                    //                 sqrt(1.0 - cos_theta * cos_theta) * 4.0 *
-                    //                 Eigen::Vector4d(0.0, quat(1), quat(2), 0.0);
-                    //     pena += weightTheta * violaThetaPena;
-                    // }
-
-                    // if (smoothedL1(violaThrust, smoothFactor, violaThrustPena, violaThrustPenaD))
-                    // {
-                    //     gradThr += weightThrust * violaThrustPenaD * 2.0 * (thr - thrustMean);
-                    //     pena += weightThrust * violaThrustPena;
-                    // }
-
                     // the purpose of backward
                     // guess without evaluating the source code:
                     // the system can be represented by (pos, theta) and their s-order deraviations
@@ -570,12 +513,10 @@ namespace modular
                     // (pos, theta) and related deraviations through the chain rule
                     // the totalGrad will then be transmitted to (c, T)
                     // then (c, T) to (xi, T)
-                    //! @todo modify the function when setting the dynamics
                     flatMap.backward(gradPos, gradVel, gradAcc, gradJibOmg,
                                      totalGradPos, totalGradVel, totalGradAcc, totalGradJer);
+                        
                     // calculate the totalGrad given the jth grad based on flat transformation
-                    // psi and psiD seem useless in this project
-
                     // node is the integration discretion coeff
                     node = (j == 0 || j == integralResolution) ? 0.5 : 1.0;
                     alpha = j * integralFrac;
@@ -596,17 +537,20 @@ namespace modular
                     
                     // integration of total cost 
                     cost += node * step * pena;
-                } // end of a piece
+                    // end of a piece
+                }
             }
 
             return;
         }
 
-        // key function in this project
         static inline double costFunctional(void *ptr,
                                             const Eigen::VectorXd &x,
                                             Eigen::VectorXd &g)
         {   
+            // diffeophism, MINCO, and user defined cost
+            // the forward and backward process of the whole pipeline
+
             // ptr is the instance of class MODULAR_PolytopeSFC
             // x is current state
             // g is current gradient
@@ -624,7 +568,7 @@ namespace modular
             Eigen::Map<Eigen::VectorXd> gradTau(g.data(), dimTau);
             Eigen::Map<Eigen::VectorXd> gradXi(g.data() + dimTau, dimXi);
             
-            forwardT(tau, obj.times); // from tau to time period t
+            forwardT(tau, obj.times);                               // from tau to time period t
             forwardP(xi, obj.vPolyIdx, obj.vPolytopes, obj.points); // from xi to points q
 
             double cost;
@@ -637,19 +581,17 @@ namespace modular
             //! @todo the energy cost should be modified when implementing the TC dynamics
             obj.minco.getEnergyPartialGradByCoeffs(obj.partialGradByCoeffs);
             obj.minco.getEnergyPartialGradByTimes(obj.partialGradByTimes);
-            // MINCO (q, t) -> (c, t)
-            // (c, t) -> cost
+            // MINCO (q, T) -> (c, T)
+            // (c, T) -> cost
             // obj.partialGradByCoeffs: control energy cost/c
             // obj.partialGradByTimes : control energy cost/t
 
             // penalty gradients w.r.t. c and T
-            //! @todo modify this function for collision avoidence 
             attachPenaltyFunctional(obj.times, obj.minco.getCoeffs(),
                                     obj.hPolyIdx, obj.hPolytopes,
                                     obj.smoothEps, obj.integralRes,
                                     obj.magnitudeBd, obj.penaltyWt, obj.simpleFlatmap,
                                     cost, obj.partialGradByTimes, obj.partialGradByCoeffs);
-            // 
 
             // penalty gradients w.r.t. p and T
             // reuiqre obj.partialGradByTimes, obj.partialGradByCoeffs calculated from the function above
@@ -665,7 +607,7 @@ namespace modular
             // This allows you to perform element-wise operations on the vector.
             // when you perform element-wise operations on the array expression
             // it doesn't modify the original vector `vec`.
-            obj.gradByTimes.array() += weightT; // seems useless
+            obj.gradByTimes.array() += weightT;
             // the auther may want to add temperol penalty gradient w.r.t. T, but seems this will not change
             // the value of gradByTimes, since the array() function will create a new memory and copy
 
@@ -682,7 +624,7 @@ namespace modular
         // used to calculate the cost of a path when initializing
         // given xi, calculate the distance and related gradients
         // counterpart of the costFunctional
-        // you do not need to modify this function when implying the modular trajtory planning method
+        //! @todo modify this function to measure the trajectory quality correctly
         static inline double costDistance(void *ptr,
                                           const Eigen::VectorXd &xi,
                                           Eigen::VectorXd &gradXi)
@@ -798,12 +740,12 @@ namespace modular
             
             // minimize cost distance through lbfgs
             // the target parameters is xi
-            lbfgs::lbfgs_optimize(xi,
-                                  minDistance,
+            lbfgs::lbfgs_optimize(xi,           // one of the inputs in costDistance, xi
+                                  minDistance,  // one of the inputs in costDistance, cost
                                   &MODULAR_PolytopeSFC::costDistance,
                                   nullptr,
                                   nullptr,
-                                  dataPtrs,     // dataPtr and this
+                                  dataPtrs,     // one of the inputs in costDistance, providing neccessary gloable parameters
                                   shortest_path_params);
 
             // the inner path point should exist in the join of two polyhedro
@@ -910,6 +852,7 @@ namespace modular
                 b = path.col(i+1);
                 // c is the average segment of vector a->b
                 c = (b-a)/l;
+
                 //! @todo this part may be important for the following module trajectory adjustment
                 // the time duration is set according to the speed and distance.
                 // for a specific piece in path generated by RRT
@@ -1026,9 +969,9 @@ namespace modular
             minco.setConditions(headPVA, tailPVA, pieceN);
             // head pos, vel, and acc; tial pos, vel, and acc; pieces number
             //! @todo modify this later to include the crane-module system dynamics
-            // flatmap.reset(physicalPm(0), physicalPm(1), physicalPm(2),
-            //               physicalPm(3), physicalPm(4), physicalPm(5));
-            simpleFlatmap.reset(1, 1, 1, 1, 1, 9.8, 0, 0, 5, 10);
+            simpleFlatmap.reset(physicalPm(0), physicalPm(1), physicalPm(2), physicalPm(3), physicalPm(4),
+                                physicalPm(5), physicalPm(6), physicalPm(7), physicalPm(8), physicalPm(9));
+
             // physical parameters to forward and backward the system dynamics
 
             // Allocate temporate variables

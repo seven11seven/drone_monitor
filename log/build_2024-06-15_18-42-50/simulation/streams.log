@@ -1,0 +1,87 @@
+[0.012s] Invoking command in '/home/kiki/Workspace/drone_monitor/build/simulation': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/kiki/Workspace/drone_monitor/build/simulation -- -j32 -l32
+[0.061s] [35m[1mConsolidate compiler generated dependencies of target simulation_node[0m
+[0.073s] [ 50%] [32mBuilding CXX object CMakeFiles/simulation_node.dir/src/fake_module.cpp.o[0m
+[0.962s] In file included from [01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/geo_utils.hpp:5[m[K,
+[0.962s]                  from [01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/misc/visualizer.hpp:6[m[K,
+[0.962s]                  from [01m[K/home/kiki/Workspace/drone_monitor/simulation/src/fake_module.cpp:1[m[K:
+[0.962s] [01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/sdlp.hpp:[m[K In function ‘[01m[Kint sdlp::linfracprog(const double*, int, int, const double*, const double*, double*, double*, int*, int*) [with int d = 1][m[K’:
+[0.962s] [01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/sdlp.hpp:666:41:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmax_size[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[0.963s]   666 |                               [01;35m[Kconst int max_size[m[K,
+[0.963s]       |                               [01;35m[K~~~~~~~~~~^~~~~~~~[m[K
+[0.963s] [01m[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/sdlp.hpp:671:39:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kwork[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[0.963s]   671 |                               [01;35m[Kdouble *work[m[K,
+[0.963s]       |                               [01;35m[K~~~~~~~~^~~~[m[K
+[4.544s] In file included from [01m[K/home/kiki/Workspace/drone_monitor/simulation/src/fake_module.cpp:10[m[K:
+[4.544s] [01m[K/home/kiki/Workspace/drone_monitor/simulation/include/simulation/modular.hpp:[m[K In static member function ‘[01m[Kstatic void modular::MODULAR_PolytopeSFC::attachPenaltyFunctional(const VectorXd&, const MatrixX3d&, const VectorXi&, const PolyhedraH&, const double&, const int&, const VectorXd&, const VectorXd&, crane_flatness::SimpleFlatnessMap&, double&, Eigen::VectorXd&, Eigen::MatrixX3d&)[m[K’:
+[4.544s] [01m[K/home/kiki/Workspace/drone_monitor/simulation/include/simulation/modular.hpp:391:26:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KweightOmg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.544s]   391 |             const double [01;35m[KweightOmg[m[K = penaltyWeights(2);
+[4.544s]       |                          [01;35m[K^~~~~~~~~[m[K
+[4.544s] [01m[K/home/kiki/Workspace/drone_monitor/simulation/include/simulation/modular.hpp:392:26:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KweightTheta[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.544s]   392 |             const double [01;35m[KweightTheta[m[K = penaltyWeights(3);
+[4.544s]       |                          [01;35m[K^~~~~~~~~~~[m[K
+[4.544s] [01m[K/home/kiki/Workspace/drone_monitor/simulation/include/simulation/modular.hpp:393:26:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KweightThrust[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.544s]   393 |             const double [01;35m[KweightThrust[m[K = penaltyWeights(4);
+[4.544s]       |                          [01;35m[K^~~~~~~~~~~~[m[K
+[4.544s] [01m[K/home/kiki/Workspace/drone_monitor/simulation/include/simulation/modular.hpp:401:20:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KtotalGradPsi[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.544s]   401 |             double [01;35m[KtotalGradPsi[m[K, totalGradPsiD;
+[4.544s]       |                    [01;35m[K^~~~~~~~~~~~[m[K
+[4.544s] [01m[K/home/kiki/Workspace/drone_monitor/simulation/include/simulation/modular.hpp:401:34:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KtotalGradPsiD[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.544s]   401 |             double totalGradPsi, [01;35m[KtotalGradPsiD[m[K;
+[4.544s]       |                                  [01;35m[K^~~~~~~~~~~~~[m[K
+[4.545s] [01m[K/home/kiki/Workspace/drone_monitor/simulation/include/simulation/modular.hpp:407:20:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[KgradThr[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+[4.545s]   407 |             double [01;35m[KgradThr[m[K, gradJibOmg;
+[4.545s]       |                    [01;35m[K^~~~~~~[m[K
+[4.545s] [01m[K/home/kiki/Workspace/drone_monitor/simulation/include/simulation/modular.hpp:417:40:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KviolaOmg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.545s]   417 |             double violaPos, violaVel, [01;35m[KviolaOmg[m[K, violaTheta, violaThrust, violaAcc, violaJibOmg;
+[4.545s]       |                                        [01;35m[K^~~~~~~~[m[K
+[4.545s] [01m[K/home/kiki/Workspace/drone_monitor/simulation/include/simulation/modular.hpp:417:50:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[KviolaTheta[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+[4.545s]   417 |             double violaPos, violaVel, violaOmg, [01;35m[KviolaTheta[m[K, violaThrust, violaAcc, violaJibOmg;
+[4.545s]       |                                                  [01;35m[K^~~~~~~~~~[m[K
+[4.545s] [01m[K/home/kiki/Workspace/drone_monitor/simulation/include/simulation/modular.hpp:417:62:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[KviolaThrust[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+[4.545s]   417 |             double violaPos, violaVel, violaOmg, violaTheta, [01;35m[KviolaThrust[m[K, violaAcc, violaJibOmg;
+[4.545s]       |                                                              [01;35m[K^~~~~~~~~~~[m[K
+[4.545s] [01m[K/home/kiki/Workspace/drone_monitor/simulation/include/simulation/modular.hpp:418:50:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KviolaOmgPenaD[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.545s]   418 |             double violaPosPenaD, violaVelPenaD, [01;35m[KviolaOmgPenaD[m[K, violaThetaPenaD, violaThrustPenaD, violaAccPenaD, violaJibOmgPenaD;
+[4.545s]       |                                                  [01;35m[K^~~~~~~~~~~~~[m[K
+[4.545s] [01m[K/home/kiki/Workspace/drone_monitor/simulation/include/simulation/modular.hpp:418:65:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KviolaThetaPenaD[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.545s]   418 |             double violaPosPenaD, violaVelPenaD, violaOmgPenaD, [01;35m[KviolaThetaPenaD[m[K, violaThrustPenaD, violaAccPenaD, violaJibOmgPenaD;
+[4.545s]       |                                                                 [01;35m[K^~~~~~~~~~~~~~~[m[K
+[4.545s] [01m[K/home/kiki/Workspace/drone_monitor/simulation/include/simulation/modular.hpp:418:82:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KviolaThrustPenaD[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.545s]   418 |             double violaPosPenaD, violaVelPenaD, violaOmgPenaD, violaThetaPenaD, [01;35m[KviolaThrustPenaD[m[K, violaAccPenaD, violaJibOmgPenaD;
+[4.545s]       |                                                                                  [01;35m[K^~~~~~~~~~~~~~~~[m[K
+[4.545s] In file included from [01m[K/home/kiki/Workspace/drone_monitor/simulation/src/fake_module.cpp:10[m[K:
+[4.546s] [01m[K/home/kiki/Workspace/drone_monitor/simulation/include/simulation/modular.hpp:419:48:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KviolaOmgPena[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.546s]   419 |             double violaPosPena, violaVelPena, [01;35m[KviolaOmgPena[m[K, violaThetaPena, violaThrustPena, violaAccPena, violaJibOmgPena;
+[4.546s]       |                                                [01;35m[K^~~~~~~~~~~~[m[K
+[4.546s] [01m[K/home/kiki/Workspace/drone_monitor/simulation/include/simulation/modular.hpp:419:62:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KviolaThetaPena[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.546s]   419 |             double violaPosPena, violaVelPena, violaOmgPena, [01;35m[KviolaThetaPena[m[K, violaThrustPena, violaAccPena, violaJibOmgPena;
+[4.546s]       |                                                              [01;35m[K^~~~~~~~~~~~~~[m[K
+[4.546s] [01m[K/home/kiki/Workspace/drone_monitor/simulation/include/simulation/modular.hpp:419:78:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KviolaThrustPena[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.546s]   419 |             double violaPosPena, violaVelPena, violaOmgPena, violaThetaPena, [01;35m[KviolaThrustPena[m[K, violaAccPena, violaJibOmgPena;
+[4.546s]       |                                                                              [01;35m[K^~~~~~~~~~~~~~~[m[K
+[13.246s] [01m[K/home/kiki/Workspace/drone_monitor/simulation/include/simulation/modular.hpp:474:40:[m[K [01;35m[Kwarning: [m[K‘[01m[Kthr[m[K’ may be used uninitialized [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmaybe-uninitialized-Wmaybe-uninitialized]8;;[m[K]
+[13.246s]   474 |                     violaThrust = [01;35m[K(thr - thrustMean)[m[K * (thr - thrustMean) - thrustSqrRadi;
+[13.246s]       |                                   [01;35m[K~~~~~^~~~~~~~~~~~~[m[K
+[18.929s] [100%] [32m[1mLinking CXX executable simulation_node[0m
+[20.256s] [100%] Built target simulation_node
+[20.261s] Invoked command in '/home/kiki/Workspace/drone_monitor/build/simulation' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/kiki/Workspace/drone_monitor/build/simulation -- -j32 -l32
+[20.276s] Invoking command in '/home/kiki/Workspace/drone_monitor/build/simulation': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/kiki/Workspace/drone_monitor/build/simulation
+[20.280s] -- Install configuration: ""
+[20.280s] -- Installing: /home/kiki/Workspace/drone_monitor/install/simulation/lib/simulation/simulation_node
+[20.287s] -- Set runtime path of "/home/kiki/Workspace/drone_monitor/install/simulation/lib/simulation/simulation_node" to ""
+[20.287s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/ament_index/resource_index/package_run_dependencies/simulation
+[20.287s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/ament_index/resource_index/parent_prefix_path/simulation
+[20.287s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/environment/ament_prefix_path.sh
+[20.287s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/environment/ament_prefix_path.dsv
+[20.287s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/environment/path.sh
+[20.287s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/environment/path.dsv
+[20.287s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/local_setup.bash
+[20.287s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/local_setup.sh
+[20.287s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/local_setup.zsh
+[20.287s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/local_setup.dsv
+[20.287s] -- Installing: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/package.dsv
+[20.287s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/ament_index/resource_index/packages/simulation
+[20.287s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/cmake/simulationConfig.cmake
+[20.287s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/cmake/simulationConfig-version.cmake
+[20.287s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/package.xml
+[20.290s] Invoked command in '/home/kiki/Workspace/drone_monitor/build/simulation' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/kiki/Workspace/drone_monitor/build/simulation

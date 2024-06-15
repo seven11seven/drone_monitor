@@ -1,0 +1,23 @@
+[0.007s] Invoking command in '/home/kiki/Workspace/drone_monitor/build/simulation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/kiki/Workspace/drone_monitor/build/simulation -- -j32 -l32
+[0.028s] [35m[1mConsolidate compiler generated dependencies of target simulation_node[0m
+[0.041s] [100%] Built target simulation_node
+[0.048s] Invoked command in '/home/kiki/Workspace/drone_monitor/build/simulation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/kiki/Workspace/drone_monitor/build/simulation -- -j32 -l32
+[0.063s] Invoking command in '/home/kiki/Workspace/drone_monitor/build/simulation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/kiki/Workspace/drone_monitor/build/simulation
+[0.066s] -- Install configuration: ""
+[0.066s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/lib/simulation/simulation_node
+[0.066s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/ament_index/resource_index/package_run_dependencies/simulation
+[0.066s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/ament_index/resource_index/parent_prefix_path/simulation
+[0.066s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/environment/ament_prefix_path.sh
+[0.066s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/environment/ament_prefix_path.dsv
+[0.066s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/environment/path.sh
+[0.066s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/environment/path.dsv
+[0.066s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/local_setup.bash
+[0.066s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/local_setup.sh
+[0.066s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/local_setup.zsh
+[0.066s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/local_setup.dsv
+[0.066s] -- Installing: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/package.dsv
+[0.067s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/ament_index/resource_index/packages/simulation
+[0.067s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/cmake/simulationConfig.cmake
+[0.067s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/cmake/simulationConfig-version.cmake
+[0.067s] -- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/package.xml
+[0.069s] Invoked command in '/home/kiki/Workspace/drone_monitor/build/simulation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/kiki/Workspace/drone_monitor/build/simulation

@@ -150,7 +150,7 @@ namespace crane_flatness
 
     private:
         // setup parameters
-        double L;                // the loctaion of the jib's CoM w.r.t. the rotation point 
+        double L;                   // the loctaion of the jib's CoM w.r.t. the rotation point 
         double m_mass, j_mass, t_mass;
         double j_innt, t_innt;
         double grav;

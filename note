@@ -51,7 +51,11 @@
 13. MILESTONE:realize the optimization process based on MINCO
 
 14. Visualize using OctoMap
-gcopter in the costFunctional 
+
+15. the initial path genereted by the RRT* can largely affect the final results
+    you can improve the algorithm by improving the front end of the project
+16. you should clearly define the quality of trajectorys
+
 <<< TODO <<<
 
 >>> Principle >>>

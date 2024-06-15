@@ -87,7 +87,7 @@ Visualization Manager:
       Enabled: true
       Name: Marker
       Namespaces:
-        edge: true
+        {}
       Topic:
         Depth: 5
         Durability Policy: Volatile
@@ -100,7 +100,7 @@ Visualization Manager:
       Enabled: true
       Name: Marker
       Namespaces:
-        mesh: true
+        {}
       Topic:
         Depth: 5
         Durability Policy: Volatile
@@ -113,7 +113,7 @@ Visualization Manager:
       Enabled: true
       Name: Marker
       Namespaces:
-        trajectory: true
+        {}
       Topic:
         Depth: 5
         Durability Policy: Volatile
@@ -146,7 +146,7 @@ Visualization Manager:
       Enabled: true
       Name: Marker
       Namespaces:
-        moduleframe: true
+        {}
       Topic:
         Depth: 5
         Durability Policy: Volatile
@@ -154,6 +154,13 @@ Visualization Manager:
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /visualizer/modules
+      Value: true
+    - Class: rviz_default_plugins/Axes
+      Enabled: true
+      Length: 1
+      Name: Axes
+      Radius: 0.10000000149011612
+      Reference Frame: <Fixed Frame>
       Value: true
   Enabled: true
   Global Options:

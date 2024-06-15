@@ -40,16 +40,22 @@ public:
         this->declare_parameter<std::vector<double>>("MapBound");
         this->declare_parameter<double>("TimeoutRRT");
         this->declare_parameter<double>("MaxVelMag");
-        this->declare_parameter<double>("MaxBdrMag");
-        this->declare_parameter<double>("MaxTiltAngle");
+        this->declare_parameter<double>("MaxJibOmg");
+        this->declare_parameter<double>("MaxAccMag");
         this->declare_parameter<double>("MinThrust");
         this->declare_parameter<double>("MaxThrust");
-        this->declare_parameter<double>("VehicleMass");
+        
+        this->declare_parameter<double>("ModuleMass");
+        this->declare_parameter<double>("JibMass");
+        this->declare_parameter<double>("TrolleyMass");
+        this->declare_parameter<double>("JibInnt");
+        this->declare_parameter<double>("TrolleyInnt");
         this->declare_parameter<double>("GravAcc");
-        this->declare_parameter<double>("HorizDrag");
-        this->declare_parameter<double>("VertDrag");
-        this->declare_parameter<double>("ParasDrag");
-        this->declare_parameter<double>("SpeedEps");
+        this->declare_parameter<double>("X");
+        this->declare_parameter<double>("Y");
+        this->declare_parameter<double>("H");
+        this->declare_parameter<double>("L");
+        
         this->declare_parameter<double>("WeightT");
         this->declare_parameter<std::vector<double>>("ChiVec");
         this->declare_parameter<double>("SmoothingEps");
@@ -63,16 +69,22 @@ public:
         this->get_parameter("MapBound", mapBound);
         this->get_parameter("TimeoutRRT", timeoutRRT);
         this->get_parameter("MaxVelMag", maxVelMag);
-        this->get_parameter("MaxBdrMag", maxBdrMag);
-        this->get_parameter("MaxTiltAngle", maxTiltAngle);
+        this->get_parameter("MaxJibOmg", maxJibOmg);
+        this->get_parameter("MaxAccMag", maxAccMag);
         this->get_parameter("MinThrust", minThrust);
         this->get_parameter("MaxThrust", maxThrust);
-        this->get_parameter("VehicleMass", vehicleMass);
+
+        this->get_parameter("ModuleMass", moduleMass);
+        this->get_parameter("JibMass", jibMass);
+        this->get_parameter("TrolleyMass", trolleyMass);
+        this->get_parameter("JibInnt", jibInnt);
+        this->get_parameter("TrolleyInnt", trolleyInnt);
         this->get_parameter("GravAcc", gravAcc);
-        this->get_parameter("HorizDrag", horizDrag);
-        this->get_parameter("VertDrag", vertDrag);
-        this->get_parameter("ParasDrag", parasDrag);
-        this->get_parameter("SpeedEps", speedEps);
+        this->get_parameter("X", X);
+        this->get_parameter("Y", Y);
+        this->get_parameter("H", H);
+        this->get_parameter("L", L);
+
         this->get_parameter("WeightT", weightT);
         this->get_parameter("ChiVec", chiVec);
         this->get_parameter("SmoothingEps", smoothingEps);
@@ -177,7 +189,6 @@ public:
                                  hPolys);
             sfc_gen::shortCut(hPolys);
 
-            // RCLCPP_WARN(this->get_logger(), "debug point 2");
             // RCLCPP_WARN(this->get_logger(), "the number of hPolys is %ld", hPolys.size());
 
             if (route.size() > 1)
@@ -197,29 +208,36 @@ public:
                 // initialize some constraint parameters
                 Eigen::VectorXd magnitudeBounds(5);
                 Eigen::VectorXd penaltyWeights(5);
-                Eigen::VectorXd physicalParams(6);
+                Eigen::VectorXd physicalParams(10);
+
                 magnitudeBounds(0) = maxVelMag;
-                magnitudeBounds(1) = maxBdrMag;
-                magnitudeBounds(2) = maxTiltAngle;
-                magnitudeBounds(3) = minThrust;
-                magnitudeBounds(4) = maxThrust;
+                magnitudeBounds(1) = maxJibOmg;
+                magnitudeBounds(2) = maxAccMag;
+                magnitudeBounds(3) = minThrust;    //! not used currently
+                magnitudeBounds(4) = maxThrust;    //! not used currently
+                
                 penaltyWeights(0) = (chiVec)[0];
                 penaltyWeights(1) = (chiVec)[1];
                 penaltyWeights(2) = (chiVec)[2];
                 penaltyWeights(3) = (chiVec)[3];
-                penaltyWeights(4) = (chiVec)[4];
-                physicalParams(0) = vehicleMass;
-                physicalParams(1) = gravAcc;
-                physicalParams(2) = horizDrag;
-                physicalParams(3) = vertDrag;
-                physicalParams(4) = parasDrag;
-                physicalParams(5) = speedEps;
+                penaltyWeights(4) = (chiVec)[4];    //! not used currently
+
+                physicalParams(0) = moduleMass;
+                physicalParams(1) = jibMass;
+                physicalParams(2) = trolleyMass;
+                physicalParams(3) = jibInnt;
+                physicalParams(4) = trolleyInnt;
+                physicalParams(5) = gravAcc;
+                physicalParams(6) = X;
+                physicalParams(7) = Y;
+                physicalParams(8) = H;
+                physicalParams(9) = L;
+
+                
                 const int quadratureRes = integralIntervs;
 
-                // RCLCPP_WARN(this->get_logger(), "debug point 3");
-
                 traj.clear();
-                // setup() and optimize()
+
                 if (!modular.setup(weightT,
                                    iniState, finState,
                                    hPolys, INFINITY,
@@ -232,15 +250,11 @@ public:
                     return;
                 }
 
-                // RCLCPP_WARN(this->get_logger(), "debug point 4");
-
                 if (std::isinf(modular.optimize(traj, relCostTol)))
                 {
                     return;
                 }
 
-                // RCLCPP_WARN(this->get_logger(), "debug point 5");
-
                 if (traj.getPieceNum() > 0)
                 {
                     // get the trajectory generation time
@@ -248,111 +262,7 @@ public:
                     visualizer.visualize(traj, route, this->routePub, this->wayPointsPub, this->trajectoryPub);
                     visualizer.visualizeModule(traj, this->modulePub);
                 }
-
-                // RCLCPP_WARN(this->get_logger(), "debug point 6");
             }
-        }
-    }
-
-    inline void plan()
-    {
-        if (startGoal.size() == 2)
-        {
-            std::vector<Eigen::Vector3d> route;
-
-            // return the planned path points in vector 3D format
-            // planner: RRTstar
-            sfc_gen::planPath<voxel_map::VoxelMap>(startGoal[0],
-                                                   startGoal[1],
-                                                   voxelMap.getOrigin(),
-                                                   voxelMap.getCorner(),
-                                                   &voxelMap, 0.01,
-                                                   route);
-            // X: the dynamic size of the matrix (rows/columns)
-            // d: double type
-            // X,4: dynamic-size matrix with 4 rows and a number of columns that can vary at runtime
-            // pc is the surface of the convex hull in the voxel map and converted 
-            // to the real vector space before called
-            std::vector<Eigen::MatrixX4d> hPolys;
-            std::vector<Eigen::Vector3d> pc;
-            voxelMap.getSurf(pc);
-            // route is the original feasible path now
-
-            // serach for / generate the convered convex hulls in the path
-            // Each row of hPoly is defined by h0, h1, h2, h3 as
-            // h0*x + h1*y + h2*z + h3 <= 0
-            sfc_gen::convexCover(route,
-                                 pc,
-                                 voxelMap.getOrigin(),
-                                 voxelMap.getCorner(),
-                                 7.0,
-                                 3.0,
-                                 hPolys);
-            // short cut uneccessary convex hulls
-            // the final convex hulls are generated. in the type of std::vector<Eigen::MatrixX4d>
-            sfc_gen::shortCut(hPolys);
-
-            if (route.size() > 1)
-            {
-                visualizer.visualizePolytope(hPolys, this->meshPub, this->edgePub);
-
-                // state here includes pos, vel, and acc
-                Eigen::Matrix3d iniState;
-                Eigen::Matrix3d finState;
-                iniState << route.front(), Eigen::Vector3d::Zero(), Eigen::Vector3d::Zero();
-                finState << route.back(), Eigen::Vector3d::Zero(), Eigen::Vector3d::Zero();
-
-                gcopter::GCOPTER_PolytopeSFC gcopter;
-
-                // initialize some constraint parameters
-                Eigen::VectorXd magnitudeBounds(5);
-                Eigen::VectorXd penaltyWeights(5);
-                Eigen::VectorXd physicalParams(6);
-                magnitudeBounds(0) = maxVelMag;
-                magnitudeBounds(1) = maxBdrMag;
-                magnitudeBounds(2) = maxTiltAngle;
-                magnitudeBounds(3) = minThrust;
-                magnitudeBounds(4) = maxThrust;
-                penaltyWeights(0) = (chiVec)[0];
-                penaltyWeights(1) = (chiVec)[1];
-                penaltyWeights(2) = (chiVec)[2];
-                penaltyWeights(3) = (chiVec)[3];
-                penaltyWeights(4) = (chiVec)[4];
-                physicalParams(0) = vehicleMass;
-                physicalParams(1) = gravAcc;
-                physicalParams(2) = horizDrag;
-                physicalParams(3) = vertDrag;
-                physicalParams(4) = parasDrag;
-                physicalParams(5) = speedEps;
-                const int quadratureRes = integralIntervs;
-
-                traj.clear();
-                // setup() and optimize()
-                if (!gcopter.setup(weightT,
-                                   iniState, finState,
-                                   hPolys, INFINITY,
-                                   smoothingEps,
-                                   quadratureRes,
-                                   magnitudeBounds,
-                                   penaltyWeights,
-                                   physicalParams))
-                {
-                    return;
-                }
-
-                if (std::isinf(gcopter.optimize(traj, relCostTol)))
-                {
-                    return;
-                }
-
-                if (traj.getPieceNum() > 0)
-                {
-                    // get the trajectory generation time
-                    trajStamp = rclcpp::Clock().now().seconds();
-                    visualizer.visualize(traj, route, this->routePub, this->wayPointsPub, this->trajectoryPub);
-                    visualizer.visualizeModule(traj, this->modulePub);
-                }
-            }    
         }
     }
 
@@ -380,56 +290,9 @@ public:
                 RCLCPP_WARN(this->get_logger(), "Infeasible Position Selected !!!\n");
             }
 
-            // plan();
             module_plan();
         }
         return;
-    }
-
-    // not used in this project
-    inline void process()
-    {
-        Eigen::VectorXd physicalParams(6);
-        physicalParams(0) = vehicleMass;
-        physicalParams(1) = gravAcc;
-        physicalParams(2) = horizDrag;
-        physicalParams(3) = vertDrag;
-        physicalParams(4) = parasDrag;
-        physicalParams(5) = speedEps;
-
-        flatness::FlatnessMap flatmap;
-        flatmap.reset(physicalParams(0), physicalParams(1), physicalParams(2),
-                      physicalParams(3), physicalParams(4), physicalParams(5));
-
-        if (traj.getPieceNum() > 0)
-        {
-            const double delta = rclcpp::Clock().now().seconds() - trajStamp;
-            if (delta > 0.0 && delta < traj.getTotalDuration())
-            {
-                double thr;
-                Eigen::Vector4d quat;
-                Eigen::Vector3d omg;
-
-                flatmap.forward(traj.getVel(delta),
-                                traj.getAcc(delta),
-                                traj.getJer(delta),
-                                0.0, 0.0,
-                                thr, quat, omg);
-                double speed = traj.getVel(delta).norm();
-                double bodyratemag = omg.norm();
-                double tiltangle = acos(1.0 - 2.0 * (quat(1) * quat(1) + quat(2) * quat(2)));
-                std_msgs::msg::Float64 speedMsg, thrMsg, tiltMsg, bdrMsg;
-                speedMsg.data = speed;
-                thrMsg.data = thr;
-                tiltMsg.data = tiltangle;
-                bdrMsg.data = bodyratemag;
-                this->speedPub->publish(speedMsg);
-                this->thrPub->publish(thrMsg);
-                this->tiltPub->publish(tiltMsg);
-                this->bdrPub->publish(bdrMsg);
-                this->visualizer.visualizeSphere(traj.getPos(delta), dilateRadius, this->spherePub);
-            }
-        }
     }
 
 private:
@@ -441,16 +304,22 @@ private:
     std::vector<double> mapBound;
     double timeoutRRT;
     double maxVelMag;
-    double maxBdrMag;
-    double maxTiltAngle;
+    double maxJibOmg;
+    double maxAccMag;
     double minThrust;
     double maxThrust;
-    double vehicleMass;
+
+    double moduleMass;
+    double jibMass;
+    double trolleyMass;
+    double jibInnt;
+    double trolleyInnt;
     double gravAcc;
-    double horizDrag;
-    double vertDrag;
-    double parasDrag;
-    double speedEps;
+    double X;
+    double Y;
+    double H;
+    double L;
+    
     double weightT;
     std::vector<double> chiVec;
     double smoothingEps;

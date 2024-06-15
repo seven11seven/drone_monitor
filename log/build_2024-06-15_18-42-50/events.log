@@ -1,0 +1,300 @@
+[0.000000] (-) TimerEvent: {}
+[0.000359] (-) JobUnselected: {'identifier': 'gcopter'}
+[0.000446] (-) JobUnselected: {'identifier': 'map_sensing'}
+[0.000455] (-) JobUnselected: {'identifier': 'mockamap'}
+[0.000463] (simulation) JobQueued: {'identifier': 'simulation', 'dependencies': OrderedDict()}
+[0.000613] (simulation) JobStarted: {'identifier': 'simulation'}
+[0.009631] (simulation) JobProgress: {'identifier': 'simulation', 'progress': 'cmake'}
+[0.012321] (simulation) JobProgress: {'identifier': 'simulation', 'progress': 'build'}
+[0.012337] (simulation) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/kiki/Workspace/drone_monitor/build/simulation', '--', '-j32', '-l32'], 'cwd': '/home/kiki/Workspace/drone_monitor/build/simulation', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_HK:en'), ('USER', 'kiki'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/kiki'), ('OLDPWD', '/home/kiki'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '2240'), ('SYSTEMD_EXEC_PID', '2774'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '9205'), ('_colcon_cd_root', '/opt/ros/humble/'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'kiki'), ('JOURNAL_STREAM', '8:57796'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'kiki'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/opt/gcc-arm-none-eabi-9-2020-q2-update/bin:/home/kiki/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/kiki-System-Product-Name:@/tmp/.ICE-unix/2482,unix/kiki-System-Product-Name:/tmp/.ICE-unix/2482'), ('INVOCATION_ID', '1ce6631115a34d7cb1220bffc03eb4f2'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:4fb9fe25-b572-4578-abb3-1eb9357acd16'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/kiki/Workspace/drone_monitor/build/simulation'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.061860] (simulation) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target simulation_node\x1b[0m\n'}
+[0.073068] (simulation) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/simulation_node.dir/src/fake_module.cpp.o\x1b[0m\n'}
+[0.100077] (-) TimerEvent: {}
+[0.200393] (-) TimerEvent: {}
+[0.300656] (-) TimerEvent: {}
+[0.400968] (-) TimerEvent: {}
+[0.501178] (-) TimerEvent: {}
+[0.601385] (-) TimerEvent: {}
+[0.701651] (-) TimerEvent: {}
+[0.801883] (-) TimerEvent: {}
+[0.902173] (-) TimerEvent: {}
+[0.962727] (simulation) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/geo_utils.hpp:5\x1b[m\x1b[K,\n'}
+[0.962913] (simulation) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/gcopter/include/misc/visualizer.hpp:6\x1b[m\x1b[K,\n'}
+[0.962966] (simulation) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/simulation/src/fake_module.cpp:1\x1b[m\x1b[K:\n'}
+[0.963014] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/sdlp.hpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kint sdlp::linfracprog(const double*, int, int, const double*, const double*, double*, double*, int*, int*) [with int d = 1]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[0.963062] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/sdlp.hpp:666:41:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kmax_size\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[0.963111] (simulation) StderrLine: {'line': b'  666 |                               \x1b[01;35m\x1b[Kconst int max_size\x1b[m\x1b[K,\n'}
+[0.963158] (simulation) StderrLine: {'line': b'      |                               \x1b[01;35m\x1b[K~~~~~~~~~~^~~~~~~~\x1b[m\x1b[K\n'}
+[0.963203] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/sdlp.hpp:671:39:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kwork\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[0.963250] (simulation) StderrLine: {'line': b'  671 |                               \x1b[01;35m\x1b[Kdouble *work\x1b[m\x1b[K,\n'}
+[0.963295] (simulation) StderrLine: {'line': b'      |                               \x1b[01;35m\x1b[K~~~~~~~~^~~~\x1b[m\x1b[K\n'}
+[1.002316] (-) TimerEvent: {}
+[1.102587] (-) TimerEvent: {}
+[1.202892] (-) TimerEvent: {}
+[1.303220] (-) TimerEvent: {}
+[1.403544] (-) TimerEvent: {}
+[1.503815] (-) TimerEvent: {}
+[1.604168] (-) TimerEvent: {}
+[1.704453] (-) TimerEvent: {}
+[1.804793] (-) TimerEvent: {}
+[1.905066] (-) TimerEvent: {}
+[2.005366] (-) TimerEvent: {}
+[2.105695] (-) TimerEvent: {}
+[2.206023] (-) TimerEvent: {}
+[2.306353] (-) TimerEvent: {}
+[2.406669] (-) TimerEvent: {}
+[2.506974] (-) TimerEvent: {}
+[2.607243] (-) TimerEvent: {}
+[2.707565] (-) TimerEvent: {}
+[2.807908] (-) TimerEvent: {}
+[2.908262] (-) TimerEvent: {}
+[3.008602] (-) TimerEvent: {}
+[3.108895] (-) TimerEvent: {}
+[3.209178] (-) TimerEvent: {}
+[3.309540] (-) TimerEvent: {}
+[3.409853] (-) TimerEvent: {}
+[3.510120] (-) TimerEvent: {}
+[3.610446] (-) TimerEvent: {}
+[3.710745] (-) TimerEvent: {}
+[3.811038] (-) TimerEvent: {}
+[3.911347] (-) TimerEvent: {}
+[4.011656] (-) TimerEvent: {}
+[4.111922] (-) TimerEvent: {}
+[4.212260] (-) TimerEvent: {}
+[4.312581] (-) TimerEvent: {}
+[4.412909] (-) TimerEvent: {}
+[4.513170] (-) TimerEvent: {}
+[4.544054] (simulation) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/simulation/src/fake_module.cpp:10\x1b[m\x1b[K:\n'}
+[4.544229] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/simulation/include/simulation/modular.hpp:\x1b[m\x1b[K In static member function \xe2\x80\x98\x1b[01m\x1b[Kstatic void modular::MODULAR_PolytopeSFC::attachPenaltyFunctional(const VectorXd&, const MatrixX3d&, const VectorXi&, const PolyhedraH&, const double&, const int&, const VectorXd&, const VectorXd&, crane_flatness::SimpleFlatnessMap&, double&, Eigen::VectorXd&, Eigen::MatrixX3d&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.544292] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/simulation/include/simulation/modular.hpp:391:26:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[KweightOmg\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.544343] (simulation) StderrLine: {'line': b'  391 |             const double \x1b[01;35m\x1b[KweightOmg\x1b[m\x1b[K = penaltyWeights(2);\n'}
+[4.544465] (simulation) StderrLine: {'line': b'      |                          \x1b[01;35m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[4.544514] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/simulation/include/simulation/modular.hpp:392:26:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[KweightTheta\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.544562] (simulation) StderrLine: {'line': b'  392 |             const double \x1b[01;35m\x1b[KweightTheta\x1b[m\x1b[K = penaltyWeights(3);\n'}
+[4.544608] (simulation) StderrLine: {'line': b'      |                          \x1b[01;35m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.544652] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/simulation/include/simulation/modular.hpp:393:26:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[KweightThrust\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.544711] (simulation) StderrLine: {'line': b'  393 |             const double \x1b[01;35m\x1b[KweightThrust\x1b[m\x1b[K = penaltyWeights(4);\n'}
+[4.544762] (simulation) StderrLine: {'line': b'      |                          \x1b[01;35m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.544808] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/simulation/include/simulation/modular.hpp:401:20:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[KtotalGradPsi\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.544862] (simulation) StderrLine: {'line': b'  401 |             double \x1b[01;35m\x1b[KtotalGradPsi\x1b[m\x1b[K, totalGradPsiD;\n'}
+[4.544907] (simulation) StderrLine: {'line': b'      |                    \x1b[01;35m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.544956] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/simulation/include/simulation/modular.hpp:401:34:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[KtotalGradPsiD\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.545006] (simulation) StderrLine: {'line': b'  401 |             double totalGradPsi, \x1b[01;35m\x1b[KtotalGradPsiD\x1b[m\x1b[K;\n'}
+[4.545051] (simulation) StderrLine: {'line': b'      |                                  \x1b[01;35m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.545100] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/simulation/include/simulation/modular.hpp:407:20:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kvariable \xe2\x80\x98\x1b[01m\x1b[KgradThr\x1b[m\x1b[K\xe2\x80\x99 set but not used [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable\x07-Wunused-but-set-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.545146] (simulation) StderrLine: {'line': b'  407 |             double \x1b[01;35m\x1b[KgradThr\x1b[m\x1b[K, gradJibOmg;\n'}
+[4.545191] (simulation) StderrLine: {'line': b'      |                    \x1b[01;35m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[4.545235] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/simulation/include/simulation/modular.hpp:417:40:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[KviolaOmg\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.545283] (simulation) StderrLine: {'line': b'  417 |             double violaPos, violaVel, \x1b[01;35m\x1b[KviolaOmg\x1b[m\x1b[K, violaTheta, violaThrust, violaAcc, violaJibOmg;\n'}
+[4.545327] (simulation) StderrLine: {'line': b'      |                                        \x1b[01;35m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[4.545371] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/simulation/include/simulation/modular.hpp:417:50:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kvariable \xe2\x80\x98\x1b[01m\x1b[KviolaTheta\x1b[m\x1b[K\xe2\x80\x99 set but not used [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable\x07-Wunused-but-set-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.545417] (simulation) StderrLine: {'line': b'  417 |             double violaPos, violaVel, violaOmg, \x1b[01;35m\x1b[KviolaTheta\x1b[m\x1b[K, violaThrust, violaAcc, violaJibOmg;\n'}
+[4.545465] (simulation) StderrLine: {'line': b'      |                                                  \x1b[01;35m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.545509] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/simulation/include/simulation/modular.hpp:417:62:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kvariable \xe2\x80\x98\x1b[01m\x1b[KviolaThrust\x1b[m\x1b[K\xe2\x80\x99 set but not used [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable\x07-Wunused-but-set-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.545555] (simulation) StderrLine: {'line': b'  417 |             double violaPos, violaVel, violaOmg, violaTheta, \x1b[01;35m\x1b[KviolaThrust\x1b[m\x1b[K, violaAcc, violaJibOmg;\n'}
+[4.545599] (simulation) StderrLine: {'line': b'      |                                                              \x1b[01;35m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.545644] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/simulation/include/simulation/modular.hpp:418:50:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[KviolaOmgPenaD\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.545696] (simulation) StderrLine: {'line': b'  418 |             double violaPosPenaD, violaVelPenaD, \x1b[01;35m\x1b[KviolaOmgPenaD\x1b[m\x1b[K, violaThetaPenaD, violaThrustPenaD, violaAccPenaD, violaJibOmgPenaD;\n'}
+[4.545742] (simulation) StderrLine: {'line': b'      |                                                  \x1b[01;35m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.545786] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/simulation/include/simulation/modular.hpp:418:65:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[KviolaThetaPenaD\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.545831] (simulation) StderrLine: {'line': b'  418 |             double violaPosPenaD, violaVelPenaD, violaOmgPenaD, \x1b[01;35m\x1b[KviolaThetaPenaD\x1b[m\x1b[K, violaThrustPenaD, violaAccPenaD, violaJibOmgPenaD;\n'}
+[4.545875] (simulation) StderrLine: {'line': b'      |                                                                 \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.545919] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/simulation/include/simulation/modular.hpp:418:82:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[KviolaThrustPenaD\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.545967] (simulation) StderrLine: {'line': b'  418 |             double violaPosPenaD, violaVelPenaD, violaOmgPenaD, violaThetaPenaD, \x1b[01;35m\x1b[KviolaThrustPenaD\x1b[m\x1b[K, violaAccPenaD, violaJibOmgPenaD;\n'}
+[4.546012] (simulation) StderrLine: {'line': b'      |                                                                                  \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.546055] (simulation) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/simulation/src/fake_module.cpp:10\x1b[m\x1b[K:\n'}
+[4.546100] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/simulation/include/simulation/modular.hpp:419:48:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[KviolaOmgPena\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.546152] (simulation) StderrLine: {'line': b'  419 |             double violaPosPena, violaVelPena, \x1b[01;35m\x1b[KviolaOmgPena\x1b[m\x1b[K, violaThetaPena, violaThrustPena, violaAccPena, violaJibOmgPena;\n'}
+[4.546197] (simulation) StderrLine: {'line': b'      |                                                \x1b[01;35m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.546241] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/simulation/include/simulation/modular.hpp:419:62:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[KviolaThetaPena\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.546289] (simulation) StderrLine: {'line': b'  419 |             double violaPosPena, violaVelPena, violaOmgPena, \x1b[01;35m\x1b[KviolaThetaPena\x1b[m\x1b[K, violaThrustPena, violaAccPena, violaJibOmgPena;\n'}
+[4.546333] (simulation) StderrLine: {'line': b'      |                                                              \x1b[01;35m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.546381] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/simulation/include/simulation/modular.hpp:419:78:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[KviolaThrustPena\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.546432] (simulation) StderrLine: {'line': b'  419 |             double violaPosPena, violaVelPena, violaOmgPena, violaThetaPena, \x1b[01;35m\x1b[KviolaThrustPena\x1b[m\x1b[K, violaAccPena, violaJibOmgPena;\n'}
+[4.546477] (simulation) StderrLine: {'line': b'      |                                                                              \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.613276] (-) TimerEvent: {}
+[4.713561] (-) TimerEvent: {}
+[4.813841] (-) TimerEvent: {}
+[4.914154] (-) TimerEvent: {}
+[5.014403] (-) TimerEvent: {}
+[5.114702] (-) TimerEvent: {}
+[5.214965] (-) TimerEvent: {}
+[5.315287] (-) TimerEvent: {}
+[5.415597] (-) TimerEvent: {}
+[5.515901] (-) TimerEvent: {}
+[5.616138] (-) TimerEvent: {}
+[5.716424] (-) TimerEvent: {}
+[5.816689] (-) TimerEvent: {}
+[5.916933] (-) TimerEvent: {}
+[6.017210] (-) TimerEvent: {}
+[6.117470] (-) TimerEvent: {}
+[6.217704] (-) TimerEvent: {}
+[6.317985] (-) TimerEvent: {}
+[6.418215] (-) TimerEvent: {}
+[6.518474] (-) TimerEvent: {}
+[6.618778] (-) TimerEvent: {}
+[6.719043] (-) TimerEvent: {}
+[6.819320] (-) TimerEvent: {}
+[6.919630] (-) TimerEvent: {}
+[7.019945] (-) TimerEvent: {}
+[7.120252] (-) TimerEvent: {}
+[7.220593] (-) TimerEvent: {}
+[7.320852] (-) TimerEvent: {}
+[7.421112] (-) TimerEvent: {}
+[7.521372] (-) TimerEvent: {}
+[7.621695] (-) TimerEvent: {}
+[7.722034] (-) TimerEvent: {}
+[7.822374] (-) TimerEvent: {}
+[7.922699] (-) TimerEvent: {}
+[8.023018] (-) TimerEvent: {}
+[8.123344] (-) TimerEvent: {}
+[8.223644] (-) TimerEvent: {}
+[8.323981] (-) TimerEvent: {}
+[8.424309] (-) TimerEvent: {}
+[8.524634] (-) TimerEvent: {}
+[8.624973] (-) TimerEvent: {}
+[8.725317] (-) TimerEvent: {}
+[8.825649] (-) TimerEvent: {}
+[8.925988] (-) TimerEvent: {}
+[9.026318] (-) TimerEvent: {}
+[9.126654] (-) TimerEvent: {}
+[9.226998] (-) TimerEvent: {}
+[9.327327] (-) TimerEvent: {}
+[9.427659] (-) TimerEvent: {}
+[9.527984] (-) TimerEvent: {}
+[9.628315] (-) TimerEvent: {}
+[9.728638] (-) TimerEvent: {}
+[9.828950] (-) TimerEvent: {}
+[9.929264] (-) TimerEvent: {}
+[10.029576] (-) TimerEvent: {}
+[10.129895] (-) TimerEvent: {}
+[10.230128] (-) TimerEvent: {}
+[10.330386] (-) TimerEvent: {}
+[10.430607] (-) TimerEvent: {}
+[10.530908] (-) TimerEvent: {}
+[10.631156] (-) TimerEvent: {}
+[10.731453] (-) TimerEvent: {}
+[10.831742] (-) TimerEvent: {}
+[10.932023] (-) TimerEvent: {}
+[11.032288] (-) TimerEvent: {}
+[11.132570] (-) TimerEvent: {}
+[11.232799] (-) TimerEvent: {}
+[11.333025] (-) TimerEvent: {}
+[11.433228] (-) TimerEvent: {}
+[11.533478] (-) TimerEvent: {}
+[11.633757] (-) TimerEvent: {}
+[11.734027] (-) TimerEvent: {}
+[11.834299] (-) TimerEvent: {}
+[11.934534] (-) TimerEvent: {}
+[12.034742] (-) TimerEvent: {}
+[12.134967] (-) TimerEvent: {}
+[12.235173] (-) TimerEvent: {}
+[12.335378] (-) TimerEvent: {}
+[12.435584] (-) TimerEvent: {}
+[12.535843] (-) TimerEvent: {}
+[12.636127] (-) TimerEvent: {}
+[12.736395] (-) TimerEvent: {}
+[12.836663] (-) TimerEvent: {}
+[12.936899] (-) TimerEvent: {}
+[13.037113] (-) TimerEvent: {}
+[13.137348] (-) TimerEvent: {}
+[13.237557] (-) TimerEvent: {}
+[13.246703] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/simulation/include/simulation/modular.hpp:474:40:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kthr\x1b[m\x1b[K\xe2\x80\x99 may be used uninitialized [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmaybe-uninitialized\x07-Wmaybe-uninitialized\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[13.246794] (simulation) StderrLine: {'line': b'  474 |                     violaThrust = \x1b[01;35m\x1b[K(thr - thrustMean)\x1b[m\x1b[K * (thr - thrustMean) - thrustSqrRadi;\n'}
+[13.246826] (simulation) StderrLine: {'line': b'      |                                   \x1b[01;35m\x1b[K~~~~~^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[13.337638] (-) TimerEvent: {}
+[13.437892] (-) TimerEvent: {}
+[13.538197] (-) TimerEvent: {}
+[13.638502] (-) TimerEvent: {}
+[13.738795] (-) TimerEvent: {}
+[13.839050] (-) TimerEvent: {}
+[13.939309] (-) TimerEvent: {}
+[14.039565] (-) TimerEvent: {}
+[14.139817] (-) TimerEvent: {}
+[14.240076] (-) TimerEvent: {}
+[14.340332] (-) TimerEvent: {}
+[14.440604] (-) TimerEvent: {}
+[14.540884] (-) TimerEvent: {}
+[14.641141] (-) TimerEvent: {}
+[14.741396] (-) TimerEvent: {}
+[14.841627] (-) TimerEvent: {}
+[14.941878] (-) TimerEvent: {}
+[15.042158] (-) TimerEvent: {}
+[15.142438] (-) TimerEvent: {}
+[15.242722] (-) TimerEvent: {}
+[15.343006] (-) TimerEvent: {}
+[15.443251] (-) TimerEvent: {}
+[15.543501] (-) TimerEvent: {}
+[15.643723] (-) TimerEvent: {}
+[15.743943] (-) TimerEvent: {}
+[15.844105] (-) TimerEvent: {}
+[15.944238] (-) TimerEvent: {}
+[16.044412] (-) TimerEvent: {}
+[16.144659] (-) TimerEvent: {}
+[16.244917] (-) TimerEvent: {}
+[16.345148] (-) TimerEvent: {}
+[16.445339] (-) TimerEvent: {}
+[16.545532] (-) TimerEvent: {}
+[16.645723] (-) TimerEvent: {}
+[16.745964] (-) TimerEvent: {}
+[16.846224] (-) TimerEvent: {}
+[16.946457] (-) TimerEvent: {}
+[17.046657] (-) TimerEvent: {}
+[17.146932] (-) TimerEvent: {}
+[17.247224] (-) TimerEvent: {}
+[17.347492] (-) TimerEvent: {}
+[17.447783] (-) TimerEvent: {}
+[17.548065] (-) TimerEvent: {}
+[17.648367] (-) TimerEvent: {}
+[17.748645] (-) TimerEvent: {}
+[17.848902] (-) TimerEvent: {}
+[17.949298] (-) TimerEvent: {}
+[18.049772] (-) TimerEvent: {}
+[18.150058] (-) TimerEvent: {}
+[18.250341] (-) TimerEvent: {}
+[18.350551] (-) TimerEvent: {}
+[18.450806] (-) TimerEvent: {}
+[18.551065] (-) TimerEvent: {}
+[18.651300] (-) TimerEvent: {}
+[18.751500] (-) TimerEvent: {}
+[18.851713] (-) TimerEvent: {}
+[18.929888] (simulation) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable simulation_node\x1b[0m\n'}
+[18.951797] (-) TimerEvent: {}
+[19.052057] (-) TimerEvent: {}
+[19.152315] (-) TimerEvent: {}
+[19.252580] (-) TimerEvent: {}
+[19.352877] (-) TimerEvent: {}
+[19.453145] (-) TimerEvent: {}
+[19.553440] (-) TimerEvent: {}
+[19.653733] (-) TimerEvent: {}
+[19.754030] (-) TimerEvent: {}
+[19.854386] (-) TimerEvent: {}
+[19.954847] (-) TimerEvent: {}
+[20.055155] (-) TimerEvent: {}
+[20.155429] (-) TimerEvent: {}
+[20.255699] (-) TimerEvent: {}
+[20.256482] (simulation) StdoutLine: {'line': b'[100%] Built target simulation_node\n'}
+[20.261660] (simulation) CommandEnded: {'returncode': 0}
+[20.272697] (simulation) JobProgress: {'identifier': 'simulation', 'progress': 'install'}
+[20.276353] (simulation) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/kiki/Workspace/drone_monitor/build/simulation'], 'cwd': '/home/kiki/Workspace/drone_monitor/build/simulation', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_HK:en'), ('USER', 'kiki'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/kiki'), ('OLDPWD', '/home/kiki'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '2240'), ('SYSTEMD_EXEC_PID', '2774'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '9205'), ('_colcon_cd_root', '/opt/ros/humble/'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'kiki'), ('JOURNAL_STREAM', '8:57796'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'kiki'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/opt/gcc-arm-none-eabi-9-2020-q2-update/bin:/home/kiki/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/kiki-System-Product-Name:@/tmp/.ICE-unix/2482,unix/kiki-System-Product-Name:/tmp/.ICE-unix/2482'), ('INVOCATION_ID', '1ce6631115a34d7cb1220bffc03eb4f2'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:4fb9fe25-b572-4578-abb3-1eb9357acd16'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/kiki/Workspace/drone_monitor/build/simulation'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[20.280150] (simulation) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[20.280921] (simulation) StdoutLine: {'line': b'-- Installing: /home/kiki/Workspace/drone_monitor/install/simulation/lib/simulation/simulation_node\n'}
+[20.287505] (simulation) StdoutLine: {'line': b'-- Set runtime path of "/home/kiki/Workspace/drone_monitor/install/simulation/lib/simulation/simulation_node" to ""\n'}
+[20.287610] (simulation) StdoutLine: {'line': b'-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/ament_index/resource_index/package_run_dependencies/simulation\n'}
+[20.287636] (simulation) StdoutLine: {'line': b'-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/ament_index/resource_index/parent_prefix_path/simulation\n'}
+[20.287657] (simulation) StdoutLine: {'line': b'-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/environment/ament_prefix_path.sh\n'}
+[20.287706] (simulation) StdoutLine: {'line': b'-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/environment/ament_prefix_path.dsv\n'}
+[20.287727] (simulation) StdoutLine: {'line': b'-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/environment/path.sh\n'}
+[20.287747] (simulation) StdoutLine: {'line': b'-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/environment/path.dsv\n'}
+[20.287769] (simulation) StdoutLine: {'line': b'-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/local_setup.bash\n'}
+[20.287789] (simulation) StdoutLine: {'line': b'-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/local_setup.sh\n'}
+[20.287809] (simulation) StdoutLine: {'line': b'-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/local_setup.zsh\n'}
+[20.287828] (simulation) StdoutLine: {'line': b'-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/local_setup.dsv\n'}
+[20.287847] (simulation) StdoutLine: {'line': b'-- Installing: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/package.dsv\n'}
+[20.287966] (simulation) StdoutLine: {'line': b'-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/ament_index/resource_index/packages/simulation\n'}
+[20.287988] (simulation) StdoutLine: {'line': b'-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/cmake/simulationConfig.cmake\n'}
+[20.288008] (simulation) StdoutLine: {'line': b'-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/cmake/simulationConfig-version.cmake\n'}
+[20.288026] (simulation) StdoutLine: {'line': b'-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/package.xml\n'}
+[20.289958] (simulation) CommandEnded: {'returncode': 0}
+[20.323685] (simulation) JobEnded: {'identifier': 'simulation', 'rc': 0}
+[20.325177] (-) EventReactorShutdown: {}
