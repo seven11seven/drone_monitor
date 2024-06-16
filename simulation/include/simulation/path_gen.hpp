@@ -21,7 +21,8 @@
 namespace path_gen
 {
     template <typename Map>
-    inline double planPath(const Eigen::Vector3d &s,
+    inline double planPath(const Eigen::Matrix3Xd &v,
+                           const Eigen::Vector3d &s,
                            const Eigen::Vector3d &g,
                            const Eigen::Vector3d &lb,
                            const Eigen::Vector3d &hb,
@@ -51,7 +52,7 @@ namespace path_gen
                 const Eigen::Vector3d position(lb(0) + (*pos)[0],
                                                lb(1) + (*pos)[1],
                                                lb(2) + (*pos)[2]);
-                return mapPtr->query_box(position) == 0;
+                return mapPtr->query_box(position, v) == 0;
             }
         );
         si->setup();

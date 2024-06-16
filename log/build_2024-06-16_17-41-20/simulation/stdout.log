@@ -1,0 +1,25 @@
+[35m[1mConsolidate compiler generated dependencies of target simulation_node[0m
+[35m[1mConsolidate compiler generated dependencies of target debug_node[0m
+[ 75%] Built target simulation_node
+[ 75%] [32mBuilding CXX object CMakeFiles/debug_node.dir/src/fake_module_debug.cpp.o[0m
+[100%] [32m[1mLinking CXX executable debug_node[0m
+[100%] Built target debug_node
+-- Install configuration: ""
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/lib/simulation/simulation_node
+-- Installing: /home/kiki/Workspace/drone_monitor/install/simulation/lib/simulation/debug_node
+-- Set runtime path of "/home/kiki/Workspace/drone_monitor/install/simulation/lib/simulation/debug_node" to ""
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/ament_index/resource_index/package_run_dependencies/simulation
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/ament_index/resource_index/parent_prefix_path/simulation
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/environment/ament_prefix_path.sh
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/environment/path.sh
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/environment/path.dsv
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/local_setup.bash
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/local_setup.sh
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/local_setup.zsh
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/local_setup.dsv
+-- Installing: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/package.dsv
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/ament_index/resource_index/packages/simulation
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/cmake/simulationConfig.cmake
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/cmake/simulationConfig-version.cmake
+-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/package.xml

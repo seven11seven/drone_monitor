@@ -1,0 +1,271 @@
+[0.000000] (-) TimerEvent: {}
+[0.000233] (-) JobUnselected: {'identifier': 'gcopter'}
+[0.000260] (-) JobUnselected: {'identifier': 'map_sensing'}
+[0.000272] (-) JobUnselected: {'identifier': 'mockamap'}
+[0.000281] (simulation) JobQueued: {'identifier': 'simulation', 'dependencies': OrderedDict()}
+[0.000291] (simulation) JobStarted: {'identifier': 'simulation'}
+[0.005707] (simulation) JobProgress: {'identifier': 'simulation', 'progress': 'cmake'}
+[0.007177] (simulation) JobProgress: {'identifier': 'simulation', 'progress': 'build'}
+[0.007509] (simulation) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/kiki/Workspace/drone_monitor/build/simulation', '--', '-j32', '-l32'], 'cwd': '/home/kiki/Workspace/drone_monitor/build/simulation', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_HK:en'), ('USER', 'kiki'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/kiki'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '2232'), ('SYSTEMD_EXEC_PID', '2626'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '21446'), ('_colcon_cd_root', '/opt/ros/humble/'), ('COLCON_PREFIX_PATH', '/home/kiki/Workspace/drone_monitor/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'kiki'), ('JOURNAL_STREAM', '8:41179'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'kiki'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/opt/gcc-arm-none-eabi-9-2020-q2-update/bin:/home/kiki/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/kiki-System-Product-Name:@/tmp/.ICE-unix/2453,unix/kiki-System-Product-Name:/tmp/.ICE-unix/2453'), ('INVOCATION_ID', 'da06c65ebbe34bb59e43b5ae502890e3'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/kiki/Workspace/drone_monitor/install/simulation:/home/kiki/Workspace/drone_monitor/install/mockamap:/home/kiki/Workspace/drone_monitor/install/map_sensing:/home/kiki/Workspace/drone_monitor/install/gcopter:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:1275a717-b562-4ff0-9014-38ad4455fc20'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/kiki/Workspace/drone_monitor/build/simulation'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/kiki/Workspace/drone_monitor/install/simulation:/home/kiki/Workspace/drone_monitor/install/mockamap:/home/kiki/Workspace/drone_monitor/install/map_sensing:/home/kiki/Workspace/drone_monitor/install/gcopter:/opt/ros/humble')]), 'shell': False}
+[0.020537] (simulation) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.085418] (simulation) StdoutLine: {'line': b'-- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.098586] (simulation) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.099402] (-) TimerEvent: {}
+[0.099689] (simulation) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.102124] (simulation) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.106837] (simulation) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.113633] (simulation) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.139306] (simulation) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.140098] (simulation) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.199500] (-) TimerEvent: {}
+[0.203259] (simulation) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.271816] (simulation) StdoutLine: {'line': b'-- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[0.290595] (simulation) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[0.299615] (-) TimerEvent: {}
+[0.333132] (simulation) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)\n'}
+[0.343542] (simulation) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[0.346346] (simulation) StdoutLine: {'line': b'-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)\n'}
+[0.346408] (simulation) StderrLine: {'line': b'\x1b[0m** WARNING ** io features related to pcap will be disabled\x1b[0m\n'}
+[0.346453] (simulation) StderrLine: {'line': b'\x1b[0m** WARNING ** io features related to png will be disabled\x1b[0m\n'}
+[0.399710] (-) TimerEvent: {}
+[0.491719] (simulation) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)\n'}
+[0.491842] (simulation) StdoutLine: {'line': b'-- looking for PCL_COMMON\n'}
+[0.491991] (simulation) StdoutLine: {'line': b'-- looking for PCL_OCTREE\n'}
+[0.492190] (simulation) StdoutLine: {'line': b'-- looking for PCL_IO\n'}
+[0.492552] (simulation) StdoutLine: {'line': b'-- Found pcl_conversions: 2.4.0 (/opt/ros/humble/share/pcl_conversions/cmake)\n'}
+[0.499795] (-) TimerEvent: {}
+[0.550330] (simulation) StdoutLine: {'line': b'-- Found visualization_msgs: 4.2.3 (/opt/ros/humble/share/visualization_msgs/cmake)\n'}
+[0.599893] (-) TimerEvent: {}
+[0.650944] (simulation) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.671573] (simulation) StdoutLine: {'line': b'-- Generating done\n'}
+[0.680348] (simulation) StdoutLine: {'line': b'-- Build files have been written to: /home/kiki/Workspace/drone_monitor/build/simulation\n'}
+[0.695548] (simulation) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target simulation_node\x1b[0m\n'}
+[0.700023] (-) TimerEvent: {}
+[0.705741] (simulation) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/simulation_node.dir/src/fake_module.cpp.o\x1b[0m\n'}
+[0.800195] (-) TimerEvent: {}
+[0.900531] (-) TimerEvent: {}
+[1.000873] (-) TimerEvent: {}
+[1.101202] (-) TimerEvent: {}
+[1.201540] (-) TimerEvent: {}
+[1.301875] (-) TimerEvent: {}
+[1.402206] (-) TimerEvent: {}
+[1.502518] (-) TimerEvent: {}
+[1.538802] (simulation) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/geo_utils.hpp:5\x1b[m\x1b[K,\n'}
+[1.538993] (simulation) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/gcopter/include/misc/visualizer.hpp:6\x1b[m\x1b[K,\n'}
+[1.539168] (simulation) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/simulation/src/fake_module.cpp:1\x1b[m\x1b[K:\n'}
+[1.539218] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/sdlp.hpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kint sdlp::linfracprog(const double*, int, int, const double*, const double*, double*, double*, int*, int*) [with int d = 1]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.539242] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/sdlp.hpp:666:41:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kmax_size\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.539265] (simulation) StderrLine: {'line': b'  666 |                               \x1b[01;35m\x1b[Kconst int max_size\x1b[m\x1b[K,\n'}
+[1.539285] (simulation) StderrLine: {'line': b'      |                               \x1b[01;35m\x1b[K~~~~~~~~~~^~~~~~~~\x1b[m\x1b[K\n'}
+[1.539304] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/sdlp.hpp:671:39:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kwork\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.539325] (simulation) StderrLine: {'line': b'  671 |                               \x1b[01;35m\x1b[Kdouble *work\x1b[m\x1b[K,\n'}
+[1.539344] (simulation) StderrLine: {'line': b'      |                               \x1b[01;35m\x1b[K~~~~~~~~^~~~\x1b[m\x1b[K\n'}
+[1.602612] (-) TimerEvent: {}
+[1.702830] (-) TimerEvent: {}
+[1.803051] (-) TimerEvent: {}
+[1.903302] (-) TimerEvent: {}
+[2.003525] (-) TimerEvent: {}
+[2.103829] (-) TimerEvent: {}
+[2.204097] (-) TimerEvent: {}
+[2.304407] (-) TimerEvent: {}
+[2.404733] (-) TimerEvent: {}
+[2.505064] (-) TimerEvent: {}
+[2.605396] (-) TimerEvent: {}
+[2.705711] (-) TimerEvent: {}
+[2.805989] (-) TimerEvent: {}
+[2.906216] (-) TimerEvent: {}
+[3.006459] (-) TimerEvent: {}
+[3.106703] (-) TimerEvent: {}
+[3.206960] (-) TimerEvent: {}
+[3.307201] (-) TimerEvent: {}
+[3.407447] (-) TimerEvent: {}
+[3.507711] (-) TimerEvent: {}
+[3.608030] (-) TimerEvent: {}
+[3.708310] (-) TimerEvent: {}
+[3.808544] (-) TimerEvent: {}
+[3.908814] (-) TimerEvent: {}
+[4.009064] (-) TimerEvent: {}
+[4.109309] (-) TimerEvent: {}
+[4.209589] (-) TimerEvent: {}
+[4.309891] (-) TimerEvent: {}
+[4.410200] (-) TimerEvent: {}
+[4.510515] (-) TimerEvent: {}
+[4.610848] (-) TimerEvent: {}
+[4.711138] (-) TimerEvent: {}
+[4.811412] (-) TimerEvent: {}
+[4.911758] (-) TimerEvent: {}
+[5.012091] (-) TimerEvent: {}
+[5.112440] (-) TimerEvent: {}
+[5.212750] (-) TimerEvent: {}
+[5.313175] (-) TimerEvent: {}
+[5.413774] (-) TimerEvent: {}
+[5.514175] (-) TimerEvent: {}
+[5.614508] (-) TimerEvent: {}
+[5.714831] (-) TimerEvent: {}
+[5.815112] (-) TimerEvent: {}
+[5.915409] (-) TimerEvent: {}
+[6.015682] (-) TimerEvent: {}
+[6.116040] (-) TimerEvent: {}
+[6.216349] (-) TimerEvent: {}
+[6.316663] (-) TimerEvent: {}
+[6.416968] (-) TimerEvent: {}
+[6.517279] (-) TimerEvent: {}
+[6.617600] (-) TimerEvent: {}
+[6.717930] (-) TimerEvent: {}
+[6.818281] (-) TimerEvent: {}
+[6.918588] (-) TimerEvent: {}
+[7.018847] (-) TimerEvent: {}
+[7.119123] (-) TimerEvent: {}
+[7.219396] (-) TimerEvent: {}
+[7.319712] (-) TimerEvent: {}
+[7.420038] (-) TimerEvent: {}
+[7.520368] (-) TimerEvent: {}
+[7.620712] (-) TimerEvent: {}
+[7.721062] (-) TimerEvent: {}
+[7.821405] (-) TimerEvent: {}
+[7.921758] (-) TimerEvent: {}
+[8.022122] (-) TimerEvent: {}
+[8.122480] (-) TimerEvent: {}
+[8.222832] (-) TimerEvent: {}
+[8.323183] (-) TimerEvent: {}
+[8.423485] (-) TimerEvent: {}
+[8.523822] (-) TimerEvent: {}
+[8.624182] (-) TimerEvent: {}
+[8.724527] (-) TimerEvent: {}
+[8.824874] (-) TimerEvent: {}
+[8.925210] (-) TimerEvent: {}
+[9.025544] (-) TimerEvent: {}
+[9.125885] (-) TimerEvent: {}
+[9.226226] (-) TimerEvent: {}
+[9.326558] (-) TimerEvent: {}
+[9.426897] (-) TimerEvent: {}
+[9.527176] (-) TimerEvent: {}
+[9.627511] (-) TimerEvent: {}
+[9.727781] (-) TimerEvent: {}
+[9.828113] (-) TimerEvent: {}
+[9.928445] (-) TimerEvent: {}
+[10.028777] (-) TimerEvent: {}
+[10.129103] (-) TimerEvent: {}
+[10.229402] (-) TimerEvent: {}
+[10.329706] (-) TimerEvent: {}
+[10.430019] (-) TimerEvent: {}
+[10.530294] (-) TimerEvent: {}
+[10.630550] (-) TimerEvent: {}
+[10.730806] (-) TimerEvent: {}
+[10.831058] (-) TimerEvent: {}
+[10.931279] (-) TimerEvent: {}
+[11.031526] (-) TimerEvent: {}
+[11.131792] (-) TimerEvent: {}
+[11.232089] (-) TimerEvent: {}
+[11.332331] (-) TimerEvent: {}
+[11.432598] (-) TimerEvent: {}
+[11.532861] (-) TimerEvent: {}
+[11.633123] (-) TimerEvent: {}
+[11.733413] (-) TimerEvent: {}
+[11.833677] (-) TimerEvent: {}
+[11.933945] (-) TimerEvent: {}
+[12.034209] (-) TimerEvent: {}
+[12.134468] (-) TimerEvent: {}
+[12.234730] (-) TimerEvent: {}
+[12.335027] (-) TimerEvent: {}
+[12.435294] (-) TimerEvent: {}
+[12.535563] (-) TimerEvent: {}
+[12.635831] (-) TimerEvent: {}
+[12.736092] (-) TimerEvent: {}
+[12.836356] (-) TimerEvent: {}
+[12.936619] (-) TimerEvent: {}
+[13.036879] (-) TimerEvent: {}
+[13.137166] (-) TimerEvent: {}
+[13.237435] (-) TimerEvent: {}
+[13.337677] (-) TimerEvent: {}
+[13.437944] (-) TimerEvent: {}
+[13.538217] (-) TimerEvent: {}
+[13.638524] (-) TimerEvent: {}
+[13.738792] (-) TimerEvent: {}
+[13.839063] (-) TimerEvent: {}
+[13.939341] (-) TimerEvent: {}
+[14.039564] (-) TimerEvent: {}
+[14.139810] (-) TimerEvent: {}
+[14.240061] (-) TimerEvent: {}
+[14.340329] (-) TimerEvent: {}
+[14.440585] (-) TimerEvent: {}
+[14.540834] (-) TimerEvent: {}
+[14.641073] (-) TimerEvent: {}
+[14.741303] (-) TimerEvent: {}
+[14.841532] (-) TimerEvent: {}
+[14.941777] (-) TimerEvent: {}
+[15.042010] (-) TimerEvent: {}
+[15.142207] (-) TimerEvent: {}
+[15.242457] (-) TimerEvent: {}
+[15.342725] (-) TimerEvent: {}
+[15.442920] (-) TimerEvent: {}
+[15.543161] (-) TimerEvent: {}
+[15.643353] (-) TimerEvent: {}
+[15.743613] (-) TimerEvent: {}
+[15.843839] (-) TimerEvent: {}
+[15.944065] (-) TimerEvent: {}
+[16.044302] (-) TimerEvent: {}
+[16.144543] (-) TimerEvent: {}
+[16.244770] (-) TimerEvent: {}
+[16.344974] (-) TimerEvent: {}
+[16.445243] (-) TimerEvent: {}
+[16.545506] (-) TimerEvent: {}
+[16.645741] (-) TimerEvent: {}
+[16.745970] (-) TimerEvent: {}
+[16.846197] (-) TimerEvent: {}
+[16.946429] (-) TimerEvent: {}
+[17.046668] (-) TimerEvent: {}
+[17.146936] (-) TimerEvent: {}
+[17.247213] (-) TimerEvent: {}
+[17.347438] (-) TimerEvent: {}
+[17.447683] (-) TimerEvent: {}
+[17.547881] (-) TimerEvent: {}
+[17.648132] (-) TimerEvent: {}
+[17.748389] (-) TimerEvent: {}
+[17.848692] (-) TimerEvent: {}
+[17.948960] (-) TimerEvent: {}
+[18.049331] (-) TimerEvent: {}
+[18.149587] (-) TimerEvent: {}
+[18.249886] (-) TimerEvent: {}
+[18.350144] (-) TimerEvent: {}
+[18.450453] (-) TimerEvent: {}
+[18.550712] (-) TimerEvent: {}
+[18.650966] (-) TimerEvent: {}
+[18.751191] (-) TimerEvent: {}
+[18.851420] (-) TimerEvent: {}
+[18.939516] (simulation) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable simulation_node\x1b[0m\n'}
+[18.951487] (-) TimerEvent: {}
+[19.051716] (-) TimerEvent: {}
+[19.151928] (-) TimerEvent: {}
+[19.252201] (-) TimerEvent: {}
+[19.352491] (-) TimerEvent: {}
+[19.452760] (-) TimerEvent: {}
+[19.553030] (-) TimerEvent: {}
+[19.653290] (-) TimerEvent: {}
+[19.753620] (-) TimerEvent: {}
+[19.853884] (-) TimerEvent: {}
+[19.861692] (simulation) StdoutLine: {'line': b'[100%] Built target simulation_node\n'}
+[19.866986] (simulation) CommandEnded: {'returncode': 0}
+[19.877562] (simulation) JobProgress: {'identifier': 'simulation', 'progress': 'install'}
+[19.881162] (simulation) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/kiki/Workspace/drone_monitor/build/simulation'], 'cwd': '/home/kiki/Workspace/drone_monitor/build/simulation', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_HK:en'), ('USER', 'kiki'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/kiki'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '2232'), ('SYSTEMD_EXEC_PID', '2626'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '21446'), ('_colcon_cd_root', '/opt/ros/humble/'), ('COLCON_PREFIX_PATH', '/home/kiki/Workspace/drone_monitor/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'kiki'), ('JOURNAL_STREAM', '8:41179'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'kiki'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/opt/gcc-arm-none-eabi-9-2020-q2-update/bin:/home/kiki/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/kiki-System-Product-Name:@/tmp/.ICE-unix/2453,unix/kiki-System-Product-Name:/tmp/.ICE-unix/2453'), ('INVOCATION_ID', 'da06c65ebbe34bb59e43b5ae502890e3'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/kiki/Workspace/drone_monitor/install/simulation:/home/kiki/Workspace/drone_monitor/install/mockamap:/home/kiki/Workspace/drone_monitor/install/map_sensing:/home/kiki/Workspace/drone_monitor/install/gcopter:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:1275a717-b562-4ff0-9014-38ad4455fc20'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/kiki/Workspace/drone_monitor/build/simulation'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/kiki/Workspace/drone_monitor/install/simulation:/home/kiki/Workspace/drone_monitor/install/mockamap:/home/kiki/Workspace/drone_monitor/install/map_sensing:/home/kiki/Workspace/drone_monitor/install/gcopter:/opt/ros/humble')]), 'shell': False}
+[19.884451] (simulation) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[19.884648] (simulation) StdoutLine: {'line': b'-- Installing: /home/kiki/Workspace/drone_monitor/install/simulation/lib/simulation/simulation_node\n'}
+[19.892586] (simulation) StdoutLine: {'line': b'-- Set runtime path of "/home/kiki/Workspace/drone_monitor/install/simulation/lib/simulation/simulation_node" to ""\n'}
+[19.892801] (simulation) StdoutLine: {'line': b'-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/ament_index/resource_index/package_run_dependencies/simulation\n'}
+[19.892870] (simulation) StdoutLine: {'line': b'-- Installing: /home/kiki/Workspace/drone_monitor/install/simulation/share/ament_index/resource_index/parent_prefix_path/simulation\n'}
+[19.893011] (simulation) StdoutLine: {'line': b'-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/environment/ament_prefix_path.sh\n'}
+[19.893092] (simulation) StdoutLine: {'line': b'-- Installing: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/environment/ament_prefix_path.dsv\n'}
+[19.893247] (simulation) StdoutLine: {'line': b'-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/environment/path.sh\n'}
+[19.893300] (simulation) StdoutLine: {'line': b'-- Installing: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/environment/path.dsv\n'}
+[19.893347] (simulation) StdoutLine: {'line': b'-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/local_setup.bash\n'}
+[19.893392] (simulation) StdoutLine: {'line': b'-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/local_setup.sh\n'}
+[19.893437] (simulation) StdoutLine: {'line': b'-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/local_setup.zsh\n'}
+[19.893483] (simulation) StdoutLine: {'line': b'-- Installing: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/local_setup.dsv\n'}
+[19.893528] (simulation) StdoutLine: {'line': b'-- Installing: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/package.dsv\n'}
+[19.893580] (simulation) StdoutLine: {'line': b'-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/ament_index/resource_index/packages/simulation\n'}
+[19.893625] (simulation) StdoutLine: {'line': b'-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/cmake/simulationConfig.cmake\n'}
+[19.893669] (simulation) StdoutLine: {'line': b'-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/cmake/simulationConfig-version.cmake\n'}
+[19.893714] (simulation) StdoutLine: {'line': b'-- Up-to-date: /home/kiki/Workspace/drone_monitor/install/simulation/share/simulation/package.xml\n'}
+[19.896642] (simulation) CommandEnded: {'returncode': 0}
+[19.917992] (simulation) JobEnded: {'identifier': 'simulation', 'rc': 0}
+[19.918412] (-) EventReactorShutdown: {}

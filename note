@@ -25,6 +25,18 @@
     the range of mockamap (-25, 25) * (-25, 25) * (0, 10)
     develop the simulation package for module trajectory optimization
     use the gcopter as a static library
+
+5. Add new penalty functions
+    5.1 register parameters in launch file (weight, bounds, etc.)
+    5.2 set, declare and get parameters, initialize in fake_module
+    5.3 input parameters to setup() function in fake_module
+    5.4 declare private variables in modular
+    5.5 revise setup() function in modular
+    5.6 declare variables, penalties and their gradients
+    5.7 set them as zero
+    5.8 in attachPenaltyFunctional() calculate the penalties and gradients
+    5.9 modify flatness file and add new functions to pass the gradients to c and T
+
 <<< Start Memo <<< 
 
 >>> TODO >>>
@@ -40,10 +52,11 @@
     7.1 Visualize the module and the trajectory ====
     7.2 Reset the cost function ====
 8. MILESTONE: automatic trajectory planning in the simplest dynamic assumption
-    9.1 Review the energy penalty of the MINCO class: analytical integration of acceleration ====
-    9.2 Revise the flatness part of the project ====
-    9.3 Revise the violate thrust and velocity of the project ====
-    9.4 Review the xi to q layer in modular: no project retriction, use ball penalty instead ====
+    8.1 Review the energy penalty of the MINCO class: analytical integration of acceleration ====
+    8.2 Revise the flatness part of the project ====
+    8.3 Revise the violate thrust and velocity of the project ====
+    8.4 Review the xi to q layer in modular: no project retriction, use ball penalty instead ====
+    8.5 debug the errors that the end point dismissed in some cases (the RRT* algorithm is buggy)
 9. dynamics simulation: mujoco <==> ros2 
 10. evaluate the proposed differential flatness of the crane-module system
 11. reconsidering the optimization methods based on MIO
@@ -55,7 +68,6 @@
 15. the initial path genereted by the RRT* can largely affect the final results
     you can improve the algorithm by improving the front end of the project
 16. you should clearly define the quality of trajectorys
-
 <<< TODO <<<
 
 >>> Principle >>>
@@ -63,20 +75,34 @@
 2. add detail notations when decoding the project. The logic, parameters, inputs and outputs, mathmactics, etc.
 <<< Principle <<<
 
+>>> Temp Note >>>
+some of the cost function as well as the initial path strategy is not perfect,
+there are still much work remaining to be done.
+The key Qustion:
+How to define the quality of module liftinig trajectory ?
+<<< Temp Note <<<
+
 >>> Other Issues TODAY >>>
-1. Polish the codes
+1. Rethinking the penalty function
+2. ROS2 and mujoco
+3. A function to compare different trajectories
+    3.1 use trajectory class to get the velocity, acceleration, and other information
+4. Add extra penalties to consider the control efforts
+5. Add functions in crane flatness to get the forces in trjectory
+
+1. Polish the codes     ====
 2. Adjust the hardware
 
-1. modify the dynamics flatness part  ===
-2. encode dynamics  ===
-3. decode dynamics  ===
-4. adjust the parameters  ===
+1. modify the dynamics flatness part  ====
+2. encode dynamics  ====
+3. decode dynamics  ====
+4. adjust the parameters  ====
 
 1. Add geometry constraints during optimization ====
 
 1. Decode the optimization function, finished ====
 2. Develop the step motor driver ====
-3. Test the Odrive
+3. Test the Odrive ====
 
 1. Decode the optimization function, part of ... ====
 2. Teleoperation system development plan ====
@@ -92,10 +118,4 @@
 1. design the smart hook ====
 2. test the NUC power supply
 <<< Other Issues TODAY <<<
-
->>> Temp Note >>>
-some of the cost function as well as the initial path strategy is not perfect,
-there are still much work remaining to be done.
-The key Qustion:
-How to define the quality of module liftinig trajectory ?
 

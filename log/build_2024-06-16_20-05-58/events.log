@@ -1,0 +1,335 @@
+[0.000000] (-) TimerEvent: {}
+[0.000167] (-) JobUnselected: {'identifier': 'gcopter'}
+[0.000279] (-) JobUnselected: {'identifier': 'map_sensing'}
+[0.000341] (-) JobUnselected: {'identifier': 'mockamap'}
+[0.000414] (simulation) JobQueued: {'identifier': 'simulation', 'dependencies': OrderedDict()}
+[0.000439] (simulation) JobStarted: {'identifier': 'simulation'}
+[0.005162] (simulation) JobProgress: {'identifier': 'simulation', 'progress': 'cmake'}
+[0.007253] (simulation) JobProgress: {'identifier': 'simulation', 'progress': 'build'}
+[0.007278] (simulation) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/kiki/Workspace/drone_monitor/build/simulation', '--', '-j32', '-l32'], 'cwd': '/home/kiki/Workspace/drone_monitor/build/simulation', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_HK:en'), ('USER', 'kiki'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/kiki'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '2232'), ('SYSTEMD_EXEC_PID', '2626'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '21446'), ('_colcon_cd_root', '/opt/ros/humble/'), ('COLCON_PREFIX_PATH', '/home/kiki/Workspace/drone_monitor/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'kiki'), ('JOURNAL_STREAM', '8:41179'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'kiki'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/opt/gcc-arm-none-eabi-9-2020-q2-update/bin:/home/kiki/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/kiki-System-Product-Name:@/tmp/.ICE-unix/2453,unix/kiki-System-Product-Name:/tmp/.ICE-unix/2453'), ('INVOCATION_ID', 'da06c65ebbe34bb59e43b5ae502890e3'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/kiki/Workspace/drone_monitor/install/simulation:/home/kiki/Workspace/drone_monitor/install/mockamap:/home/kiki/Workspace/drone_monitor/install/map_sensing:/home/kiki/Workspace/drone_monitor/install/gcopter:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:1275a717-b562-4ff0-9014-38ad4455fc20'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/kiki/Workspace/drone_monitor/build/simulation'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/kiki/Workspace/drone_monitor/install/simulation:/home/kiki/Workspace/drone_monitor/install/mockamap:/home/kiki/Workspace/drone_monitor/install/map_sensing:/home/kiki/Workspace/drone_monitor/install/gcopter:/opt/ros/humble')]), 'shell': False}
+[0.028784] (simulation) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target debug_node\x1b[0m\n'}
+[0.035391] (simulation) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/simulation_node.dir/src/fake_module.cpp.o\x1b[0m\n'}
+[0.038597] (simulation) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/debug_node.dir/src/fake_module_debug.cpp.o\x1b[0m\n'}
+[0.099911] (-) TimerEvent: {}
+[0.200163] (-) TimerEvent: {}
+[0.300426] (-) TimerEvent: {}
+[0.400692] (-) TimerEvent: {}
+[0.500980] (-) TimerEvent: {}
+[0.601325] (-) TimerEvent: {}
+[0.701670] (-) TimerEvent: {}
+[0.802031] (-) TimerEvent: {}
+[0.843194] (simulation) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/geo_utils.hpp:5\x1b[m\x1b[K,\n'}
+[0.843373] (simulation) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/gcopter/include/misc/visualizer.hpp:6\x1b[m\x1b[K,\n'}
+[0.843427] (simulation) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/simulation/src/fake_module.cpp:1\x1b[m\x1b[K:\n'}
+[0.843474] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/sdlp.hpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kint sdlp::linfracprog(const double*, int, int, const double*, const double*, double*, double*, int*, int*) [with int d = 1]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[0.843522] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/sdlp.hpp:666:41:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kmax_size\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[0.843571] (simulation) StderrLine: {'line': b'  666 |                               \x1b[01;35m\x1b[Kconst int max_size\x1b[m\x1b[K,\n'}
+[0.843616] (simulation) StderrLine: {'line': b'      |                               \x1b[01;35m\x1b[K~~~~~~~~~~^~~~~~~~\x1b[m\x1b[K\n'}
+[0.843661] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/sdlp.hpp:671:39:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kwork\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[0.843707] (simulation) StderrLine: {'line': b'  671 |                               \x1b[01;35m\x1b[Kdouble *work\x1b[m\x1b[K,\n'}
+[0.843757] (simulation) StderrLine: {'line': b'      |                               \x1b[01;35m\x1b[K~~~~~~~~^~~~\x1b[m\x1b[K\n'}
+[0.871564] (simulation) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/geo_utils.hpp:5\x1b[m\x1b[K,\n'}
+[0.871681] (simulation) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/gcopter/include/misc/visualizer.hpp:6\x1b[m\x1b[K,\n'}
+[0.871705] (simulation) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/simulation/src/fake_module_debug.cpp:1\x1b[m\x1b[K:\n'}
+[0.871726] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/sdlp.hpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kint sdlp::linfracprog(const double*, int, int, const double*, const double*, double*, double*, int*, int*) [with int d = 1]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[0.871748] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/sdlp.hpp:666:41:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kmax_size\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[0.871770] (simulation) StderrLine: {'line': b'  666 |                               \x1b[01;35m\x1b[Kconst int max_size\x1b[m\x1b[K,\n'}
+[0.871790] (simulation) StderrLine: {'line': b'      |                               \x1b[01;35m\x1b[K~~~~~~~~~~^~~~~~~~\x1b[m\x1b[K\n'}
+[0.871810] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/sdlp.hpp:671:39:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kwork\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[0.871829] (simulation) StderrLine: {'line': b'  671 |                               \x1b[01;35m\x1b[Kdouble *work\x1b[m\x1b[K,\n'}
+[0.871847] (simulation) StderrLine: {'line': b'      |                               \x1b[01;35m\x1b[K~~~~~~~~^~~~\x1b[m\x1b[K\n'}
+[0.902158] (-) TimerEvent: {}
+[1.002409] (-) TimerEvent: {}
+[1.102662] (-) TimerEvent: {}
+[1.202942] (-) TimerEvent: {}
+[1.303280] (-) TimerEvent: {}
+[1.403713] (-) TimerEvent: {}
+[1.504053] (-) TimerEvent: {}
+[1.604398] (-) TimerEvent: {}
+[1.704737] (-) TimerEvent: {}
+[1.805107] (-) TimerEvent: {}
+[1.905452] (-) TimerEvent: {}
+[2.005837] (-) TimerEvent: {}
+[2.106166] (-) TimerEvent: {}
+[2.206606] (-) TimerEvent: {}
+[2.307205] (-) TimerEvent: {}
+[2.407803] (-) TimerEvent: {}
+[2.508186] (-) TimerEvent: {}
+[2.608539] (-) TimerEvent: {}
+[2.708858] (-) TimerEvent: {}
+[2.809178] (-) TimerEvent: {}
+[2.909493] (-) TimerEvent: {}
+[3.009768] (-) TimerEvent: {}
+[3.110087] (-) TimerEvent: {}
+[3.210405] (-) TimerEvent: {}
+[3.310713] (-) TimerEvent: {}
+[3.411024] (-) TimerEvent: {}
+[3.511299] (-) TimerEvent: {}
+[3.611648] (-) TimerEvent: {}
+[3.712003] (-) TimerEvent: {}
+[3.812315] (-) TimerEvent: {}
+[3.912597] (-) TimerEvent: {}
+[4.012874] (-) TimerEvent: {}
+[4.113143] (-) TimerEvent: {}
+[4.213404] (-) TimerEvent: {}
+[4.313649] (-) TimerEvent: {}
+[4.413901] (-) TimerEvent: {}
+[4.514164] (-) TimerEvent: {}
+[4.614413] (-) TimerEvent: {}
+[4.714656] (-) TimerEvent: {}
+[4.814899] (-) TimerEvent: {}
+[4.915148] (-) TimerEvent: {}
+[5.015401] (-) TimerEvent: {}
+[5.115649] (-) TimerEvent: {}
+[5.215894] (-) TimerEvent: {}
+[5.316143] (-) TimerEvent: {}
+[5.416394] (-) TimerEvent: {}
+[5.516661] (-) TimerEvent: {}
+[5.616924] (-) TimerEvent: {}
+[5.717171] (-) TimerEvent: {}
+[5.817419] (-) TimerEvent: {}
+[5.917712] (-) TimerEvent: {}
+[6.017994] (-) TimerEvent: {}
+[6.118213] (-) TimerEvent: {}
+[6.218505] (-) TimerEvent: {}
+[6.234178] (simulation) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/local/include/eigen3/Eigen/Core:164\x1b[m\x1b[K,\n'}
+[6.234357] (simulation) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/local/include/eigen3/Eigen/Dense:1\x1b[m\x1b[K,\n'}
+[6.234412] (simulation) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/local/include/eigen3/Eigen/Eigen:1\x1b[m\x1b[K,\n'}
+[6.234461] (simulation) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/root_finder.hpp:8\x1b[m\x1b[K,\n'}
+[6.234510] (simulation) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/trajectory.hpp:4\x1b[m\x1b[K,\n'}
+[6.234557] (simulation) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/gcopter/include/misc/visualizer.hpp:4\x1b[m\x1b[K,\n'}
+[6.234610] (simulation) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/simulation/src/fake_module.cpp:1\x1b[m\x1b[K:\n'}
+[6.234657] (simulation) StderrLine: {'line': b'/usr/local/include/eigen3/Eigen/src/Core/AssignEvaluator.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Kvoid Eigen::internal::call_assignment_no_alias(Dst&, const Src&, const Func&) [with Dst = Eigen::Matrix<double, 3, 1>; Src = Eigen::Matrix<double, 3, 8, 0, 3, 8>; Func = Eigen::internal::assign_op<double, double>]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.234735] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/eigen3/Eigen/src/Core/PlainObjectBase.h:797:41:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[KDerived& Eigen::PlainObjectBase<Derived>::_set_noalias(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<double, 3, 8, 0, 3, 8>; Derived = Eigen::Matrix<double, 3, 1>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.234788] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/eigen3/Eigen/src/Core/PlainObjectBase.h:594:19:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[KEigen::PlainObjectBase<Derived>::PlainObjectBase(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<double, 3, 8, 0, 3, 8>; Derived = Eigen::Matrix<double, 3, 1>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.234836] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/eigen3/Eigen/src/Core/Matrix.h:423:29:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const Eigen::EigenBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<double, 3, 8, 0, 3, 8>; _Scalar = double; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.234885] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/simulation/src/fake_module.cpp:191:35:\x1b[m\x1b[K   required from here\n'}
+[6.234931] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/eigen3/Eigen/src/Core/util/StaticAssert.h:177:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kstatic assertion failed: YOU_MIXED_MATRICES_OF_DIFFERENT_SIZES\n'}
+[6.234980] (simulation) StderrLine: {'line': b'  175 |      \x1b[01;31m\x1b[K( \\\x1b[m\x1b[K\n'}
+[6.235025] (simulation) StderrLine: {'line': b'      |      \x1b[01;31m\x1b[K~~~\x1b[m\x1b[K\n'}
+[6.235071] (simulation) StderrLine: {'line': b'  176 | \x1b[01;31m\x1b[K        (int(Eigen::internal::size_of_xpr_at_compile_time<TYPE0>::ret)==0 && int(Eigen::internal::size_of_xpr_at_compile_time<TYPE1>::ret)==0) \\\x1b[m\x1b[K\n'}
+[6.235118] (simulation) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.235164] (simulation) StderrLine: {'line': b'  177 | \x1b[01;31m\x1b[K    || (\\\x1b[m\x1b[K\n'}
+[6.235210] (simulation) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[6.235255] (simulation) StderrLine: {'line': b'  178 | \x1b[01;31m\x1b[K          (int(TYPE0::RowsAtCompileTime)==Eigen::Dynamic \\\x1b[m\x1b[K\n'}
+[6.235305] (simulation) StderrLine: {'line': b'      |           \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.235352] (simulation) StderrLine: {'line': b'  179 | \x1b[01;31m\x1b[K        || int(TYPE1::RowsAtCompileTime)==Eigen::Dynamic \\\x1b[m\x1b[K\n'}
+[6.235397] (simulation) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.235444] (simulation) StderrLine: {'line': b'  180 | \x1b[01;31m\x1b[K        || int(TYPE0::RowsAtCompileTime)==int(TYPE1::RowsAtCompileTime)) \\\x1b[m\x1b[K\n'}
+[6.235490] (simulation) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.235536] (simulation) StderrLine: {'line': b'  181 | \x1b[01;31m\x1b[K      &&  (int(TYPE0::ColsAtCompileTime)==Eigen::Dynamic \\\x1b[m\x1b[K\n'}
+[6.235583] (simulation) StderrLine: {'line': b'      |       \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.235629] (simulation) StderrLine: {'line': b'  182 | \x1b[01;31m\x1b[K        || int(TYPE1::ColsAtCompileTime)==Eigen::Dynamic \\\x1b[m\x1b[K\n'}
+[6.235675] (simulation) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.235721] (simulation) StderrLine: {'line': b'  183 | \x1b[01;31m\x1b[K        || int(TYPE0::ColsAtCompileTime)==int(TYPE1::ColsAtCompileTime))\\\x1b[m\x1b[K\n'}
+[6.235768] (simulation) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.235814] (simulation) StderrLine: {'line': b'  184 | \x1b[01;31m\x1b[K       ) \\\x1b[m\x1b[K\n'}
+[6.235861] (simulation) StderrLine: {'line': b'      |        \x1b[01;31m\x1b[K~~~\x1b[m\x1b[K\n'}
+[6.235908] (simulation) StderrLine: {'line': b'  185 | \x1b[01;31m\x1b[K     )\x1b[m\x1b[K\n'}
+[6.235954] (simulation) StderrLine: {'line': b'      |      \x1b[01;31m\x1b[K~\x1b[m\x1b[K\n'}
+[6.236001] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/eigen3/Eigen/src/Core/util/StaticAssert.h:33:54:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KEIGEN_STATIC_ASSERT\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.236050] (simulation) StderrLine: {'line': b'   33 |     #define EIGEN_STATIC_ASSERT(X,MSG) static_assert(\x1b[01;36m\x1b[KX\x1b[m\x1b[K,#MSG);\n'}
+[6.236097] (simulation) StderrLine: {'line': b'      |                                                      \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[6.236144] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/eigen3/Eigen/src/Core/util/StaticAssert.h:194:6:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin expansion of macro \xe2\x80\x98\x1b[01m\x1b[KEIGEN_PREDICATE_SAME_MATRIX_SIZE\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.236197] (simulation) StderrLine: {'line': b'  194 |      \x1b[01;36m\x1b[KEIGEN_PREDICATE_SAME_MATRIX_SIZE\x1b[m\x1b[K(TYPE0,TYPE1),\\\n'}
+[6.236246] (simulation) StderrLine: {'line': b'      |      \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.236292] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/eigen3/Eigen/src/Core/AssignEvaluator.h:887:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin expansion of macro \xe2\x80\x98\x1b[01m\x1b[KEIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.236340] (simulation) StderrLine: {'line': b'  887 |   \x1b[01;36m\x1b[KEIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE\x1b[m\x1b[K(ActualDstTypeCleaned,Src)\n'}
+[6.236387] (simulation) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.236434] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/eigen3/Eigen/src/Core/util/StaticAssert.h:177:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[K(((((int)Eigen::internal::size_of_xpr_at_compile_time<Eigen::Matrix<double, 3, 1> >::ret) == 0) && (((int)Eigen::internal::size_of_xpr_at_compile_time<Eigen::Matrix<double, 3, 8, 0, 3, 8> >::ret) == 0)) || ((((((int)Eigen::Matrix<double, 3, 1>::RowsAtCompileTime) == ((int)Eigen::Dynamic)) || (((int)Eigen::Matrix<double, 3, 8, 0, 3, 8>::RowsAtCompileTime) == ((int)Eigen::Dynamic))) || (((int)Eigen::Matrix<double, 3, 1>::RowsAtCompileTime) == ((int)Eigen::Matrix<double, 3, 8, 0, 3, 8>::RowsAtCompileTime))) && (((((int)Eigen::Matrix<double, 3, 1>::ColsAtCompileTime) == ((int)Eigen::Dynamic)) || (((int)Eigen::Matrix<double, 3, 8, 0, 3, 8>::ColsAtCompileTime) == ((int)Eigen::Dynamic))) || (((int)Eigen::Matrix<double, 3, 1>::ColsAtCompileTime) == ((int)Eigen::Matrix<double, 3, 8, 0, 3, 8>::ColsAtCompileTime)))))\x1b[m\x1b[K\xe2\x80\x99 evaluates to false\n'}
+[6.236505] (simulation) StderrLine: {'line': b'  175 |      \x1b[01;36m\x1b[K( \\\x1b[m\x1b[K\n'}
+[6.236554] (simulation) StderrLine: {'line': b'      |      \x1b[01;36m\x1b[K~~~\x1b[m\x1b[K\n'}
+[6.236602] (simulation) StderrLine: {'line': b'  176 | \x1b[01;36m\x1b[K        (int(Eigen::internal::size_of_xpr_at_compile_time<TYPE0>::ret)==0 && int(Eigen::internal::size_of_xpr_at_compile_time<TYPE1>::ret)==0) \\\x1b[m\x1b[K\n'}
+[6.236650] (simulation) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.236699] (simulation) StderrLine: {'line': b'  177 | \x1b[01;36m\x1b[K    || (\\\x1b[m\x1b[K\n'}
+[6.236748] (simulation) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[6.236794] (simulation) StderrLine: {'line': b'  178 | \x1b[01;36m\x1b[K          (int(TYPE0::RowsAtCompileTime)==Eigen::Dynamic \\\x1b[m\x1b[K\n'}
+[6.236841] (simulation) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.236888] (simulation) StderrLine: {'line': b'  179 | \x1b[01;36m\x1b[K        || int(TYPE1::RowsAtCompileTime)==Eigen::Dynamic \\\x1b[m\x1b[K\n'}
+[6.236937] (simulation) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.236984] (simulation) StderrLine: {'line': b'  180 | \x1b[01;36m\x1b[K        || int(TYPE0::RowsAtCompileTime)==int(TYPE1::RowsAtCompileTime)) \\\x1b[m\x1b[K\n'}
+[6.237031] (simulation) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.237078] (simulation) StderrLine: {'line': b'  181 | \x1b[01;36m\x1b[K      &&  (int(TYPE0::ColsAtCompileTime)==Eigen::Dynamic \\\x1b[m\x1b[K\n'}
+[6.237126] (simulation) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.237174] (simulation) StderrLine: {'line': b'  182 | \x1b[01;36m\x1b[K        || int(TYPE1::ColsAtCompileTime)==Eigen::Dynamic \\\x1b[m\x1b[K\n'}
+[6.237219] (simulation) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.237266] (simulation) StderrLine: {'line': b'  183 | \x1b[01;36m\x1b[K        || int(TYPE0::ColsAtCompileTime)==int(TYPE1::ColsAtCompileTime))\\\x1b[m\x1b[K\n'}
+[6.237312] (simulation) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.237359] (simulation) StderrLine: {'line': b'  184 | \x1b[01;36m\x1b[K       ) \\\x1b[m\x1b[K\n'}
+[6.237406] (simulation) StderrLine: {'line': b'      |        \x1b[01;36m\x1b[K~~~\x1b[m\x1b[K\n'}
+[6.237453] (simulation) StderrLine: {'line': b'  185 | \x1b[01;36m\x1b[K     )\x1b[m\x1b[K\n'}
+[6.237500] (simulation) StderrLine: {'line': b'      |      \x1b[01;36m\x1b[K~\x1b[m\x1b[K\n'}
+[6.237546] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/eigen3/Eigen/src/Core/util/StaticAssert.h:33:54:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KEIGEN_STATIC_ASSERT\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.237599] (simulation) StderrLine: {'line': b'   33 |     #define EIGEN_STATIC_ASSERT(X,MSG) static_assert(\x1b[01;36m\x1b[KX\x1b[m\x1b[K,#MSG);\n'}
+[6.237646] (simulation) StderrLine: {'line': b'      |                                                      \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[6.237693] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/eigen3/Eigen/src/Core/util/StaticAssert.h:194:6:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin expansion of macro \xe2\x80\x98\x1b[01m\x1b[KEIGEN_PREDICATE_SAME_MATRIX_SIZE\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.237745] (simulation) StderrLine: {'line': b'  194 |      \x1b[01;36m\x1b[KEIGEN_PREDICATE_SAME_MATRIX_SIZE\x1b[m\x1b[K(TYPE0,TYPE1),\\\n'}
+[6.237792] (simulation) StderrLine: {'line': b'      |      \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.237839] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/eigen3/Eigen/src/Core/AssignEvaluator.h:887:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin expansion of macro \xe2\x80\x98\x1b[01m\x1b[KEIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.237887] (simulation) StderrLine: {'line': b'  887 |   \x1b[01;36m\x1b[KEIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE\x1b[m\x1b[K(ActualDstTypeCleaned,Src)\n'}
+[6.237934] (simulation) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.272085] (simulation) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/local/include/eigen3/Eigen/Core:164\x1b[m\x1b[K,\n'}
+[6.272355] (simulation) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/local/include/eigen3/Eigen/Dense:1\x1b[m\x1b[K,\n'}
+[6.272412] (simulation) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/local/include/eigen3/Eigen/Eigen:1\x1b[m\x1b[K,\n'}
+[6.272462] (simulation) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/root_finder.hpp:8\x1b[m\x1b[K,\n'}
+[6.272513] (simulation) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/gcopter/include/gcopter/trajectory.hpp:4\x1b[m\x1b[K,\n'}
+[6.272562] (simulation) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/gcopter/include/misc/visualizer.hpp:4\x1b[m\x1b[K,\n'}
+[6.272611] (simulation) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/simulation/src/fake_module_debug.cpp:1\x1b[m\x1b[K:\n'}
+[6.272669] (simulation) StderrLine: {'line': b'/usr/local/include/eigen3/Eigen/src/Core/AssignEvaluator.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Kvoid Eigen::internal::call_assignment_no_alias(Dst&, const Src&, const Func&) [with Dst = Eigen::Matrix<double, 3, 1>; Src = Eigen::Matrix<double, 3, 8, 0, 3, 8>; Func = Eigen::internal::assign_op<double, double>]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.272726] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/eigen3/Eigen/src/Core/PlainObjectBase.h:797:41:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[KDerived& Eigen::PlainObjectBase<Derived>::_set_noalias(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<double, 3, 8, 0, 3, 8>; Derived = Eigen::Matrix<double, 3, 1>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.272776] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/eigen3/Eigen/src/Core/PlainObjectBase.h:594:19:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[KEigen::PlainObjectBase<Derived>::PlainObjectBase(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<double, 3, 8, 0, 3, 8>; Derived = Eigen::Matrix<double, 3, 1>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.272827] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/eigen3/Eigen/src/Core/Matrix.h:423:29:\x1b[m\x1b[K   required from \xe2\x80\x98\x1b[01m\x1b[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const Eigen::EigenBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<double, 3, 8, 0, 3, 8>; _Scalar = double; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.272881] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/home/kiki/Workspace/drone_monitor/simulation/src/fake_module_debug.cpp:200:35:\x1b[m\x1b[K   required from here\n'}
+[6.272929] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/eigen3/Eigen/src/Core/util/StaticAssert.h:177:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kstatic assertion failed: YOU_MIXED_MATRICES_OF_DIFFERENT_SIZES\n'}
+[6.272985] (simulation) StderrLine: {'line': b'  175 |      \x1b[01;31m\x1b[K( \\\x1b[m\x1b[K\n'}
+[6.273034] (simulation) StderrLine: {'line': b'      |      \x1b[01;31m\x1b[K~~~\x1b[m\x1b[K\n'}
+[6.273081] (simulation) StderrLine: {'line': b'  176 | \x1b[01;31m\x1b[K        (int(Eigen::internal::size_of_xpr_at_compile_time<TYPE0>::ret)==0 && int(Eigen::internal::size_of_xpr_at_compile_time<TYPE1>::ret)==0) \\\x1b[m\x1b[K\n'}
+[6.273130] (simulation) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.273178] (simulation) StderrLine: {'line': b'  177 | \x1b[01;31m\x1b[K    || (\\\x1b[m\x1b[K\n'}
+[6.273226] (simulation) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[6.273274] (simulation) StderrLine: {'line': b'  178 | \x1b[01;31m\x1b[K          (int(TYPE0::RowsAtCompileTime)==Eigen::Dynamic \\\x1b[m\x1b[K\n'}
+[6.273323] (simulation) StderrLine: {'line': b'      |           \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.273371] (simulation) StderrLine: {'line': b'  179 | \x1b[01;31m\x1b[K        || int(TYPE1::RowsAtCompileTime)==Eigen::Dynamic \\\x1b[m\x1b[K\n'}
+[6.273419] (simulation) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.273466] (simulation) StderrLine: {'line': b'  180 | \x1b[01;31m\x1b[K        || int(TYPE0::RowsAtCompileTime)==int(TYPE1::RowsAtCompileTime)) \\\x1b[m\x1b[K\n'}
+[6.273514] (simulation) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.273563] (simulation) StderrLine: {'line': b'  181 | \x1b[01;31m\x1b[K      &&  (int(TYPE0::ColsAtCompileTime)==Eigen::Dynamic \\\x1b[m\x1b[K\n'}
+[6.273615] (simulation) StderrLine: {'line': b'      |       \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.273662] (simulation) StderrLine: {'line': b'  182 | \x1b[01;31m\x1b[K        || int(TYPE1::ColsAtCompileTime)==Eigen::Dynamic \\\x1b[m\x1b[K\n'}
+[6.273710] (simulation) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.273757] (simulation) StderrLine: {'line': b'  183 | \x1b[01;31m\x1b[K        || int(TYPE0::ColsAtCompileTime)==int(TYPE1::ColsAtCompileTime))\\\x1b[m\x1b[K\n'}
+[6.273805] (simulation) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.273853] (simulation) StderrLine: {'line': b'  184 | \x1b[01;31m\x1b[K       ) \\\x1b[m\x1b[K\n'}
+[6.273900] (simulation) StderrLine: {'line': b'      |        \x1b[01;31m\x1b[K~~~\x1b[m\x1b[K\n'}
+[6.273949] (simulation) StderrLine: {'line': b'  185 | \x1b[01;31m\x1b[K     )\x1b[m\x1b[K\n'}
+[6.273997] (simulation) StderrLine: {'line': b'      |      \x1b[01;31m\x1b[K~\x1b[m\x1b[K\n'}
+[6.274045] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/eigen3/Eigen/src/Core/util/StaticAssert.h:33:54:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KEIGEN_STATIC_ASSERT\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.274093] (simulation) StderrLine: {'line': b'   33 |     #define EIGEN_STATIC_ASSERT(X,MSG) static_assert(\x1b[01;36m\x1b[KX\x1b[m\x1b[K,#MSG);\n'}
+[6.274141] (simulation) StderrLine: {'line': b'      |                                                      \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[6.274194] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/eigen3/Eigen/src/Core/util/StaticAssert.h:194:6:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin expansion of macro \xe2\x80\x98\x1b[01m\x1b[KEIGEN_PREDICATE_SAME_MATRIX_SIZE\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.274243] (simulation) StderrLine: {'line': b'  194 |      \x1b[01;36m\x1b[KEIGEN_PREDICATE_SAME_MATRIX_SIZE\x1b[m\x1b[K(TYPE0,TYPE1),\\\n'}
+[6.274291] (simulation) StderrLine: {'line': b'      |      \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.274338] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/eigen3/Eigen/src/Core/AssignEvaluator.h:887:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin expansion of macro \xe2\x80\x98\x1b[01m\x1b[KEIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.274391] (simulation) StderrLine: {'line': b'  887 |   \x1b[01;36m\x1b[KEIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE\x1b[m\x1b[K(ActualDstTypeCleaned,Src)\n'}
+[6.274438] (simulation) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.274489] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/eigen3/Eigen/src/Core/util/StaticAssert.h:177:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[K(((((int)Eigen::internal::size_of_xpr_at_compile_time<Eigen::Matrix<double, 3, 1> >::ret) == 0) && (((int)Eigen::internal::size_of_xpr_at_compile_time<Eigen::Matrix<double, 3, 8, 0, 3, 8> >::ret) == 0)) || ((((((int)Eigen::Matrix<double, 3, 1>::RowsAtCompileTime) == ((int)Eigen::Dynamic)) || (((int)Eigen::Matrix<double, 3, 8, 0, 3, 8>::RowsAtCompileTime) == ((int)Eigen::Dynamic))) || (((int)Eigen::Matrix<double, 3, 1>::RowsAtCompileTime) == ((int)Eigen::Matrix<double, 3, 8, 0, 3, 8>::RowsAtCompileTime))) && (((((int)Eigen::Matrix<double, 3, 1>::ColsAtCompileTime) == ((int)Eigen::Dynamic)) || (((int)Eigen::Matrix<double, 3, 8, 0, 3, 8>::ColsAtCompileTime) == ((int)Eigen::Dynamic))) || (((int)Eigen::Matrix<double, 3, 1>::ColsAtCompileTime) == ((int)Eigen::Matrix<double, 3, 8, 0, 3, 8>::ColsAtCompileTime)))))\x1b[m\x1b[K\xe2\x80\x99 evaluates to false\n'}
+[6.274545] (simulation) StderrLine: {'line': b'  175 |      \x1b[01;36m\x1b[K( \\\x1b[m\x1b[K\n'}
+[6.274593] (simulation) StderrLine: {'line': b'      |      \x1b[01;36m\x1b[K~~~\x1b[m\x1b[K\n'}
+[6.274641] (simulation) StderrLine: {'line': b'  176 | \x1b[01;36m\x1b[K        (int(Eigen::internal::size_of_xpr_at_compile_time<TYPE0>::ret)==0 && int(Eigen::internal::size_of_xpr_at_compile_time<TYPE1>::ret)==0) \\\x1b[m\x1b[K\n'}
+[6.274695] (simulation) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.274745] (simulation) StderrLine: {'line': b'  177 | \x1b[01;36m\x1b[K    || (\\\x1b[m\x1b[K\n'}
+[6.274794] (simulation) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[6.274842] (simulation) StderrLine: {'line': b'  178 | \x1b[01;36m\x1b[K          (int(TYPE0::RowsAtCompileTime)==Eigen::Dynamic \\\x1b[m\x1b[K\n'}
+[6.274891] (simulation) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.274940] (simulation) StderrLine: {'line': b'  179 | \x1b[01;36m\x1b[K        || int(TYPE1::RowsAtCompileTime)==Eigen::Dynamic \\\x1b[m\x1b[K\n'}
+[6.274992] (simulation) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.275041] (simulation) StderrLine: {'line': b'  180 | \x1b[01;36m\x1b[K        || int(TYPE0::RowsAtCompileTime)==int(TYPE1::RowsAtCompileTime)) \\\x1b[m\x1b[K\n'}
+[6.275090] (simulation) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.275139] (simulation) StderrLine: {'line': b'  181 | \x1b[01;36m\x1b[K      &&  (int(TYPE0::ColsAtCompileTime)==Eigen::Dynamic \\\x1b[m\x1b[K\n'}
+[6.275370] (simulation) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.275420] (simulation) StderrLine: {'line': b'  182 | \x1b[01;36m\x1b[K        || int(TYPE1::ColsAtCompileTime)==Eigen::Dynamic \\\x1b[m\x1b[K\n'}
+[6.275473] (simulation) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.275522] (simulation) StderrLine: {'line': b'  183 | \x1b[01;36m\x1b[K        || int(TYPE0::ColsAtCompileTime)==int(TYPE1::ColsAtCompileTime))\\\x1b[m\x1b[K\n'}
+[6.275571] (simulation) StderrLine: {'line': b'      |         \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.275619] (simulation) StderrLine: {'line': b'  184 | \x1b[01;36m\x1b[K       ) \\\x1b[m\x1b[K\n'}
+[6.275668] (simulation) StderrLine: {'line': b'      |        \x1b[01;36m\x1b[K~~~\x1b[m\x1b[K\n'}
+[6.275717] (simulation) StderrLine: {'line': b'  185 | \x1b[01;36m\x1b[K     )\x1b[m\x1b[K\n'}
+[6.275766] (simulation) StderrLine: {'line': b'      |      \x1b[01;36m\x1b[K~\x1b[m\x1b[K\n'}
+[6.275815] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/eigen3/Eigen/src/Core/util/StaticAssert.h:33:54:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin definition of macro \xe2\x80\x98\x1b[01m\x1b[KEIGEN_STATIC_ASSERT\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.275863] (simulation) StderrLine: {'line': b'   33 |     #define EIGEN_STATIC_ASSERT(X,MSG) static_assert(\x1b[01;36m\x1b[KX\x1b[m\x1b[K,#MSG);\n'}
+[6.275913] (simulation) StderrLine: {'line': b'      |                                                      \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[6.275961] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/eigen3/Eigen/src/Core/util/StaticAssert.h:194:6:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin expansion of macro \xe2\x80\x98\x1b[01m\x1b[KEIGEN_PREDICATE_SAME_MATRIX_SIZE\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.276010] (simulation) StderrLine: {'line': b'  194 |      \x1b[01;36m\x1b[KEIGEN_PREDICATE_SAME_MATRIX_SIZE\x1b[m\x1b[K(TYPE0,TYPE1),\\\n'}
+[6.276057] (simulation) StderrLine: {'line': b'      |      \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.276106] (simulation) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/eigen3/Eigen/src/Core/AssignEvaluator.h:887:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin expansion of macro \xe2\x80\x98\x1b[01m\x1b[KEIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.276154] (simulation) StderrLine: {'line': b'  887 |   \x1b[01;36m\x1b[KEIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE\x1b[m\x1b[K(ActualDstTypeCleaned,Src)\n'}
+[6.276202] (simulation) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.318662] (-) TimerEvent: {}
+[6.418994] (-) TimerEvent: {}
+[6.519297] (-) TimerEvent: {}
+[6.619632] (-) TimerEvent: {}
+[6.719975] (-) TimerEvent: {}
+[6.820334] (-) TimerEvent: {}
+[6.920689] (-) TimerEvent: {}
+[7.021029] (-) TimerEvent: {}
+[7.121375] (-) TimerEvent: {}
+[7.221693] (-) TimerEvent: {}
+[7.322057] (-) TimerEvent: {}
+[7.422414] (-) TimerEvent: {}
+[7.522723] (-) TimerEvent: {}
+[7.622993] (-) TimerEvent: {}
+[7.723264] (-) TimerEvent: {}
+[7.823541] (-) TimerEvent: {}
+[7.923897] (-) TimerEvent: {}
+[8.024219] (-) TimerEvent: {}
+[8.124548] (-) TimerEvent: {}
+[8.224861] (-) TimerEvent: {}
+[8.325201] (-) TimerEvent: {}
+[8.425524] (-) TimerEvent: {}
+[8.525836] (-) TimerEvent: {}
+[8.626148] (-) TimerEvent: {}
+[8.726473] (-) TimerEvent: {}
+[8.826795] (-) TimerEvent: {}
+[8.927134] (-) TimerEvent: {}
+[9.027406] (-) TimerEvent: {}
+[9.127754] (-) TimerEvent: {}
+[9.228139] (-) TimerEvent: {}
+[9.328477] (-) TimerEvent: {}
+[9.428830] (-) TimerEvent: {}
+[9.529164] (-) TimerEvent: {}
+[9.629511] (-) TimerEvent: {}
+[9.729863] (-) TimerEvent: {}
+[9.830191] (-) TimerEvent: {}
+[9.930530] (-) TimerEvent: {}
+[10.030812] (-) TimerEvent: {}
+[10.131108] (-) TimerEvent: {}
+[10.231430] (-) TimerEvent: {}
+[10.331745] (-) TimerEvent: {}
+[10.432045] (-) TimerEvent: {}
+[10.532385] (-) TimerEvent: {}
+[10.632739] (-) TimerEvent: {}
+[10.733079] (-) TimerEvent: {}
+[10.833412] (-) TimerEvent: {}
+[10.933751] (-) TimerEvent: {}
+[11.034101] (-) TimerEvent: {}
+[11.134442] (-) TimerEvent: {}
+[11.234748] (-) TimerEvent: {}
+[11.335082] (-) TimerEvent: {}
+[11.435412] (-) TimerEvent: {}
+[11.535747] (-) TimerEvent: {}
+[11.636096] (-) TimerEvent: {}
+[11.736440] (-) TimerEvent: {}
+[11.836785] (-) TimerEvent: {}
+[11.937133] (-) TimerEvent: {}
+[12.037475] (-) TimerEvent: {}
+[12.137816] (-) TimerEvent: {}
+[12.238153] (-) TimerEvent: {}
+[12.338503] (-) TimerEvent: {}
+[12.438873] (-) TimerEvent: {}
+[12.539146] (-) TimerEvent: {}
+[12.639488] (-) TimerEvent: {}
+[12.739830] (-) TimerEvent: {}
+[12.840135] (-) TimerEvent: {}
+[12.940491] (-) TimerEvent: {}
+[13.040840] (-) TimerEvent: {}
+[13.141172] (-) TimerEvent: {}
+[13.241509] (-) TimerEvent: {}
+[13.341842] (-) TimerEvent: {}
+[13.442178] (-) TimerEvent: {}
+[13.542509] (-) TimerEvent: {}
+[13.642857] (-) TimerEvent: {}
+[13.743221] (-) TimerEvent: {}
+[13.843555] (-) TimerEvent: {}
+[13.943903] (-) TimerEvent: {}
+[14.044250] (-) TimerEvent: {}
+[14.144593] (-) TimerEvent: {}
+[14.204677] (simulation) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/simulation_node.dir/build.make:76: CMakeFiles/simulation_node.dir/src/fake_module.cpp.o] Error 1\n'}
+[14.204863] (simulation) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/simulation_node.dir/all] Error 2\n'}
+[14.204927] (simulation) StderrLine: {'line': b'gmake[1]: *** Waiting for unfinished jobs....\n'}
+[14.244760] (-) TimerEvent: {}
+[14.272999] (simulation) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/debug_node.dir/build.make:76: CMakeFiles/debug_node.dir/src/fake_module_debug.cpp.o] Error 1\n'}
+[14.273275] (simulation) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/debug_node.dir/all] Error 2\n'}
+[14.273357] (simulation) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[14.274664] (simulation) CommandEnded: {'returncode': 2}
+[14.299480] (simulation) JobEnded: {'identifier': 'simulation', 'rc': 2}
+[14.309721] (-) EventReactorShutdown: {}

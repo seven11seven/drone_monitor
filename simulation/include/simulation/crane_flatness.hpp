@@ -163,10 +163,9 @@ namespace crane_flatness
         // force
         double j_force, t_force, m_force;
         double mf0, mf1, mf2;
-
     };
 
-    // class RotationFlatnessMap
+    //! @todo add a class considering the under-actuated property of the system
 }
 
 #endif

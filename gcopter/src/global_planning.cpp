@@ -245,7 +245,7 @@ public:
                     // get the trajectory generation time
                     trajStamp = rclcpp::Clock().now().seconds();
                     visualizer.visualize(traj, route, this->routePub, this->wayPointsPub, this->trajectoryPub);
-                    visualizer.visualizeModule(traj, this->modulePub);
+                    // visualizer.visualizeModule(traj, this->modulePub);
                 }
             }    
         }

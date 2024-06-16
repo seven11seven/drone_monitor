@@ -33,64 +33,7 @@ public:
   : Node("fake_module_node"),
     mapInitialized(false)
     {   
-        this->declare_parameter<std::string>("MapTopic");
-        this->declare_parameter<std::string>("TargetTopic");
-        this->declare_parameter<double>("DilateRadius");
-        this->declare_parameter<double>("VoxelWidth");
-        this->declare_parameter<std::vector<double>>("MapBound");
-        this->declare_parameter<double>("TimeoutRRT");
-        this->declare_parameter<double>("MaxVelMag");
-        this->declare_parameter<double>("MaxJibOmg");
-        this->declare_parameter<double>("MaxAccMag");
-        this->declare_parameter<double>("MinThrust");
-        this->declare_parameter<double>("MaxThrust");
-        
-        this->declare_parameter<double>("ModuleMass");
-        this->declare_parameter<double>("JibMass");
-        this->declare_parameter<double>("TrolleyMass");
-        this->declare_parameter<double>("JibInnt");
-        this->declare_parameter<double>("TrolleyInnt");
-        this->declare_parameter<double>("GravAcc");
-        this->declare_parameter<double>("X");
-        this->declare_parameter<double>("Y");
-        this->declare_parameter<double>("H");
-        this->declare_parameter<double>("L");
-        
-        this->declare_parameter<double>("WeightT");
-        this->declare_parameter<std::vector<double>>("ChiVec");
-        this->declare_parameter<double>("SmoothingEps");
-        this->declare_parameter<int>("IntegralIntervs");
-        this->declare_parameter<double>("RelCostTol");
-
-        this->get_parameter("MapTopic", mapTopic);
-        this->get_parameter("TargetTopic", targetTopic);
-        this->get_parameter("DilateRadius", dilateRadius);
-        this->get_parameter("VoxelWidth", voxelWidth);
-        this->get_parameter("MapBound", mapBound);
-        this->get_parameter("TimeoutRRT", timeoutRRT);
-        this->get_parameter("MaxVelMag", maxVelMag);
-        this->get_parameter("MaxJibOmg", maxJibOmg);
-        this->get_parameter("MaxAccMag", maxAccMag);
-        this->get_parameter("MinThrust", minThrust);
-        this->get_parameter("MaxThrust", maxThrust);
-
-        this->get_parameter("ModuleMass", moduleMass);
-        this->get_parameter("JibMass", jibMass);
-        this->get_parameter("TrolleyMass", trolleyMass);
-        this->get_parameter("JibInnt", jibInnt);
-        this->get_parameter("TrolleyInnt", trolleyInnt);
-        this->get_parameter("GravAcc", gravAcc);
-        this->get_parameter("X", X);
-        this->get_parameter("Y", Y);
-        this->get_parameter("H", H);
-        this->get_parameter("L", L);
-
-        this->get_parameter("WeightT", weightT);
-        this->get_parameter("ChiVec", chiVec);
-        this->get_parameter("SmoothingEps", smoothingEps);
-        this->get_parameter("IntegralIntervs", integralIntervs);
-        this->get_parameter("RelCostTol", relCostTol);
-
+        initParas();
         visualizer = Visualizer();
         routePub = this->create_publisher<visualization_msgs::msg::Marker>("/visualizer/route", 10);
         wayPointsPub = this->create_publisher<visualization_msgs::msg::Marker>("/visualizer/waypoints", 10);
@@ -112,6 +55,13 @@ public:
 
         voxelMap = voxel_map::VoxelMap(xyz, offset, voxelWidth);
 
+        moduleVertices.resize(3, 8);
+        moduleVertices << 1.0, 1.0, 1.0, 1.0, -1.0, -1.0, -1.0, -1.0,
+                          1.0, 1.0, -1.0, -1.0, 1.0, 1.0, -1.0, -1.0,
+                          1.0, -1.0, 1.0, -1.0, 1.0, -1.0, 1.0, -1.0;
+        for (int i=0; i<moduleVertices.rows(); ++i) moduleVertices.row(i).array() *= moduleHalfLWH[i];
+        // RCLCPP_WARN(this->get_logger(), "debug point 1");
+
         mapSub = this->create_subscription<sensor_msgs::msg::PointCloud2>(mapTopic,
                                                                           rclcpp::QoS(1).best_effort(),
                                                                           std::bind(&MiCModule::mapCallBack, this, std::placeholders::_1));
@@ -119,7 +69,6 @@ public:
         targetSub = this->create_subscription<geometry_msgs::msg::PoseStamped>(targetTopic,
                                                                                rclcpp::QoS(1).best_effort(),
                                                                                std::bind(&MiCModule::targetCallBack, this, std::placeholders::_1));
-
     }
 
     inline void mapCallBack(const sensor_msgs::msg::PointCloud2::SharedPtr msg)
@@ -168,7 +117,8 @@ public:
 
             // return the planned path points in vector 3D format
             // planner: RRTstar
-            path_gen::planPath<voxel_map::VoxelMap>(startGoal[0],
+            path_gen::planPath<voxel_map::VoxelMap>(moduleVertices,
+                                                    startGoal[0],
                                                     startGoal[1],
                                                     voxelMap.getOrigin(),
                                                     voxelMap.getCorner(),
@@ -178,8 +128,6 @@ public:
             std::vector<Eigen::Vector3d> pc;
             voxelMap.getSurf(pc);
 
-            // RCLCPP_WARN(this->get_logger(), "debug point 1");
-
             sfc_gen::convexCover(route,
                                  pc,
                                  voxelMap.getOrigin(),
@@ -188,7 +136,6 @@ public:
                                  3.0,
                                  hPolys);
             sfc_gen::shortCut(hPolys);
-
             // RCLCPP_WARN(this->get_logger(), "the number of hPolys is %ld", hPolys.size());
 
             if (route.size() > 1)
@@ -208,8 +155,9 @@ public:
                 // initialize some constraint parameters
                 Eigen::VectorXd magnitudeBounds(5);
                 Eigen::VectorXd penaltyWeights(5);
+                Eigen::Vector3d moduleSize;
                 Eigen::VectorXd physicalParams(10);
-
+                
                 magnitudeBounds(0) = maxVelMag;
                 magnitudeBounds(1) = maxJibOmg;
                 magnitudeBounds(2) = maxAccMag;
@@ -222,6 +170,10 @@ public:
                 penaltyWeights(3) = (chiVec)[3];
                 penaltyWeights(4) = (chiVec)[4];    //! not used currently
 
+                moduleSize(0) = (moduleHalfLWH)[0];
+                moduleSize(1) = (moduleHalfLWH)[1];
+                moduleSize(2) = (moduleHalfLWH)[2];
+
                 physicalParams(0) = moduleMass;
                 physicalParams(1) = jibMass;
                 physicalParams(2) = trolleyMass;
@@ -233,18 +185,18 @@ public:
                 physicalParams(8) = H;
                 physicalParams(9) = L;
 
-                
                 const int quadratureRes = integralIntervs;
 
                 traj.clear();
-
+                
                 if (!modular.setup(weightT,
                                    iniState, finState,
-                                   hPolys, INFINITY,
+                                   hPolys, pieceDst,    // you can set pieceDst as INFINITY in launch file
                                    smoothingEps,
                                    quadratureRes,
                                    magnitudeBounds,
                                    penaltyWeights,
+                                   moduleVertices,
                                    physicalParams))
                 {
                     return;
@@ -260,7 +212,7 @@ public:
                     // get the trajectory generation time
                     trajStamp = rclcpp::Clock().now().seconds();
                     visualizer.visualize(traj, route, this->routePub, this->wayPointsPub, this->trajectoryPub);
-                    visualizer.visualizeModule(traj, this->modulePub);
+                    visualizer.visualizeModule(traj, moduleSize, this->modulePub);
                 }
             }
         }
@@ -280,7 +232,7 @@ public:
                                  fabs(msg->pose.orientation.z) *
                                      (mapBound[5] - mapBound[4] - 2 * dilateRadius);
             const Eigen::Vector3d goal(msg->pose.position.x, msg->pose.position.y, zGoal);
-            if (voxelMap.query(goal) == 0)
+            if (voxelMap.query_box(goal, moduleVertices) == 0)
             {
                 visualizer.visualizeStartGoal(goal, 0.5, startGoal.size(), this->spherePub);
                 startGoal.emplace_back(goal);
@@ -308,7 +260,7 @@ private:
     double maxAccMag;
     double minThrust;
     double maxThrust;
-
+    std::vector<double> moduleHalfLWH;
     double moduleMass;
     double jibMass;
     double trolleyMass;
@@ -319,12 +271,14 @@ private:
     double Y;
     double H;
     double L;
-    
+    double pieceDst;
+
     double weightT;
     std::vector<double> chiVec;
     double smoothingEps;
     int integralIntervs;
     double relCostTol;
+    Eigen::Matrix3Xd moduleVertices;
 
     rclcpp::Subscription<sensor_msgs::msg::PointCloud2>::SharedPtr mapSub;
     rclcpp::Subscription<geometry_msgs::msg::PoseStamped>::SharedPtr targetSub;
@@ -349,6 +303,68 @@ public:
     rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr thrPub;
     rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr tiltPub;
     rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr bdrPub;
+
+private:
+    inline void initParas()
+    {
+        this->declare_parameter<std::string>("MapTopic");
+        this->declare_parameter<std::string>("TargetTopic");
+        this->declare_parameter<double>("DilateRadius");
+        this->declare_parameter<double>("VoxelWidth");
+        this->declare_parameter<std::vector<double>>("MapBound");
+        this->declare_parameter<double>("TimeoutRRT");
+        this->declare_parameter<double>("MaxVelMag");
+        this->declare_parameter<double>("MaxJibOmg");
+        this->declare_parameter<double>("MaxAccMag");
+        this->declare_parameter<double>("MinThrust");
+        this->declare_parameter<double>("MaxThrust");
+        this->declare_parameter<std::vector<double>>("ModuleHalfLWH");
+        this->declare_parameter<double>("ModuleMass");
+        this->declare_parameter<double>("JibMass");
+        this->declare_parameter<double>("TrolleyMass");
+        this->declare_parameter<double>("JibInnt");
+        this->declare_parameter<double>("TrolleyInnt");
+        this->declare_parameter<double>("GravAcc");
+        this->declare_parameter<double>("X");
+        this->declare_parameter<double>("Y");
+        this->declare_parameter<double>("H");
+        this->declare_parameter<double>("L");
+        this->declare_parameter<double>("PieceDst");
+        this->declare_parameter<double>("WeightT");
+        this->declare_parameter<std::vector<double>>("ChiVec");
+        this->declare_parameter<double>("SmoothingEps");
+        this->declare_parameter<int>("IntegralIntervs");
+        this->declare_parameter<double>("RelCostTol");
+
+        this->get_parameter("MapTopic", mapTopic);
+        this->get_parameter("TargetTopic", targetTopic);
+        this->get_parameter("DilateRadius", dilateRadius);
+        this->get_parameter("VoxelWidth", voxelWidth);
+        this->get_parameter("MapBound", mapBound);
+        this->get_parameter("TimeoutRRT", timeoutRRT);
+        this->get_parameter("MaxVelMag", maxVelMag);
+        this->get_parameter("MaxJibOmg", maxJibOmg);
+        this->get_parameter("MaxAccMag", maxAccMag);
+        this->get_parameter("MinThrust", minThrust);
+        this->get_parameter("MaxThrust", maxThrust);
+        this->get_parameter("ModuleHalfLWH", moduleHalfLWH);
+        this->get_parameter("ModuleMass", moduleMass);
+        this->get_parameter("JibMass", jibMass);
+        this->get_parameter("TrolleyMass", trolleyMass);
+        this->get_parameter("JibInnt", jibInnt);
+        this->get_parameter("TrolleyInnt", trolleyInnt);
+        this->get_parameter("GravAcc", gravAcc);
+        this->get_parameter("X", X);
+        this->get_parameter("Y", Y);
+        this->get_parameter("H", H);
+        this->get_parameter("L", L);
+        this->get_parameter("PieceDst", pieceDst);
+        this->get_parameter("WeightT", weightT);
+        this->get_parameter("ChiVec", chiVec);
+        this->get_parameter("SmoothingEps", smoothingEps);
+        this->get_parameter("IntegralIntervs", integralIntervs);
+        this->get_parameter("RelCostTol", relCostTol);
+    }
 };
 
 int main(int argc, char **argv)

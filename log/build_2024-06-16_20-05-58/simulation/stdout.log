@@ -1,0 +1,3 @@
+[35m[1mConsolidate compiler generated dependencies of target debug_node[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/simulation_node.dir/src/fake_module.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/debug_node.dir/src/fake_module_debug.cpp.o[0m

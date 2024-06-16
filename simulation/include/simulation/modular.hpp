@@ -72,7 +72,7 @@ namespace modular
 
         // added by QQ: vPoly representing the module
         // coordinates are related to the CoM of the module
-        Eigen::Matrix<double, 3, 8> modulePoly;
+        Eigen::Matrix3Xd modulePoly;
 
     private:
         /* The following 3 functions give the mappings and gradient w.r.t T and tau */
@@ -357,6 +357,7 @@ namespace modular
                                                    const PolyhedraH &hPolys,        // obj.hPolytopes
                                                    const double &smoothFactor,      // obj.smoothEps
                                                    const int &integralResolution,   // obj.integralRes
+                                                   const Eigen::Matrix3Xd &moduleVertices,      // obj.modulePoly
                                                    const Eigen::VectorXd &magnitudeBounds,      // obj.magnitudeBd
                                                    const Eigen::VectorXd &penaltyWeights,       // obj.penaltyWt
                                                    crane_flatness::SimpleFlatnessMap &flatMap,  // obj.flatmap
@@ -382,7 +383,6 @@ namespace modular
             const double weightVel = penaltyWeights(1);
             const double weightAcc = penaltyWeights(2);
             const double weightJibOmg = penaltyWeights(3);
-
 
             Eigen::Vector3d pos, vel, acc, jer, sna;
             Eigen::Vector3d totalGradPos, totalGradVel, totalGradAcc, totalGradJer;
@@ -462,17 +462,10 @@ namespace modular
                         // each row in hPolys[L] is a surface
                         outerNormal = hPolys[L].block<1, 3>(k, 0);
 
-                        // modify the penalty function with bounding box constraints
-                        //! @todo set the diameter as hyper parameters
-                        const double diameter = 0.5;
-                        Eigen::Matrix<double, 3, 8> vertices;
-                        vertices << 1.0, 1.0, 1.0, 1.0, -1.0, -1.0, -1.0, -1.0,
-                                    1.0, 1.0, -1.0, -1.0, 1.0, 1.0, -1.0, -1.0,
-                                    1.0, -1.0, 1.0, -1.0, 1.0, -1.0, 1.0, -1.0;
-                        vertices = vertices * diameter;
-                        for (int i=0; i<vertices.cols(); i++)
+                        // the penalty function with bounding box constraints
+                        for (int i=0; i<moduleVertices.cols(); i++)
                         {   
-                            Eigen::Vector3d vertice = pos + vertices.col(i);
+                            Eigen::Vector3d vertice = pos + moduleVertices.col(i);
                             violaPos = outerNormal.dot(vertice) + hPolys[L](k, 3);
                             if (smoothedL1(violaPos, smoothFactor, violaPosPena, violaPosPenaD))
                             {
@@ -589,7 +582,7 @@ namespace modular
             // penalty gradients w.r.t. c and T
             attachPenaltyFunctional(obj.times, obj.minco.getCoeffs(),
                                     obj.hPolyIdx, obj.hPolytopes,
-                                    obj.smoothEps, obj.integralRes,
+                                    obj.smoothEps, obj.integralRes, obj.modulePoly,
                                     obj.magnitudeBd, obj.penaltyWt, obj.simpleFlatmap,
                                     cost, obj.partialGradByTimes, obj.partialGradByCoeffs);
 
@@ -606,10 +599,9 @@ namespace modular
             // obtain an array expression from a vector or matrix.
             // This allows you to perform element-wise operations on the vector.
             // when you perform element-wise operations on the array expression
-            // it doesn't modify the original vector `vec`.
+            // it doesn't modify the original vector `vec`. 
+            // seems the expression of array() from ChatGPT 4 is not correct
             obj.gradByTimes.array() += weightT;
-            // the auther may want to add temperol penalty gradient w.r.t. T, but seems this will not change
-            // the value of gradByTimes, since the array() function will create a new memory and copy
 
             // penalty gradients w.r.t. xi and tau
             backwardGradT(tau, obj.gradByTimes, gradTau);
@@ -877,6 +869,7 @@ namespace modular
 
     public:
         // call setup first before run optimize
+        //! @todo revise notations here
         // magnitudeBounds = [v_max, omg_max, theta_max, thrust_min, thrust_max]^T
         // penaltyWeights = [pos_weight, vel_weight, omg_weight, theta_weight, thrust_weight]^T
         // physicalParams = [vehicle_mass, gravitational_acceleration, horitonral_drag_coeff,
@@ -890,6 +883,7 @@ namespace modular
                           const int &integralResolution,
                           const Eigen::VectorXd &magnitudeBounds,
                           const Eigen::VectorXd &penaltyWeights,
+                          const Eigen::Matrix3Xd &moduleVertices,
                           const Eigen::VectorXd &physicalParams)
         {
             rho = timeWeight;
@@ -924,7 +918,8 @@ namespace modular
             penaltyWt = penaltyWeights;
             physicalPm = physicalParams;
             allocSpeed = magnitudeBd(0) * 3.0;
-
+            modulePoly = moduleVertices;
+            
             // init a shallow path
             // the path consists of 2*N-1 points
             // the path is splitted into multiple pieces according to the lengthPerPiece parameter

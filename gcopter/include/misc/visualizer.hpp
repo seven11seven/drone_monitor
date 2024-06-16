@@ -27,6 +27,7 @@ public:
     //! @author added by kiki
     template <int D>
     inline void visualizeModule(const Trajectory<D> & traj,
+                                const Eigen::Vector3d & moduleSize,
                                 const rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr & modulePub)
     {
         // Markers are visual elements that can be used to represent things like points, lines, meshes, text, etc.
@@ -65,8 +66,8 @@ public:
         };
 
         //! @todo add diameter to hyper parameters
-        const double diameter = 0.5;
-        Eigen::Vector3d offset = Eigen::Vector3d(diameter, diameter, diameter);
+        // const double diameter = 0.5;
+        // Eigen::Vector3d offset = Eigen::Vector3d(diameter, diameter, diameter);
         std::vector<Eigen::Vector3d> moduleGeom(8);
         Eigen::Vector3d coGeom(0.0, 0.0, 0.0);
 
@@ -80,14 +81,14 @@ public:
                 // the CoM of the Module
                 coGeom = wps.col(i).head<3>();
                 // update the moduleGeom
-                moduleGeom[0] = coGeom + Eigen::Vector3d(1, 1, 1).cwiseProduct(offset);
-                moduleGeom[1] = coGeom + Eigen::Vector3d(-1, 1, 1).cwiseProduct(offset);
-                moduleGeom[2] = coGeom + Eigen::Vector3d(-1, -1, 1).cwiseProduct(offset);
-                moduleGeom[3] = coGeom + Eigen::Vector3d(1, -1, 1).cwiseProduct(offset);
-                moduleGeom[4] = coGeom + Eigen::Vector3d(1, 1, -1).cwiseProduct(offset);
-                moduleGeom[5] = coGeom + Eigen::Vector3d(-1, 1, -1).cwiseProduct(offset);
-                moduleGeom[6] = coGeom + Eigen::Vector3d(-1, -1, -1).cwiseProduct(offset);
-                moduleGeom[7] = coGeom + Eigen::Vector3d(1, -1, -1).cwiseProduct(offset);
+                moduleGeom[0] = coGeom + Eigen::Vector3d(1, 1, 1).cwiseProduct(moduleSize);
+                moduleGeom[1] = coGeom + Eigen::Vector3d(-1, 1, 1).cwiseProduct(moduleSize);
+                moduleGeom[2] = coGeom + Eigen::Vector3d(-1, -1, 1).cwiseProduct(moduleSize);
+                moduleGeom[3] = coGeom + Eigen::Vector3d(1, -1, 1).cwiseProduct(moduleSize);
+                moduleGeom[4] = coGeom + Eigen::Vector3d(1, 1, -1).cwiseProduct(moduleSize);
+                moduleGeom[5] = coGeom + Eigen::Vector3d(-1, 1, -1).cwiseProduct(moduleSize);
+                moduleGeom[6] = coGeom + Eigen::Vector3d(-1, -1, -1).cwiseProduct(moduleSize);
+                moduleGeom[7] = coGeom + Eigen::Vector3d(1, -1, -1).cwiseProduct(moduleSize);
                 // add line to moduleMarker
                 for (std::pair<int, int> edge : box_edges)
                 {

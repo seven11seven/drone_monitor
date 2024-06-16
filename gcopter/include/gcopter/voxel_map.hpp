@@ -224,22 +224,13 @@ namespace voxel_map
         }
 
         // @author added by kiki
-        inline bool query_box(const Eigen::Vector3d &pos) const
+        inline bool query_box(const Eigen::Vector3d &pos,
+                              const Eigen::Matrix3Xd &vertices) const
         {   
             // if occupied return true else return false
             // pos: the center of the geomry
-            // assuming the robot is a box with diameter of 0.5
-            // the voxel width is set as 0.25
-            // there are 3*3*3 = 27 voxels remianing to be checked
-            
-            //! @todo add diameter to hyper-parameters
-            const double diameter = 0.5;
-            Eigen::Matrix<double, 3, 9> vertices;
-            vertices << 0.0, 1.0, 1.0, 1.0, 1.0, -1.0, -1.0, -1.0, -1.0,
-                        0.0, 1.0, 1.0, -1.0, -1.0, 1.0, 1.0, -1.0, -1.0,
-                        0.0, 1.0, -1.0, 1.0, -1.0, 1.0, -1.0, 1.0, -1.0;
-            vertices = vertices * diameter;
-
+            // vertices: the relative position of module vertices
+                        
             for (int i=0; i<vertices.cols(); i++)
             {   
                 Eigen::Vector3d vertice = pos + vertices.col(i);
